@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>multiprocessing on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/multiprocessing/</link>
+    <description>Recent content in multiprocessing on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 09 Dec 2017 19:19:08 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/multiprocessing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Debugging Python multiprocessing program with strace</title>
+      <link>https://kracekumar.github.io/post/168364964555/debugging-python-multiprocessing-program-with/</link>
+      <pubDate>Sat, 09 Dec 2017 19:19:08 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/168364964555/debugging-python-multiprocessing-program-with/</guid>
+      <description>Debugging is a time consuming and brain draining process. It’s essential part of learning and writing maintainable code. Every person has their way of debugging, approaches and tools. Sometimes you can view the traceback, pull the code from memory, and find a quick fix. Some other times, you opt different tricks like the print statement, debugger, and rubber duck method.
+Debugging multi-processing bug in Python is hard because of various reasons.</description>
+    </item>
+    
+  </channel>
+</rss>

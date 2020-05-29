@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pip on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/pip/</link>
+    <description>Recent content in pip on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 12 May 2014 18:56:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/pip/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to install externally hosted files using pip</title>
+      <link>https://kracekumar.github.io/post/85545169530/how-to-install-externally-hosted-files-using-pip/</link>
+      <pubDate>Mon, 12 May 2014 18:56:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/85545169530/how-to-install-externally-hosted-files-using-pip/</guid>
+      <description>As of writing (12, May 2014) latest version of pip is 1.5.1. pip doesn’tallow installing packages from non PyPI based url.It is possible to upload tar or zip or tar.gz file to PyPI or specifydownload url which points other sites(Example: pyPdf points to http://pybrary.net/pyPdf/pyPdf-1.13.tar.gz).pip considers externally hosted packages as insecure. Agreed.
+This is one of the reason why I kept using pip 1.4.1. Finally decided to fix this issue.Below is the sample error which pip throws.</description>
+    </item>
+    
+  </channel>
+</rss>

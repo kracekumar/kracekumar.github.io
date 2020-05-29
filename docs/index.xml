@@ -1,0 +1,1166 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Technical Ramblings</title>
+    <link>https://kracekumar.github.io/</link>
+    <description>Recent content on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 16 May 2020 09:51:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Parameterize Python Tests</title>
+      <link>https://kracekumar.github.io/post/618264170735009792/parameterize-python-tests/</link>
+      <pubDate>Sat, 16 May 2020 09:51:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/618264170735009792/parameterize-python-tests/</guid>
+      <description>Introduction A single test case follows a pattern. Setup the data, invoke the function or method with the arguments and assert the return data or the state changes. A function will have a minimum of one or more test cases for various success and failure cases.
+Here is an example implementation of wc command for a single file that returns number of words, lines, and characters for an ASCII text file.</description>
+    </item>
+    
+    <item>
+      <title>Incomplete data is useless - COVID-19 India data</title>
+      <link>https://kracekumar.github.io/post/615946721097285632/incomplete-data-is-useless-covid-19-india-data/</link>
+      <pubDate>Mon, 20 Apr 2020 19:56:04 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/615946721097285632/incomplete-data-is-useless-covid-19-india-data/</guid>
+      <description>The data is a representation of reality. When a value is missing in the piece of data, it makes it less useful and reliable. Every day, articles, a news report about COVID-19 discuss the new cases, recovered cases, and deceased cases. This information gives you a sense of hope or reality or confusion.
+Regarding COVID-19, everyone believes or accepts specific details as fact like mortality rate is 2 to 3 percent, over the age of fifty, the chance of death is 30 to 50 percent.</description>
+    </item>
+    
+    <item>
+      <title>“Don’t touch your face” - Neural Network will warn you</title>
+      <link>https://kracekumar.github.io/post/612817685627191296/dont-touch-your-face-neural-network-will-warn/</link>
+      <pubDate>Tue, 17 Mar 2020 07:01:22 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/612817685627191296/dont-touch-your-face-neural-network-will-warn/</guid>
+      <description>A few days back, Keras creator, Francois Chollet tweeted
+ A Keras/TF.js challenge: make a model that processes a webcam feed and detects when someone touches their face (triggering a loud beep).“ The very next day, I tried the Keras yolov3 model available in the Github. It was trained on the coco80 dataset and could detect person but not the face touch.
+  V1 Training The original Keras implementation lacked documentation to train fromscratch or transfer learning.</description>
+    </item>
+    
+    <item>
+      <title>1000 more whitelist sites in Kashmir, yet no Internet</title>
+      <link>https://kracekumar.github.io/post/190951734050/1000-more-whitelist-sites-in-kashmir-yet-no/</link>
+      <pubDate>Fri, 21 Feb 2020 20:13:15 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/190951734050/1000-more-whitelist-sites-in-kashmir-yet-no/</guid>
+      <description>Kashmir is under lockdown for more than
+200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200 days.
+Last Friday(14th Feb, 2020), Government released a documentwith list of allowed whitelist sites at 2G speed. The text file with URLs extracted from the PDF - https://gitlab.com/snippets/1943725
+In case you’re not interested in tech details, analysis, or short of time, look at the summary section at the bottom.</description>
+    </item>
+    
+    <item>
+      <title>Capture all browser HTTP[s] calls to load a web page</title>
+      <link>https://kracekumar.github.io/post/190478935610/capture-all-browser-https-calls-to-load-a-web/</link>
+      <pubDate>Sun, 26 Jan 2020 17:31:40 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/190478935610/capture-all-browser-https-calls-to-load-a-web/</guid>
+      <description>How does one find out what network calls, browser requests to load web pages?
+The simple method - download the HTML page, parse the page, find out all the network calls using web parsers like beautifulsoup.
+The shortcoming in the method, what about the network calls made by your browser before requesting the web page? For example, firefox makes a call to ocsp.digicert.com to obtain revocation status on digital certificates. The protocol is Online Certificate Status Protocol.</description>
+    </item>
+    
+    <item>
+      <title>153 sites allowed in Kashmir but no internet</title>
+      <link>https://kracekumar.github.io/post/190341665270/153-sites-allowed-in-kashmir-but-no-internet/</link>
+      <pubDate>Sun, 19 Jan 2020 11:22:57 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/190341665270/153-sites-allowed-in-kashmir-but-no-internet/</guid>
+      <description>Kashmir is locked down without the internet for more than 167 days as of 19th Jan 2020 since 5th Aug 2019. The wire recently published an article wherein the Government of India whitelisted 153 websites access in Kashmir. Below is the list extracted from the document
+ . The internet shutdown is becoming common in recent days during protests.
+Anyone with little knowledge to create a web application or work can say, every web application will make network calls to other sites to load JavaScript, Style sheets, Maps, Videos, Images, etc.</description>
+    </item>
+    
+    <item>
+      <title>How long do Python Postgres tools take to load data?</title>
+      <link>https://kracekumar.github.io/post/170492996890/how-long-do-python-postgres-tools-take-to-load/</link>
+      <pubDate>Sun, 04 Feb 2018 13:15:49 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/170492996890/how-long-do-python-postgres-tools-take-to-load/</guid>
+      <description>Data is crucial for all applications. While fetching a significant amount of data from database multiple times, faster data load times improve performance.
+The post considers tools like SQLAlchemy statement, SQLAlchemy ORM, Pscopg2, psql for measuring latency. And to measure the python tool timing, jupyter notebook’s timeit is used. Psql is for the lowest time taken reference.
+Table Structure annotation=&amp;gt; \d data; Table &amp;quot;public.data&amp;quot; Column | Type | Modifiers --------+-----------+--------------------------------------------------- id | integer | not null default nextval(&#39;data_id_seq&#39;::regclass) value | integer | label | integer | x | integer[] | y | integer[] | Indexes: &amp;quot;data_pkey&amp;quot; PRIMARY KEY, btree (id) &amp;quot;ix_data_label&amp;quot; btree (label) annotation=&amp;gt; select count(*) from data; count --------- 1050475 (1 row)  SQLAlchemy ORM Declaration class Data(Base): __tablename__ = &#39;data&#39; id = Column(Integer, primary_key=True) value = Column(Integer) # 0 =&amp;gt; Training, 1 =&amp;gt; test label = Column(Integer, default=0, index=True) x = Column(postgresql.</description>
+    </item>
+    
+    <item>
+      <title>Debugging Python multiprocessing program with strace</title>
+      <link>https://kracekumar.github.io/post/168364964555/debugging-python-multiprocessing-program-with/</link>
+      <pubDate>Sat, 09 Dec 2017 19:19:08 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/168364964555/debugging-python-multiprocessing-program-with/</guid>
+      <description>Debugging is a time consuming and brain draining process. It’s essential part of learning and writing maintainable code. Every person has their way of debugging, approaches and tools. Sometimes you can view the traceback, pull the code from memory, and find a quick fix. Some other times, you opt different tricks like the print statement, debugger, and rubber duck method.
+Debugging multi-processing bug in Python is hard because of various reasons.</description>
+    </item>
+    
+    <item>
+      <title>Notes from Root Conf Day 2 - 2017</title>
+      <link>https://kracekumar.github.io/post/160622791375/notes-from-root-conf-day-2-2017/</link>
+      <pubDate>Sat, 13 May 2017 15:51:29 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/160622791375/notes-from-root-conf-day-2-2017/</guid>
+      <description>On day 2, I spent a considerable amount of time networking and attend only four sessions.
+Spotswap: running production APIs on Spot instance
+ Amazon EC2 spot instances are cheaper than on-demand server costs. Spot instances run when the bid price is greater than market/spot instance price. Mapbox API server uses spot instances which are part of auto-scaling server Auto scaling group is configured with min, desired, max parameters. Latency should be low and cost effective EC2 has three types of instances: On demand, reserved and spot.</description>
+    </item>
+    
+    <item>
+      <title>Notes from Root Conf Day 1 - 2017</title>
+      <link>https://kracekumar.github.io/post/160561774060/notes-from-root-conf-day-1-2017/</link>
+      <pubDate>Thu, 11 May 2017 21:11:23 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/160561774060/notes-from-root-conf-day-1-2017/</guid>
+      <description>Root Conf is a conference on DevOps and Cloud Infrastructure. 2017 edition’s theme is service reliability. Following is my notes from Day 1.
+  State of the open source monitoring landscape
+ The speaker of the session is the co-founder of Icinga monitoring system. I missed first ten minutes of the talk.-The talk is a comparison of all available OSS options for monitoring, visualization. Auto-discovery is hard. As per 2015 monitoring tool usage survey, Nagios is widely used.</description>
+    </item>
+    
+    <item>
+      <title>Book Review: The Culture Map</title>
+      <link>https://kracekumar.github.io/post/160523067765/book-review-the-culture-map/</link>
+      <pubDate>Wed, 10 May 2017 19:22:01 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/160523067765/book-review-the-culture-map/</guid>
+      <description>The Culture Map: Breaking Through the Invisible Boundaries of Global Business is a book on cultural differences in communication by Erin Meyer.
+Last year, I spent three months in NYC. Whenever I entered food outlet or made an eye contact, all the conversation started with “How are you doing?”. I replied, “I’m good and how are you doing?”. Most of the times, I didn’t receive a response. It was a sign.</description>
+    </item>
+    
+    <item>
+      <title>Book Review: Software Architecture with Python</title>
+      <link>https://kracekumar.github.io/post/160521154075/book-review-software-architecture-with-python/</link>
+      <pubDate>Wed, 10 May 2017 18:13:33 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/160521154075/book-review-software-architecture-with-python/</guid>
+      <description>The book Software Architecture with Python is by Anand B Pillai. The book explains various aspects of software architecture like testability, performance, scaling, concurrency and design patterns.
+The book has ten chapters. The first chapter speaks about different architect roles like solution architect, enterprise architect, technical architect what is the role of an architect and difference between design and architecture. The book covers two lesser spoken topics debugging and code security which I liked.</description>
+    </item>
+    
+    <item>
+      <title>RC checklist for Indian Applicants</title>
+      <link>https://kracekumar.github.io/post/157858156340/rc-checklist-for-indian-applicants/</link>
+      <pubDate>Wed, 01 Mar 2017 10:51:23 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/157858156340/rc-checklist-for-indian-applicants/</guid>
+      <description>One Sunny Sunday morning one can get up and question their self-existence, or one can ask every few days or few months what am I doing at the current job? The answer will push you to a place you have never been.
+One can meticulously plan for extravagant programming tour or programmer’s pilgrimage for three months. Yes, that what my outlook of RC is! RC is a different place from a usual workplace, meetups, college or any educational institute.</description>
+    </item>
+    
+    <item>
+      <title>Return Postgres data as JSON in Python</title>
+      <link>https://kracekumar.github.io/post/156769849745/return-postgres-data-as-json-in-python/</link>
+      <pubDate>Fri, 03 Feb 2017 20:47:13 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/156769849745/return-postgres-data-as-json-in-python/</guid>
+      <description>Postgres supports JSON and JSONB for a couple of years now. The support for JSON-functions landed in version 9.2. These functions let Postgres server to return JSON serialized data. This is a handy feature. Consider a case; Python client fetches 20 records from Postgres. The client converts the data returned by the server to tuple/dict/proxy. The application or web server converts tuple again back to JSON and sends to the client.</description>
+    </item>
+    
+    <item>
+      <title>RFCS We Love</title>
+      <link>https://kracekumar.github.io/post/156493415835/rfcs-we-love/</link>
+      <pubDate>Sat, 28 Jan 2017 17:47:02 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/156493415835/rfcs-we-love/</guid>
+      <description>A simple question can open a door for new exploration. While I was at RC, I tweeted “Is there any meetup group similar to papers we love for discussing RFCS?”. In an interval of nine minutes, Jaseem replied: “Let’s start one :)”
+Is there any meetup group similar to @papers_we_love for discussing RFCs?
+— kracekumar (@kracetheking) November 30, 2016  Above discussion on Twitter, lead to a new focus group RFCS We Love in Bangalore by Nemo, Jaseem, Avinash and Kracekumar.</description>
+    </item>
+    
+    <item>
+      <title>Expose jupyter notebook over the network</title>
+      <link>https://kracekumar.github.io/post/156322146345/expose-jupyter-notebook-over-the-network/</link>
+      <pubDate>Tue, 24 Jan 2017 20:21:21 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/156322146345/expose-jupyter-notebook-over-the-network/</guid>
+      <description>What is the Jupyter notebook?
+ The Jupyter Notebook is a web application that allows you to create and share documents that contain live code, equations, visualisations and explanatory text.
+ The definition is from the official site. I use IPython/Jupyter shell all time. If you haven’t tried, spend 30 minutes and witness the power!
+At times, I want to share some code snippet with folks in the same building during work, workshop or training.</description>
+    </item>
+    
+    <item>
+      <title>RC Return Statement</title>
+      <link>https://kracekumar.github.io/post/155718711280/rc-return-statement/</link>
+      <pubDate>Wed, 11 Jan 2017 14:31:45 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/155718711280/rc-return-statement/</guid>
+      <description>The Recurse Center is a free, three-month self-directed program for people who want to get better at programming. I attended fall batch 2 in 2016 from September to December. If you aren’t aware of Recurse Centre, take a couple of minutes to go through recurse.com and read the rest of the piece.
+Every day we open a significant amount of doors to get to desired places. Some doors are unique but look dull and plain, but the incredible universe behind the door hides excitement, adventures, gems, friends, and insights.</description>
+    </item>
+    
+    <item>
+      <title>Grokking algorithm: Book Review</title>
+      <link>https://kracekumar.github.io/post/155490330815/grokking-algorithm-book-review/</link>
+      <pubDate>Fri, 06 Jan 2017 18:32:51 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/155490330815/grokking-algorithm-book-review/</guid>
+      <description>Grokking algorithm - An illustrated guide for programmers and other curious people is the book by Aditya Y. Bhargava about understanding algorithms. The book is different from other algorithm books. The book explains the chosen concepts with illustrated guide like cartoons, xkcd and doesn’t let the followers lost in the sea of mathematical formulas or procedure.
+The book discusses a handful of foundational topics on algorithms like Big O notation, Binary Search, Sorting, Recursion, Hash Tables, graphs, greedy algorithm, dynamic programming.</description>
+    </item>
+    
+    <item>
+      <title>2016 Books</title>
+      <link>https://kracekumar.github.io/post/155204597600/2016-books/</link>
+      <pubDate>Sat, 31 Dec 2016 11:43:21 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/155204597600/2016-books/</guid>
+      <description>I was watching one of my favorite Tamil writer S Ramakrishnan’s video about books. Somewhere in the middle of the talk, he suggests the audience to write down the list of books they read this year and share with others. Irrespective of how short or tall the list is, undoubtedly people will pick up from the list someday. I bought the idea and documenting the book list.
+English Read  The 5 Elements of Effective Thinking Quiet: The Power of Introverts in a World That Can’t Stop Talking - The book is about introverts, what constittues who they are and their world - My Review The Fire Next Time Jonathan Livingston Seagull Animal Farm - Satire on Russian Revolution - My Review The Metamorphosis Outliers: The Story of Success - the factors that contribute to high levels of success Man’s Search for Meaning - Hope during adversity - My Review How to Stay Sane  Currently reading  The Gifts of Imperfection: Let Go of Who You Think You’re Supposed to Be and Embrace Who You Are Nonviolent Communication: A Language of Life Grokking Algorithms An illustrated guide for programmers and other curious people Mirrors: Stories of Almost Everyone - World historic events in few sentences The Trial Flowers for Algernon  Dropped the ball  Surely You’re Joking, Mr.</description>
+    </item>
+    
+    <item>
+      <title>RC Week 1011</title>
+      <link>https://kracekumar.github.io/post/154669792910/rc-week-1011/</link>
+      <pubDate>Mon, 19 Dec 2016 08:21:35 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/154669792910/rc-week-1011/</guid>
+      <description>EDHT I continued to work on the project and added the few features.
+ Data replication - One of the main features of DHT is replicate the data across a subset of nodes in the cluster. Remember not all nodes! Depending on the number of copies to store, say N, the data is stored in N - 1 nodes starting from the primary node in the anti-clockwise direction. Routing - Every node in the cluster has equal responsibility, and there is no master.</description>
+    </item>
+    
+    <item>
+      <title>RC Week 1010</title>
+      <link>https://kracekumar.github.io/post/154363774320/rc-week-1010/</link>
+      <pubDate>Mon, 12 Dec 2016 05:18:55 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/154363774320/rc-week-1010/</guid>
+      <description>This week has mostly been calm and cold in New York.
+EDHT Distributed Hash Table implementation in Erlang is slowly coming along. The project now supports multi-node communication.
+The project uses bitcask which riak uses. Erlang’s Key/Value store data is local to the single process. Building Key/Value store from the ground up requires reinventing wheel and time consuming. The leveraging existing library made sense. Bitcask takes care of persisting the data to the disk and can access data without race conditions so far.</description>
+    </item>
+    
+    <item>
+      <title>RC week 1001</title>
+      <link>https://kracekumar.github.io/post/154068164505/rc-week-1001/</link>
+      <pubDate>Mon, 05 Dec 2016 07:34:14 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/154068164505/rc-week-1001/</guid>
+      <description>This week I spent most of the time on working with Zulip, Erlang and EDHT.
+Zulip This week, we (Stan, Jennifer and I) continued efforts on implementing message reaction. We made decent progress and had a good create reaction frontend. During the journey, we discovered an interesting bug. Debugging the bug on production minified JS with the debugger was fun. We are close to completing the completing the initial version. It’s still a few days away from closure.</description>
+    </item>
+    
+    <item>
+      <title>RC week 1000</title>
+      <link>https://kracekumar.github.io/post/153759852775/rc-week-1000/</link>
+      <pubDate>Mon, 28 Nov 2016 03:49:59 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/153759852775/rc-week-1000/</guid>
+      <description>This week has been quiet, bikeshedding, holiday week and unproductive week so far in RC.
+Zulip Zulip is a Python-based open source group chat. RC uses zulip for the internal chat. Unlike GitHub, zulip doesn’t support inline emoji reaction for messages. I am collaborating with Arpith and Stan Zheng to add the missing feature. The first time I came across the limitation of Django’s values method. If you’re considering setting up a group chat for your community or company, try out zulip!</description>
+    </item>
+    
+    <item>
+      <title>RC Week 0111</title>
+      <link>https://kracekumar.github.io/post/153465926785/rc-week-0111/</link>
+      <pubDate>Mon, 21 Nov 2016 08:09:16 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/153465926785/rc-week-0111/</guid>
+      <description>This week most of the time I spent learning Distributed Hash Tables and Erlang. That means I didn’t write a significant amount of code for the project.
+I am reading DynamoDB paper which is Distributed Hash Table and Distributed Key/Value store. Some implementation like etcd and consul provides Distributed Key/Value store but replicates all data across nodes. So those aren’t Distributed Hash Table. I am reading the one sections at a time.</description>
+    </item>
+    
+    <item>
+      <title>Side Project Feasibility</title>
+      <link>https://kracekumar.github.io/post/153252087240/side-project-feasibility/</link>
+      <pubDate>Wed, 16 Nov 2016 08:27:53 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/153252087240/side-project-feasibility/</guid>
+      <description>It’s common for developers to work on side projects. The reason why developers work on a side project is a long list of imaginable and unimaginable reasons. My main reason to work on a side project is to learn how things work or to build a utility program for use.
+One of my recent projects is to monitor the internet traffic and aggregate the traffic based on the domain name - bandwidth monitor.</description>
+    </item>
+    
+    <item>
+      <title>RC Week 0110</title>
+      <link>https://kracekumar.github.io/post/153157531640/rc-week-0110/</link>
+      <pubDate>Mon, 14 Nov 2016 04:17:29 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/153157531640/rc-week-0110/</guid>
+      <description>This week, I reached the first milestone of the project - imon which I worked on for past couple of weeks.
+imon is a command-line utility to record all network traffic and classify the data according to the domain name.
+Here is a high-level presentation of the project.I am looking for code review on the project and happy to answer any questions.
+I wrote a blog post about my experience with Rust.</description>
+    </item>
+    
+    <item>
+      <title>My Experience With Rust</title>
+      <link>https://kracekumar.github.io/post/153116176705/my-experience-with-rust/</link>
+      <pubDate>Sun, 13 Nov 2016 07:25:37 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/153116176705/my-experience-with-rust/</guid>
+      <description>When I was about to leave to RC in few weeks, wrote an E-mail to Puneeth asking for Do&#39;s and Don&#39;ts at RC. One of the line in the mail said,
+ Since you are a Python guy, don’t write any Python code while you are there. Do something completely different.
+ I contemplated which language to choose. Other than Python, I knew a decent amount of Go-lang and Javascript. I previously attempted to learn rust but never dived deep into it.</description>
+    </item>
+    
+    <item>
+      <title>RC week 0101</title>
+      <link>https://kracekumar.github.io/post/152847253135/rc-week-0101/</link>
+      <pubDate>Mon, 07 Nov 2016 06:53:52 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/152847253135/rc-week-0101/</guid>
+      <description>Time flies faster than you can perceive.
+ The first half of twelve weeks experimental journey ends this week.
+This week was the last week for Fall 01, 2016 batch and my batch is due in next six weeks. I wish everyone in Fall 01, 2016 batch Good luck for their future endeavors. I made few friends, helped few people in their project; few helped me in my projects and a lot of unnoticed learnings.</description>
+    </item>
+    
+    <item>
+      <title>Man&#39;s Search for Meaning - Book Review</title>
+      <link>https://kracekumar.github.io/post/152845373255/mans-search-for-meaning-book-review/</link>
+      <pubDate>Mon, 07 Nov 2016 05:48:12 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/152845373255/mans-search-for-meaning-book-review/</guid>
+      <description>What can you do during acute inhuman soul-crushing conditions in life? Hope. This book is about “Hope.” - dopamine for life. Psychiatrist Viktor Frankl’s presents his life in Nazi death camps and learning for spiritual survival. The narrative is based on his experience and the experiences of others he treated later in his practice. The author aptly reiterated throughout the book “We cannot avoid suffering, but we can choose how to cope with it, and find a meaning to live.</description>
+    </item>
+    
+    <item>
+      <title>RC Week 0100</title>
+      <link>https://kracekumar.github.io/post/152543733085/rc-week-0100/</link>
+      <pubDate>Mon, 31 Oct 2016 05:31:05 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/152543733085/rc-week-0100/</guid>
+      <description>I had a decent progress with my rust HTTP traffic monitor. I read a lot about the different type of packets like Ethernet Packet, IPv4 Packet, TCP Packet, UDP Packet, DNS Packets. I wrote a parser for Physical Layer packet, TCP Packet, UDP Packet, DNS Packet. The parser helped me understand a lot about rust functions, data types like array, vectors, string and string literal. I am not enjoying the relationship with rust lifetimes.</description>
+    </item>
+    
+    <item>
+      <title>RC week 0011</title>
+      <link>https://kracekumar.github.io/post/152280595435/rc-week-0011/</link>
+      <pubDate>Tue, 25 Oct 2016 04:40:21 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/152280595435/rc-week-0011/</guid>
+      <description>This week commenced with the second project at RC in rust. I am building a command line utility to monitor internet bandwidth consumption categorized by websites. I had a general idea of how to go about it and drew rough sketches.
+As a lot of people suggested me, I am fighting battles with rust compiler in a life time and borrowing. I hit my first road block with pcap library and here is the issue.</description>
+    </item>
+    
+    <item>
+      <title>Quiet - Book Review</title>
+      <link>https://kracekumar.github.io/post/152278984540/quiet-book-review/</link>
+      <pubDate>Tue, 25 Oct 2016 03:56:09 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/152278984540/quiet-book-review/</guid>
+      <description>Quiet: The Power of Introverts in a World That Can’t Stop Talking is an excellent book about introverts and what makes introvert an introvert. The book dives deep how different culture views introvert, analyses what intrigues introverts and in what circumstances they effectively work. The book makes a lot of parallel comparisons with extroverts. What intrigues extroverts and why introverts are good at solving complex problems.
+The book accounts for various behavior patterns like how introverts behave in the social events, how to raise introvert kids without nonsense advice.</description>
+    </item>
+    
+    <item>
+      <title>RC Week 0010</title>
+      <link>https://kracekumar.github.io/post/151921371645/rc-week-0010/</link>
+      <pubDate>Mon, 17 Oct 2016 06:04:45 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/151921371645/rc-week-0010/</guid>
+      <description>This week has been a mixed ride with the torrent client. I completed the two pending features seeding and UDP tracker. The torrent client has a major issue with downloading larger torrent file like ubuntu iso file. The client starts the downloads from a set of peers and slowly halts at sock.recv after exchanging a handful of packets. At this juncture CPU spikes to 100% when sock.recv blocks. Initially, the code relied on asyncio only features, now the code uses curio library.</description>
+    </item>
+    
+    <item>
+      <title>RC week 0001</title>
+      <link>https://kracekumar.github.io/post/151547342115/rc-week-0001/</link>
+      <pubDate>Sun, 09 Oct 2016 05:09:09 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/151547342115/rc-week-0001/</guid>
+      <description>This week, I made considerable progress on the BitTorrent client which I started a week back. The client is in a usable state to download the data from the swarm. The source code is available on GitHub. The project uses Python 3.5 async/await and asyncio. I presented the torrent client in RC Thursday five minute presentation evening slot. Here is the link to the slides.
+ Here is quick video demo recorded with asciinema.</description>
+    </item>
+    
+    <item>
+      <title>RC week 0000</title>
+      <link>https://kracekumar.github.io/post/151276229490/rc-week-0000/</link>
+      <pubDate>Mon, 03 Oct 2016 05:27:30 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/151276229490/rc-week-0000/</guid>
+      <description>The long awaited Recurse Center debut day, 26th Sep 2016 kick started with a welcome note by Nicholas Bergson-Shilcock and David Albert ; decorated by other events and activities to get to know the batchmates; the culture of RC and ended with closing note by Sonali Sridhar.
+
+ At the end of the day, I had decided to build a BitTorrent client as a first project. I was at the crossroad to choose Python or Rust or Go for the project.</description>
+    </item>
+    
+    <item>
+      <title>None</title>
+      <link>https://kracekumar.github.io/post/151005099060/im-attending-recurse-center-fall02-2016-batch/</link>
+      <pubDate>Tue, 27 Sep 2016 11:38:33 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/151005099060/im-attending-recurse-center-fall02-2016-batch/</guid>
+      <description>I’m attending Recurse Center fall&#39;02, 2016 batch. I’m excited (yes, without emoticons) to be in RC and New York. RC is different from schools, boot camps, universities for various reasons. The two reason I like the most is “Never Graduate” and “self-directed learning.”
+A lot to learn from peers, experiments, and discussions. Next, 12 weeks will be intense and what can a programmer ask for more than time to solve problems and understand how things for.</description>
+    </item>
+    
+    <item>
+      <title>Language is power</title>
+      <link>https://kracekumar.github.io/post/150673262155/language-is-power/</link>
+      <pubDate>Tue, 20 Sep 2016 07:50:53 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/150673262155/language-is-power/</guid>
+      <description>Road transport between Coimbatore and Bangalore is hit badly by fear, tension, security and protest. As of 18th Sep 2016, The current news is only two-wheelers are allowed to cross the Hosur border. The Tamil Nadu vehicles carrying vegetables, bananas, and other commodities are prohibited from entering Karnataka. Ordinary people travel till Hosur, cross the Border and walk for one or two kilometers to get a public transport and reach Bangalore.</description>
+    </item>
+    
+    <item>
+      <title>Flowers of Bangalore</title>
+      <link>https://kracekumar.github.io/post/150040563610/flowers-of-bangalore/</link>
+      <pubDate>Tue, 06 Sep 2016 19:18:59 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/150040563610/flowers-of-bangalore/</guid>
+      <description>Bangalore is called the Garden City of India. How often do you walk into a garden? I visit often. I envy you if you own a garden at home!
+Every day you can spot a lot of flowers and trees during transit to work, casual walk, etc … In the evening, trees welcome all passer-bys with chosen fallen flowers in the pathway. Especially golden flowers from Copper pod. Trees and flowers are predominant in the buzzing part of the city.</description>
+    </item>
+    
+    <item>
+      <title>Real time mobile app failure</title>
+      <link>https://kracekumar.github.io/post/148892131765/real-time-mobile-app-failure/</link>
+      <pubDate>Sat, 13 Aug 2016 18:16:55 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/148892131765/real-time-mobile-app-failure/</guid>
+      <description>August 11th to 15th is a long weekend and I decided to leave Bangalore on August 11th. I booked KSRTC to Coimbatore. The boarding point, St John’s office is few kilometers away from my office in teachers colony. The pickup time was 9:45 PM. I booked Uber pool at 8:35. The first driver handcuffed me to cancel the ride with notorious usual reason - traffic. It took fifteen minutes to find an another car.</description>
+    </item>
+    
+    <item>
+      <title>HTTP Exception as control flow</title>
+      <link>https://kracekumar.github.io/post/147895372680/http-exception-as-control-flow/</link>
+      <pubDate>Sun, 24 Jul 2016 14:37:20 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/147895372680/http-exception-as-control-flow/</guid>
+      <description>As per Wikipedia , Exception handling is the process of responding to the occurrence, during computation, of exceptions – anomalous or exceptional conditions requiring special processing – often changing the flow of program execution.
+In Python errors like SyntaxError, ZeroDivisionError are exceptions.Exception paves the way to alter the normal execution path.
+While working with API, a web request goes through the following process,authentication, authorization, input validation, business logic and finally, the response is given out.</description>
+    </item>
+    
+    <item>
+      <title>State machine in DB model</title>
+      <link>https://kracekumar.github.io/post/147507497215/state-machine-in-db-model/</link>
+      <pubDate>Sat, 16 Jul 2016 20:25:06 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/147507497215/state-machine-in-db-model/</guid>
+      <description>A state machine is an abstract machine that can be in one of a finite number of states. The machine is in only one state at a time; the state it is in at any given time is called the current state.
+While using the database, individual records should be in allowed states. The database or application stores rules for the states. There are many ways to design the database schema to achieve this.</description>
+    </item>
+    
+    <item>
+      <title>Animal Farm Review</title>
+      <link>https://kracekumar.github.io/post/145749737410/animal-farm-review/</link>
+      <pubDate>Sat, 11 Jun 2016 10:35:27 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/145749737410/animal-farm-review/</guid>
+      <description>Animal Farm’s satire makes the novella interesting to read. Written after Bolshevik revolution and no reason why lot go over gaga. Confining to Bolshevik revolution is tunnel view. The core of the novella resembles with lot of today’s politics and ancient kingdom. For a moment forget about the bolshevik revolution. Rebellion outbursts, the leader comes to power and slowly vanquishes non believers in ideas or voices. Slowly becomes benevolent dictator for life, corrupt and power moves from people to few hands.</description>
+    </item>
+    
+    <item>
+      <title>Asyncio and uvloop</title>
+      <link>https://kracekumar.github.io/post/144058400775/asyncio-and-uvloop/</link>
+      <pubDate>Sun, 08 May 2016 20:18:48 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/144058400775/asyncio-and-uvloop/</guid>
+      <description>Today, I read an article about uvloop. I am aware of libuv and its behind nodejs. What caught me was “In fact, it is at least 2x faster than any other Python asynchronous framework.”. So I decided to give it a try with aiohttp.
+The test program was simple websocket code which receives a text message, doubles the content and echoes back. Here is the complete snippet with uvloop.
+I ran naive benchmark using thor and results favoured uvloop.</description>
+    </item>
+    
+    <item>
+      <title>Permissions in Django Admin</title>
+      <link>https://kracekumar.github.io/post/141377389440/permissions-in-django-admin/</link>
+      <pubDate>Sun, 20 Mar 2016 17:07:40 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/141377389440/permissions-in-django-admin/</guid>
+      <description>Admin dashboard is one of the Django’s useful feature. Admin dashboard allows super users to create, read, update, delete database objects. The super users have full control over the data. Staff user can login into admin dashboard but can’t access data. In few cases, staff users needs restricted access . Super user can access all data from various in built and third party apps. Here is a screenshot of Super user admin interface after login.</description>
+    </item>
+    
+    <item>
+      <title>Testing Django Views</title>
+      <link>https://kracekumar.github.io/post/138492827565/testing-django-views/</link>
+      <pubDate>Mon, 01 Feb 2016 19:17:49 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/138492827565/testing-django-views/</guid>
+      <description>Majority of web frameworks promote MVC/MTV software pattern. The way web applications are designed today aren’t same as 5-6 years back. Back then it was server side templates, HTML, API’s weren’t widespread and mobile apps were becoming popular. Rise of mobile and Single Page Application shifted majority of web development towards API centric development. Testing API is super simple with data in and data out, but testing a django view in classic web application is difficult since HTML is returned.</description>
+    </item>
+    
+    <item>
+      <title>Simple Json Response basic test between Flask and Django</title>
+      <link>https://kracekumar.github.io/post/117948332935/simple-json-response-basic-test-between-flask-and/</link>
+      <pubDate>Sat, 02 May 2015 16:42:40 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/117948332935/simple-json-response-basic-test-between-flask-and/</guid>
+      <description>Django and Flask are two well known Python web frameworks. There are lot of benchmarks claim Flask is 2xfaster for simple JSON Response, one such is Techempower. After lookinginto the source, it struckme Django can do better!
+I will compare Flask and Django for simple json response. The machine used is Macbook pro, Intel Core i5-4258U CPU @ 2.40GHz,with 8 GB Memory on OS X 10.10.3. gunicorn==19.3.0 will be used for serving WSGI application.</description>
+    </item>
+    
+    <item>
+      <title>django print exception to console</title>
+      <link>https://kracekumar.github.io/post/113057636135/django-print-exception-to-console/</link>
+      <pubDate>Sun, 08 Mar 2015 11:10:09 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/113057636135/django-print-exception-to-console/</guid>
+      <description>Django has very good debug toolbar for debugging SQL. While working with Single Page Application and API exceptions can’t be displayed in browser. Exception is sent to front end. What if the exception can be printed to console ?
+Django middleware gets called for every request/response. The small helper class looks like
+ Add the filename and class name to MIDDLEWARE_CLASSES in settings file like
+ This is how exceptions looks</description>
+    </item>
+    
+    <item>
+      <title>Check for custom objects in Python set.</title>
+      <link>https://kracekumar.github.io/post/107618031945/check-for-custom-objects-in-python-set/</link>
+      <pubDate>Fri, 09 Jan 2015 19:50:06 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/107618031945/check-for-custom-objects-in-python-set/</guid>
+      <description>Python set data structure is commonly used for removing duplicate entriesand make lookup faster (O(1)). Any hashable object can be stored in set.For example, list and dict can’t be stored.
+User defined objects can be stored. Here is how it looks.
+class Person(object): def __init__(self, name, age): self.name, self.age = name, age In [25]: s = set() In [26]: s.add(Person(&#39;kracekumar&#39;, 25)) In [27]: s Out[27]: set([&amp;lt;__main__.Person at 0x1033c5e10&amp;gt;]) In [29]: Person(&#39;kracekumar&#39;, 25) in s Out[29]: False  Implement equality check Even though Person object with same value is present but check failed.</description>
+    </item>
+    
+    <item>
+      <title>class as decorator</title>
+      <link>https://kracekumar.github.io/post/101540141725/class-as-decorator/</link>
+      <pubDate>Sun, 02 Nov 2014 01:17:42 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/101540141725/class-as-decorator/</guid>
+      <description>Decorator Decorator is a callable which can modify the function, method, class on runtime. Most ofthe decorators uses closure but it is possible to use class.
+Closure import functools def cache(f): storage = {} @functools.wraps(f) def inner(n): value = storage.get(n) if value: print(&amp;quot;Returning value from cache&amp;quot;) return value value = f(n) storage[n] = value return value return inner @cache def factorial(n): if n &amp;lt;= 1: return 1 return n * factorial(n - 1) &amp;gt;&amp;gt;&amp;gt;factorial(20) 2432902008176640000 &amp;gt;&amp;gt;&amp;gt;factorial(20) Returning from cache 2432902008176640000  cache is a function which takes function as an argument and returns a function.</description>
+    </item>
+    
+    <item>
+      <title>Fluent interface in python</title>
+      <link>https://kracekumar.github.io/post/100897281440/fluent-interface-in-python/</link>
+      <pubDate>Sat, 25 Oct 2014 09:32:01 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/100897281440/fluent-interface-in-python/</guid>
+      <description>Fluent Interface is an implementation of API which improves readability.
+Example Poem(&#39;The Road Not Taken&#39;).indent(4).suffix(&#39;Robert Frost&#39;).
+Fluent Interface is similar to method chaining. I was wondering how to implement this in Python.Returning self during method call seemed good idea .
+class Poem(object): def __init__(self, content): self.content = content def indent(self, spaces=4): self.content = &amp;quot; &amp;quot; * spaces + self.content return self def suffix(self, content): self.content += &amp;quot; - {}&amp;quot;.format(content) return self def __str__(self): return self.</description>
+    </item>
+    
+    <item>
+      <title>Python global keyword</title>
+      <link>https://kracekumar.github.io/post/100399630630/python-global-keyword/</link>
+      <pubDate>Sun, 19 Oct 2014 11:14:08 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/100399630630/python-global-keyword/</guid>
+      <description>Python’s global keyword allows to modify the variable which is out of current scope.
+In [13]: bar = 1 In [14]: def foo(): ....: global bar ....: bar = 2 ....: In [15]: bar Out[15]: 1 In [16]: foo() In [17]: bar Out[17]: 2  In the above example, bar was declared before foo function. global bar refers to the bar variablewhich is outside the foo scope. After foo invocation bar value was modified inside foo.</description>
+    </item>
+    
+    <item>
+      <title>python source fileencoding</title>
+      <link>https://kracekumar.github.io/post/86530203730/python-source-fileencoding/</link>
+      <pubDate>Thu, 22 May 2014 20:35:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/86530203730/python-source-fileencoding/</guid>
+      <description>Some of the python source file starts with -*- coding: utf-8 -*-. This particular linetells python interpreter all the content (byte string) is utf-8 encoded. Lets see how it affects the code.
+uni1.py:
+# -*- coding: utf-8 -*- print(&amp;quot;welcome&amp;quot;) print(&amp;quot;animé&amp;quot;)  output:
+➜ code$ python2 uni1.py welcome animé  Third line had a accented character and it wasn’t explictly stated as unicode. print function passed successfully.Since first line instructed interpreter all the sequences from here on will follow utf-8, so it worked.</description>
+    </item>
+    
+    <item>
+      <title>How to install externally hosted files using pip</title>
+      <link>https://kracekumar.github.io/post/85545169530/how-to-install-externally-hosted-files-using-pip/</link>
+      <pubDate>Mon, 12 May 2014 18:56:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/85545169530/how-to-install-externally-hosted-files-using-pip/</guid>
+      <description>As of writing (12, May 2014) latest version of pip is 1.5.1. pip doesn’tallow installing packages from non PyPI based url.It is possible to upload tar or zip or tar.gz file to PyPI or specifydownload url which points other sites(Example: pyPdf points to http://pybrary.net/pyPdf/pyPdf-1.13.tar.gz).pip considers externally hosted packages as insecure. Agreed.
+This is one of the reason why I kept using pip 1.4.1. Finally decided to fix this issue.Below is the sample error which pip throws.</description>
+    </item>
+    
+    <item>
+      <title>Bus journey </title>
+      <link>https://kracekumar.github.io/post/84037307108/bus-journey/</link>
+      <pubDate>Sun, 27 Apr 2014 17:43:51 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/84037307108/bus-journey/</guid>
+      <description>I am big fan of bus travel. Still it is my only mode of transportation. The two reason I love it are wind and sight seeing. Whenever the wind kisses me I forget myself and start thinking about memories.
+The best part of the wind (Thendral) is it kindles happiness, sad moments, memorable ones, wishes and missing. Thendral has complete effect of changing my mood and mode.
+I don’t think only thendral has this effect.</description>
+    </item>
+    
+    <item>
+      <title>How to learn Python ?</title>
+      <link>https://kracekumar.github.io/post/81918059722/how-to-learn-python/</link>
+      <pubDate>Sun, 06 Apr 2014 20:30:30 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/81918059722/how-to-learn-python/</guid>
+      <description>Over period of time few people have asked me in meetups, online I want to learn python. Suggest me few ways to learn. Everyone who asked me had differentbackground and different intentions. Before answering the question I try to collectmore information about their interest and their previous approaches. Some learnt basicsfrom codecademy, some attended beginners session in Bangpypers meetup. In this postI will cover general questions asked and my suggested approach.</description>
+    </item>
+    
+    <item>
+      <title>Stop iteration when condition is meet while iterating</title>
+      <link>https://kracekumar.github.io/post/80342472437/stop-iteration-when-condition-is-meet-while/</link>
+      <pubDate>Sat, 22 Mar 2014 08:34:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/80342472437/stop-iteration-when-condition-is-meet-while/</guid>
+      <description>We are writing a small utility function called is_valid_mime_type. The function takes a mime_typeas an argument and checks if the mime type is one of the allowed types. Code looks like
+ALLOWED_MIME_TYPE = (&#39;application/json&#39;, &#39;text/plain&#39;, &#39;text/html&#39;) def is_valid_mimetype(mime_type): &amp;quot;&amp;quot;&amp;quot;Returns True or False. :param mime_type string or unicode: HTTP header mime type &amp;quot;&amp;quot;&amp;quot; for item in ALLOWED_MIME_TYPE: if mime_type.startswith(item): return True return False  Above code can refactored into single line using any.</description>
+    </item>
+    
+    <item>
+      <title>Best weekend in recent times</title>
+      <link>https://kracekumar.github.io/post/79079050731/best-weekend-in-recent-times/</link>
+      <pubDate>Sun, 09 Mar 2014 18:49:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/79079050731/best-weekend-in-recent-times/</guid>
+      <description>Normally I don’t plan weekends. I code, watch movies. This weekend (8th March) was different though. March 7th, friday evening wasn’t good. I was banging my head at work to get api working. Then came back home. Relaxed for an hour Facebook, Youtube. Then opened emacs and started to play Raja sir’s music. Stared at code, walked along the execution. Figured out the issue. Can’t ask for more. Calm and code.</description>
+    </item>
+    
+    <item>
+      <title>Find n largest and smallest number in an iterable</title>
+      <link>https://kracekumar.github.io/post/78863855937/find-n-largest-and-smallest-number-in-an-iterable/</link>
+      <pubDate>Fri, 07 Mar 2014 18:24:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/78863855937/find-n-largest-and-smallest-number-in-an-iterable/</guid>
+      <description>Python has sorted function which sorts iterable in ascending or descending order.
+# Sort descending In [95]: sorted([1, 2, 3, 4], reverse=True) Out[95]: [4, 3, 2, 1] # Sort ascending In [96]: sorted([1, 2, 3, 4], reverse=False) Out[96]: [1, 2, 3, 4]  sorted(iterable, reverse=True)[:n] will yield first n largest numbers. There is an alternate way.
+Python has heapq which implements heap datastructure. heapq has function nlargest and nsmallest which take arguments n number of elements, iterable like list, dict, tuple, generator and optional argument key.</description>
+    </item>
+    
+    <item>
+      <title>Counting elements with dictionary</title>
+      <link>https://kracekumar.github.io/post/77925927684/counting-elements-with-dictionary/</link>
+      <pubDate>Wed, 26 Feb 2014 19:07:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/77925927684/counting-elements-with-dictionary/</guid>
+      <description>Let’s say you want to find how many times each element is present in the list or tuple.
+Normal approach words = [&#39;a&#39;, &#39;the&#39;, &#39;an&#39;, &#39;a&#39;, &#39;an&#39;, &#39;the&#39;] d = {} for word in words: if word in d: d[word] += 1 else: d[word] = 1 print d {&#39;a&#39;: 2, &#39;the&#39;: 2, &#39;an&#39;: 2}  Better approach words = [&#39;a&#39;, &#39;the&#39;, &#39;an&#39;, &#39;a&#39;, &#39;an&#39;, &#39;the&#39;] d = {} for word in words: d[word] = d.</description>
+    </item>
+    
+    <item>
+      <title>Two scoops of django</title>
+      <link>https://kracekumar.github.io/post/76145181921/two-scoops-of-django/</link>
+      <pubDate>Sun, 09 Feb 2014 20:44:31 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/76145181921/two-scoops-of-django/</guid>
+      <description>Two Scoops of Django -1.5 is book by Pydanny and Audrey Roy focusing on writing clean and better Django application.
+If you are using Django in production this is must read book.
+Q: I am using django since 0.8 do I need this book ?
+A: Yes, consider the book as starting point to validate your assumption.
+Q: I just started using django, should I read this ?
+A: Yes. I started to use django in production last month.</description>
+    </item>
+    
+    <item>
+      <title>Updating model instance attribute in django</title>
+      <link>https://kracekumar.github.io/post/75983294047/updating-model-instance-attribute-in-django/</link>
+      <pubDate>Sat, 08 Feb 2014 09:01:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/75983294047/updating-model-instance-attribute-in-django/</guid>
+      <description>It is very common to update single attribute of a model instance (say update first name in user profile) and save it to db.
+In [18]: u = User.objects.get(id=1) In [19]: u.first_name = u&amp;quot;kracekumar&amp;quot; In [20]: u.save()  Very straight forward approach. How does django send the sql query to database ?
+In [22]: from django.db import connection In [22]: connection.queries Out[22]: [... {u&#39;sql&#39;: u&#39;UPDATE &amp;quot;auth_user&amp;quot; SET &amp;quot;password&amp;quot; = \&#39;pbkdf2_sha256$12000$vsHWOlo1ZhZg$DrC46wq+a2jEtEzxmUEw4vQw8oV/rxEK7zVi30QLGF4=\&#39;, &amp;quot;last_login&amp;quot; = \&#39;2014-02-01 06:55:44.</description>
+    </item>
+    
+    <item>
+      <title>how not to insult developer while hiring</title>
+      <link>https://kracekumar.github.io/post/75177239638/how-not-to-insult-developer-while-hiring/</link>
+      <pubDate>Fri, 31 Jan 2014 20:28:18 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/75177239638/how-not-to-insult-developer-while-hiring/</guid>
+      <description>In December I was looking for new job. I came across one and applied. After couple of rounds of interview, co founder informed me we will get back to you, but never happened. This sounds normal but it is not.
+Interview First round of interview started with online pair programming with one of the co-founder X. After that I went to their office, met product manager, co founder X had discussion for an hour.</description>
+    </item>
+    
+    <item>
+      <title>On leaving HasGeek</title>
+      <link>https://kracekumar.github.io/post/71708603301/on-leaving-hasgeek/</link>
+      <pubDate>Tue, 31 Dec 2013 03:41:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/71708603301/on-leaving-hasgeek/</guid>
+      <description>Today (31-12-2013) is my last working day at HasGeek. It was in July 2012, I joined HasGeek. It was fabulous journey for past 18 months, meeting lot of new people, being part of events, writing lot of code. I was part of large, medium, small conferences like Fifth elephant (2012, 2013), Cartonama (2012), JSFoo(2012, 2013), Droidcon (2012, 2013), Metarefresh (2013), various hacknight and geekup.
+I will be joning Aplopio Technology Inc, flagship product recruiterbox on 16 January, 2014.</description>
+    </item>
+    
+    <item>
+      <title>introduction to python</title>
+      <link>https://kracekumar.github.io/post/71171551647/introduction-to-python/</link>
+      <pubDate>Thu, 26 Dec 2013 04:38:41 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/71171551647/introduction-to-python/</guid>
+      <description>This is the material which I use for teaching python to beginners.
+tld;dr: Very minimal explanation more code.
+Python?
+ Interpreted language Multiparadigm  Introduction
+hasgeek@hasgeek-MacBook:~/codes/python/hacknight$ python Python 2.7.3 (default, Aug 1 2012, 05:14:39) [GCC 4.6.3] on linux2 Type &amp;quot;help&amp;quot;, &amp;quot;copyright&amp;quot;, &amp;quot;credits&amp;quot; or &amp;quot;license&amp;quot; for more information. &amp;gt;&amp;gt;&amp;gt; &amp;gt;&amp;gt;&amp;gt; print &amp;quot;Let&#39;s learn Python&amp;quot; Let&#39;s learn Python  Numbers
+&amp;gt;&amp;gt;&amp;gt; 23 + 43 66 &amp;gt;&amp;gt;&amp;gt; 23 - 45 -22 &amp;gt;&amp;gt;&amp;gt; 23 * 45 1035 &amp;gt;&amp;gt;&amp;gt; 23 ** 4 279841 &amp;gt;&amp;gt;&amp;gt; 23 / 4 5 &amp;gt;&amp;gt;&amp;gt; 23 / 4.</description>
+    </item>
+    
+    <item>
+      <title>Deploying full fledged flask app in production</title>
+      <link>https://kracekumar.github.io/post/71120049966/deploying-full-fledged-flask-app-in-production/</link>
+      <pubDate>Wed, 25 Dec 2013 18:08:34 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/71120049966/deploying-full-fledged-flask-app-in-production/</guid>
+      <description>This article will focus on deploying flask app starting from scratch like creating separate linux user, installating database, web server. Web server will be nginx, database will be postgres, python 2.7 middleware will be uwsgi, server ubuntu 13.10 x64. Flask app name is fido. Demo is carried out in Digital ocean.
+Step 1 - Installation Python header
+root@fido:~# apt-get install -y build-essential python-dev  Install uwsgi dependencies
+root@fido:~# apt-get install -y libxml2-dev libxslt1-dev  Nginx, uwsgi</description>
+    </item>
+    
+    <item>
+      <title>ipynb2viewer - Afternoon hack</title>
+      <link>https://kracekumar.github.io/post/70778191617/ipynb2viewer-afternoon-hack/</link>
+      <pubDate>Sun, 22 Dec 2013 11:50:16 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/70778191617/ipynb2viewer-afternoon-hack/</guid>
+      <description>ipython nbconvert has lot of handy options to convert ipynb to markdown, html etc… But I wanted to upload ipynb to gist.github.com and create a link in nbviewer.ipython.org. Started with curl and soon realized, it is getting messy. So wrote a small python program ipynb2viewer, Source code.
+Install  pip install ipynb2viewer  Usage Upload all ipynb files in the given path to gist.github.com and return nbviewer urls.
+ ipynb2viewer all &amp;lt;path&amp;gt;  Upload mentioned file to gist.</description>
+    </item>
+    
+    <item>
+      <title>Why you should use IPython</title>
+      <link>https://kracekumar.github.io/post/70697151386/why-you-should-use-ipython/</link>
+      <pubDate>Sat, 21 Dec 2013 17:27:06 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/70697151386/why-you-should-use-ipython/</guid>
+      <description>In December bangpypers meetup, I gave a talk on Why you should use IPython. Here is the link to nbviewer.</description>
+    </item>
+    
+    <item>
+      <title>Autogenerate Dockerfile from ubuntu image</title>
+      <link>https://kracekumar.github.io/post/70198562577/autogenerate-dockerfile-from-ubuntu-image/</link>
+      <pubDate>Mon, 16 Dec 2013 16:38:44 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/70198562577/autogenerate-dockerfile-from-ubuntu-image/</guid>
+      <description>I was learning docker to use in one of my projects. I kept installing packages, finally created required Ubuntu image. Suddenly thought it would be cool if I can generate Dockerfile like pip freeze &amp;gt; requirements.txt.
+sudo docker run ubuntu dpkg --get-selections | awk &#39;{print $1}&#39; &amp;gt; base.list &amp;amp;amp;&amp;amp;amp; sudo docker run pyextra dpkg --get-selections | awk &#39;{print $1}&#39;&amp;gt; pyextra.list &amp;amp;amp;&amp;amp;amp; sort base.list pyextra.list | uniq -u &amp;gt; op.list &amp;amp;amp;&amp;amp;amp; python -c &amp;quot;f = open(&#39;Dockerfile&#39;, &#39;w&#39;);f.</description>
+    </item>
+    
+    <item>
+      <title>easy_install broken in os x mavericks  </title>
+      <link>https://kracekumar.github.io/post/67761708966/easyinstall-broken-in-os-x-mavericks/</link>
+      <pubDate>Fri, 22 Nov 2013 17:02:21 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/67761708966/easyinstall-broken-in-os-x-mavericks/</guid>
+      <description>I hardly use easy_install. Nowadays all the python requirements are installed via pip.
+IPython is my primary python console. After installing mavericks, I installed IPython and fired IPython console. Following warning message appeared
+➜ ~ ipython /Library/Python/2.7/site-packages/IPython/utils/rlineimpl.py:94: RuntimeWarning: ****************************************************************************** libedit detected - readline will not be well behaved, including but not limited to: * crashes on tab completion * incorrect history navigation * corrupting long-lines * failure to wrap or indent lines properly It is highly recommended that you install readline, which is easy_installable: easy_install readline Note that `pip install readline` generally DOES NOT WORK, because it installs to site-packages, which come *after* lib-dynload in sys.</description>
+    </item>
+    
+    <item>
+      <title>Why programmers should love to read and write </title>
+      <link>https://kracekumar.github.io/post/67127612627/why-programmers-should-love-to-read-and-write/</link>
+      <pubDate>Sat, 16 Nov 2013 05:50:33 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/67127612627/why-programmers-should-love-to-read-and-write/</guid>
+      <description>Everyday as a programmer we solve problems and introduce new problems. Most of the time is spent in reading other people source code, library documentation, replying to developers email. Though communication is what programmers do all the time with computer and humans.
+Programmers around the globe suggests books like SICP. I have never come across people who suggests books like on writing well for programmers. Though I haven’t read the book myself, the point is why aren’t people recommending books like how to write well.</description>
+    </item>
+    
+    <item>
+      <title>taking rest</title>
+      <link>https://kracekumar.github.io/post/64983193790/taking-rest/</link>
+      <pubDate>Thu, 24 Oct 2013 20:59:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/64983193790/taking-rest/</guid>
+      <description>On my way back to home from work I was thinking, I should take rest. In my world rest always meant working on some non work codebase, reading a book, watching a movie. But I don’t want to do any of these. Then I thought I would just listen to songs, quickly remembered that will not work out because I will start coding.
+Finally I started to ask myself, is it possible for any human being to sit idle and take rest.</description>
+    </item>
+    
+    <item>
+      <title>Check Tamil word or sentence is palindrome</title>
+      <link>https://kracekumar.github.io/post/63834696015/check-tamil-word-or-sentence-is-palindrome/</link>
+      <pubDate>Sat, 12 Oct 2013 17:01:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/63834696015/check-tamil-word-or-sentence-is-palindrome/</guid>
+      <description>How to check given text is palindrome or not
+def sanitize(text): for char in [&amp;quot; &amp;quot;, &amp;quot;.&amp;quot;, &amp;quot;,&amp;quot;, &amp;quot;;&amp;quot;, &amp;quot;\n&amp;quot;]: text = text.replace(char, &amp;quot;&amp;quot;) return text def palindrome(word): # This approach is o(n), problem can be solved with o(n/2) # I am using this approach for brevity return word == word[::-1] palindrome(sanitize(&amp;quot;madam&amp;quot;)) # True palindrome(sanitize(u&amp;quot;விகடகவி&amp;quot;)) # False  Here is the hand made version for Tamil
+# Assign the variable meal the value 44.</description>
+    </item>
+    
+    <item>
+      <title>How Tamil Unicode works</title>
+      <link>https://kracekumar.github.io/post/63832712202/how-tamil-unicode-works/</link>
+      <pubDate>Sat, 12 Oct 2013 16:36:37 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/63832712202/how-tamil-unicode-works/</guid>
+      <description>Tamil has 247 characters. No panic. It is simple. 12 uyir eluthu(அ,ஆ..ஔ), 18 mei eluthu(க்,ங்..) , 216 uyirmei eluthu(12 * 18 க,ங ).1 ayutham(ஃ).
+I assume you know what is unicode. If not read The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets and then read wikipedia page. You will understand most of it. Back to the post.
+Every character or letter in unicode has value called code point.</description>
+    </item>
+    
+    <item>
+      <title>code simplicity book review</title>
+      <link>https://kracekumar.github.io/post/63657996702/code-simplicity-book-review/</link>
+      <pubDate>Thu, 10 Oct 2013 18:00:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/63657996702/code-simplicity-book-review/</guid>
+      <description>Code Simplicity: The Fundamentals of Software by Max Kanat-Alexander is crisp book about writing better software.
+The book is just 88 pages, but insights are useful for any software engineer. Author is creator of bugzilla project.
+Whenever I come across bold statements in the book, I would sit and think for 2 minutes to correlate with my programming experience. Most of the time I was able to come up with valid example.</description>
+    </item>
+    
+    <item>
+      <title>coverage.py to test web application coverage without writing tests</title>
+      <link>https://kracekumar.github.io/post/61125040813/coveragepy-to-test-web-application-coverage/</link>
+      <pubDate>Fri, 13 Sep 2013 17:50:32 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/61125040813/coveragepy-to-test-web-application-coverage/</guid>
+      <description>Tests are mandatory for packages, modules, web apps. If you are lazy to write unit tests but wanted to see the coverage for web app here is the short cut.
+Lets consider a Python web app uses Flask, runserver.py runs the development web server. Normally server is started by the command python runserver.py. Now use coverage run runserver.py.
+coverage python package will run the python program til program exits or user halts.</description>
+    </item>
+    
+    <item>
+      <title>Observations from handling python workshop in engineering colleges</title>
+      <link>https://kracekumar.github.io/post/58802831892/observations-from-handling-python-workshop-in/</link>
+      <pubDate>Tue, 20 Aug 2013 18:06:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/58802831892/observations-from-handling-python-workshop-in/</guid>
+      <description>Observations from handling python workshop in engineering colleges
+I handled 5 python workshop/sessions for novices from 8th march to 20th august, each one stretching from 1 hour to 2 days. It was worth the time.
+Students who participated in the workshop where from Computer Science, Electronics background of Under Graduate and Post Graduate level. Minimum strength was 60 and maximum was close to 100.
+ When handling the strength of 60 students in lab, remember every one have their own pace of picking up.</description>
+    </item>
+    
+    <item>
+      <title>avoid accessing wrong column in csv</title>
+      <link>https://kracekumar.github.io/post/58766042678/avoid-accessing-wrong-column-in-csv/</link>
+      <pubDate>Tue, 20 Aug 2013 05:31:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/58766042678/avoid-accessing-wrong-column-in-csv/</guid>
+      <description>Avoid accessing wrong column in csv
+I was parsing few csv files. All were from same provider. Format isDate, Name, Email, Company, City etc in one file. I made an assumption all the downloaded files are in the same format. For my surprise few files had same format and others din’t.
+with open(filename, &#39;rb&#39;) as f: reader = csv.reader(f) reader.next() # first row contains column names for row in reader: name, email, company = row[1], row[2], row[3] #save to db  In the above code the fundamental mistake is fixing the position of the columns in csv file.</description>
+    </item>
+    
+    <item>
+      <title>Funny experience of using trace module to trace function call</title>
+      <link>https://kracekumar.github.io/post/56633639978/funny-experience-of-using-trace-module-to-trace/</link>
+      <pubDate>Sat, 27 Jul 2013 21:35:32 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/56633639978/funny-experience-of-using-trace-module-to-trace/</guid>
+      <description>I came across this issue in httpie and started my investigation.
+The problem is while pretty printing the json, output is alpha sorted because keys are hashed and user wanted to preserve the order. Then I made 3 comments to the issue. First comment was half correct and explained why it isn’t possible to get the desired output, quickly I figured my assumptions were wrong and second comment explained what is actually happening, finally I proposed the solution.</description>
+    </item>
+    
+    <item>
+      <title>http request examples for luasocket</title>
+      <link>https://kracekumar.github.io/post/55856724724/http-request-examples-for-luasocket/</link>
+      <pubDate>Fri, 19 Jul 2013 08:01:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/55856724724/http-request-examples-for-luasocket/</guid>
+      <description>I was looking for http library in lua and landed in luasocket.http page. It isn’t well documented, sent few GET, POST, PUT requests and figured few bits. This blog post aims in bridging the gap(code examples).
+In this example, I will use httpbin as target site. The complete code is available as gist.
+The following code should be executed like a standalone lua file(lua lua_httpbin.lua) and while executing the code in interpreter please make local variables http, ltn12, base_url as global variables.</description>
+    </item>
+    
+    <item>
+      <title>Why This Kolaveri Di song words language </title>
+      <link>https://kracekumar.github.io/post/55796363713/why-this-kolaveri-di-song-words-language/</link>
+      <pubDate>Thu, 18 Jul 2013 18:26:20 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/55796363713/why-this-kolaveri-di-song-words-language/</guid>
+      <description>I was wondering how many words in why this kolaveri di song belongs to english. So I wrote this code to evaluate.
+#! /usr/bin/env #! -*- coding: utf-8 -*- lyrics = &amp;quot;&amp;quot;&amp;quot; yo boys i am singing song soup song flop song why this kolaveri kolaveri kolaveri di why this kolaveri kolaveri kolaveri di rhythm correct why this kolaveri kolaveri kolaveri di maintain please why this kolaveri di distance la moon-u moon-u moon-u color-u white-u white background night-u night-u night-u color-u black-u why this kolaveri kolaveri kolaveri di why this kolaveri kolaveri kolaveri di white skin-u girl-u girl-u girl-u heart-u black-u eyes-u eyes-u meet-u meet-u my future dark why this kolaveri kolaveri kolaveri di why this kolaveri kolaveri kolaveri di maama notes eduthuko apdiye kaila snacks eduthuko pa pa paan pa pa paan pa pa paa pa pa paan sariya vaasi super maama ready ready 1 2 3 4 whaa wat a change over maama ok maama now tune change-u kaila glass only english hand la glass glass la scotch eyes-u full-a tear-u empty life-u girl-u come-u life reverse gear-u love-u love-u oh my love-u you showed me bouv-u cow-u cow-u holy cow-u i want you hear now-u god i am dying now-u she is happy how-u this song for soup boys-u we dont have choice-u why this kolaveri kolaveri kolaveri di why this kolaveri kolaveri kolaveri di why this kolaveri kolaveri kolaveri di why this kolaveri kolaveri kolaveri di flop song &amp;quot;&amp;quot;&amp;quot; dict_file_path = &amp;quot;/usr/share/dict/words&amp;quot; def sanitize(words): for index, word in enumerate(words): if word.</description>
+    </item>
+    
+    <item>
+      <title>SSL for flask local development </title>
+      <link>https://kracekumar.github.io/post/54437887454/ssl-for-flask-local-development/</link>
+      <pubDate>Tue, 02 Jul 2013 16:50:39 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/54437887454/ssl-for-flask-local-development/</guid>
+      <description>Recently at HasGeek we moved all our web application to https. So I wanted to have all my development environment urls to have https.
+How to have https in flask app
+Method 1
+from flask import Flask app = Flask(__name__) app.run(&#39;0.0.0.0&#39;, debug=True, port=8100, ssl_context=&#39;adhoc&#39;)  In the above piece of code, ssl_context variable is passed to werkezug.run_simple which creates SSL certificates using OpenSSL, you may need to install pyopenssl. I had issues with this method, so I generated self signed certificate.</description>
+    </item>
+    
+    <item>
+      <title>cp command implementation and benchmark in python, go, lua</title>
+      <link>https://kracekumar.github.io/post/53685731325/cp-command-implementation-and-benchmark-in-python/</link>
+      <pubDate>Sun, 23 Jun 2013 17:20:35 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/53685731325/cp-command-implementation-and-benchmark-in-python/</guid>
+      <description>I was wondering how much will be the speed difference between cp command, rsync and implementation in python, go, lua and so wrote this code.
+Background
+ python has two versions one with gevent and without gevent. Both the version uses shutil for copying files and directory tree. go uses https://github.com/opesun/copyrecur for copying recursively. lua uses lfs - LuaFileSystem module. lfs has support for creating directory but not for files, in order to copy the files low level file opening and writing to file technique is used.</description>
+    </item>
+    
+    <item>
+      <title>Reliance filed 420 case against me in Delhi consumer court</title>
+      <link>https://kracekumar.github.io/post/53582319439/reliance-filed-420-case-against-me-in-delhi/</link>
+      <pubDate>Sat, 22 Jun 2013 08:11:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/53582319439/reliance-filed-420-case-against-me-in-delhi/</guid>
+      <description>22, June 2013
+I woke up like any other morning thinking of closing a github issue.I went out to pick up food items for the weekend, once I was back my friend said “ You got a call on Tamil Nadu number”.
+I reverted the call and the person said “I am calling from Delhi consumer court, confirmed my name, address where I stayed in feb, 2009, added RC Gowtham has filled a 420 case against you(dc801/2013, couldn’t find status in http://164.</description>
+    </item>
+    
+    <item>
+      <title>progress bar for cp command</title>
+      <link>https://kracekumar.github.io/post/52958861147/progress-bar-for-cp-command/</link>
+      <pubDate>Fri, 14 Jun 2013 17:48:41 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/52958861147/progress-bar-for-cp-command/</guid>
+      <description>I want cp command to display the progress of copy. I found three options
+ Use tools like gcp, pv. Answer from askubuntu. Use rsync. alias cp=&#39;rsync --progress -ah&#39; Use this shell script.  </description>
+    </item>
+    
+    <item>
+      <title>Little spoof of Kannukku Mai Azhagu lyrics </title>
+      <link>https://kracekumar.github.io/post/52686134804/little-spoof-of-kannukku-mai-azhagu-lyrics/</link>
+      <pubDate>Tue, 11 Jun 2013 04:40:52 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/52686134804/little-spoof-of-kannukku-mai-azhagu-lyrics/</guid>
+      <description>Today my sister was cleaning her contact lens in front of mirror. I suddenly remembered Tamil song Kannukku Mai Azhagu and lyrics and little poet in me whispered Kannukku Contact lens Azhagu. This induced me to spoof little bit of lyrics pertaining to current trend. I will spoof lyrics which I could.
+Kannukku **Contact lens** Azhagu, Kavithaikku Poi Azhagu Kannathil Kuzhi Azhagu, Kaar Koonthal **Kandalae** Azhagu Ilamaiku **photo** Azhagu, Muthumaikku Narai Azhagu Kalvarkku **phone number** Azhagu, Kaathalarkku **facebook** azhagu  ** are spoofed ones.</description>
+    </item>
+    
+    <item>
+      <title>Quora : I hate you for this</title>
+      <link>https://kracekumar.github.io/post/51741593651/quora-i-hate-you-for-this/</link>
+      <pubDate>Thu, 30 May 2013 19:24:13 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/51741593651/quora-i-hate-you-for-this/</guid>
+      <description>I have been using quora for almost two years. I have connected my Facebook, twitter, wordpress, tumblr accounts.
+Unless you are logged into quora you cannot read the post, on the surface this is true. If you are web geek you know you can look into the source code and read the page content and by pass.
+The Problem
+Now I am logged into facebook in tab 1, tab 2 is loading quora url, after few seconds dialog box appears and I am automatically logged into quora account.</description>
+    </item>
+    
+    <item>
+      <title>How much does it cost to spend 10 days in Mcleodganj</title>
+      <link>https://kracekumar.github.io/post/49797239467/how-much-does-it-cost-to-spend-10-days-in/</link>
+      <pubDate>Mon, 06 May 2013 20:47:19 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/49797239467/how-much-does-it-cost-to-spend-10-days-in/</guid>
+      <description>At HasGeek we decided to spend part of summer in McleodGanj. This trip’s main focus was to code and enjoy beauteous mcleodganj surrounding.
+Trip We(Kiran, Supreeth, Haris, Praseetha, me) started from Bangalore 13, April, 2013 and returned on 1, May, 2013. I have uploaded the photos in FaceBook, notes of food items I had in the trip, list of places visited in McleodGanj.
+Following is the breakup of the trip cost.</description>
+    </item>
+    
+    <item>
+      <title>hardest feature request </title>
+      <link>https://kracekumar.github.io/post/47806200096/hardest-feature-request/</link>
+      <pubDate>Fri, 12 Apr 2013 21:12:08 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/47806200096/hardest-feature-request/</guid>
+      <description>I was working on Hgtv feature, syncing slides and videos, when video is viewed slide changes automatically. Seems easy but guess what someone has to take pain to watch entire video and collect the details about timings of the video and slide number . Then pass on the info to presentz.js which syncs video and slides.
+Iframe If you look into source code how slide show and video is inserted, it is iframe.</description>
+    </item>
+    
+    <item>
+      <title>coding from balcony</title>
+      <link>https://kracekumar.github.io/post/46695528573/coding-from-balcony/</link>
+      <pubDate>Sat, 30 Mar 2013 20:04:57 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/46695528573/coding-from-balcony/</guid>
+      <description>I live in 5th floor, my table is near window. I spent saturday by watching 3 documentaries and 1 tamil movie Sindhu Bhairavi, yes no single line of code. Once I am done with movie it was 00:30 AM, now stepped into the balcony was mesmerized by breeze. I felt like a poet and casual thoughts.Yes breeze indeed brought a new thought seed from distant place, “How about coding from balcony”.</description>
+    </item>
+    
+    <item>
+      <title>Avvaiyar now International Icon</title>
+      <link>https://kracekumar.github.io/post/46334740169/avvaiyar-now-international-icon/</link>
+      <pubDate>Tue, 26 Mar 2013 13:33:09 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/46334740169/avvaiyar-now-international-icon/</guid>
+      <description>கற்றது கைமண் அளவு, கல்லாதது உலகளவு - ஔவையார்.
+Yes, you must have read this is tamil text book in standard 1. Now this is translated into english and referenced in NASA. From NASA - Cosmic Questions Exhibit
+What we have learned Is like a handful of earth; What we have yet to learn Is like the whole world - Auvaiyar, 4th C poet, India  Wikipedia has an article about Avvai paatti.</description>
+    </item>
+    
+    <item>
+      <title>How much will it cost to attend Hacker School ?</title>
+      <link>https://kracekumar.github.io/post/46275902528/how-much-will-it-cost-to-attend-hacker-school/</link>
+      <pubDate>Mon, 25 Mar 2013 20:41:28 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/46275902528/how-much-will-it-cost-to-attend-hacker-school/</guid>
+      <description>Hacker School is a three-month, full-time school in New York for becoming a better programmer for free, but stay, travels is yours.
+I have no idea how much it will cost for travel from India, stay, food, internet, transit so I asked the question in Quora. I got pretty good answers.
+Then I started do my lame math.
+Monthly Expense(USD)  Rent = 1000 Phone = 80 Transit = 100 Internet = 40 Electricity = 40 Food = 250 Snacks = 100 Outing = 120 Misc = 100  Total = 1830.</description>
+    </item>
+    
+    <item>
+      <title>Evaluate python code using client side javascript  </title>
+      <link>https://kracekumar.github.io/post/46183195282/evaluate-python-code-using-client-side-javascript/</link>
+      <pubDate>Sun, 24 Mar 2013 19:24:08 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/46183195282/evaluate-python-code-using-client-side-javascript/</guid>
+      <description>Now Python code can be evaluated using Client side Javascript with the help of empythoned project. empythoned uses emscripten which convert LLVM bitcode to javascript.
+What is empythoned? Empythoned is project which has converted CPython to javascript. I have created a demo project to test how to use empythoned, have a look.</description>
+    </item>
+    
+    <item>
+      <title>Python parallel assignment</title>
+      <link>https://kracekumar.github.io/post/45502206532/python-parallel-assignment/</link>
+      <pubDate>Sat, 16 Mar 2013 15:31:21 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/45502206532/python-parallel-assignment/</guid>
+      <description>Python supports parallel assignment like
+&amp;gt;&amp;gt;&amp;gt; lang, version = &amp;quot;python&amp;quot;, 2.7 &amp;gt;&amp;gt;&amp;gt; print lang, version python 2.7  values are assigned to each variable without any issues.
+&amp;gt;&amp;gt;&amp;gt; x, y, z = 1, 2, x + y Traceback (most recent call last): File &amp;quot;&amp;lt;stdin&amp;gt;&amp;quot;, line 1, in &amp;lt;module&amp;gt; NameError: name &#39;x&#39; is not defined  First python tries to evaluate x + y expression. Since x, y is defined in same line, python is unable to access the variable x and y, so NameError is raised.</description>
+    </item>
+    
+    <item>
+      <title>Setting up privoxy proxy server for browsing</title>
+      <link>https://kracekumar.github.io/post/41956153813/setting-up-privoxy-proxy-server-for-browsing/</link>
+      <pubDate>Thu, 31 Jan 2013 18:21:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/41956153813/setting-up-privoxy-proxy-server-for-browsing/</guid>
+      <description>I wanted to setup proxy server for browsing. Tried http://www.squid-cache.org/ felt cumbersome to configure though it has advanced features.
+Finally decided to setup http://www.privoxy.org/. I assume you have personal server where all the requests are forwarded.
+Installation
+__ Server Config__
+sudo apt-get install privoxy
+sudo vim /etc/privoxy/config
+look for listen-address and add ip:port listen-address 78.12.204.2:8118
+To enable logging for all requests uncomment debug 1(you will need to rotate log file using cronjob).</description>
+    </item>
+    
+    <item>
+      <title>2 weeks after installing Ubuntu 12.04 64bit in MacBook</title>
+      <link>https://kracekumar.github.io/post/37344856282/2-weeks-after-installing-ubuntu-1204-64bit-in/</link>
+      <pubDate>Thu, 06 Dec 2012 19:08:07 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/37344856282/2-weeks-after-installing-ubuntu-1204-64bit-in/</guid>
+      <description>Its been two weeks, since I installed Ubuntu 64 bit in MacBook. Let me say how I feel about.
+My setup isn’t complicated, I use sublime2, terminator, gnome-terminal, ipython, pypy-2.0beta, postgres, mosh, firefox-nightly, chromium, chrome, clementine, xchat-gnome, hotot(recent addition).
+Also installed nividia drivers for ubuntu. I am happy I installed ubuntu but had issue with right click and figured shift + F10 is short cut.
+Hate Hate Hate If you are using data-card you must have noticed default modem-manager is buggy.</description>
+    </item>
+    
+    <item>
+      <title>Stable Browser vs Fastest Browser</title>
+      <link>https://kracekumar.github.io/post/36602101124/stable-browser-vs-fastest-browser/</link>
+      <pubDate>Mon, 26 Nov 2012 18:33:11 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/36602101124/stable-browser-vs-fastest-browser/</guid>
+      <description>Firefox Vs Chrome Vs Chromium Chrome &amp;amp; Firefox are my current favourite browser. I was previously using chromium but stopped using because of this bug.
+Since then I switch between chrome and firefox. Chrome is fastest, better UI &amp;amp; UX. Firefox is stable.
+Today I faced issue with my flash player in chrome(Ubuntu 64 bit OS). All the youtube video starts playing at 2x - 3x speed. After few mins video plays in normal speed.</description>
+    </item>
+    
+    <item>
+      <title>Can PyPy be used for web application deployment ?</title>
+      <link>https://kracekumar.github.io/post/36532666649/can-pypy-be-used-for-web-application-deployment/</link>
+      <pubDate>Sun, 25 Nov 2012 20:11:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/36532666649/can-pypy-be-used-for-web-application-deployment/</guid>
+      <description>What is PyPy ?  PyPy is an implementation of Python in Python which uses JIT(Just In Time) translation.  Why to Use PyPy?  According to benchmarks “It depends greatly on the type of task being performed. The geometric average of all benchmarks is 0.18 or 5.6 times faster than CPython”.  Experience? I have used PyPy for sandboxing for my project pylive, tested flask with pypy, ported brubeck to work on pypy, tested lastuser in PyPy 2.</description>
+    </item>
+    
+    <item>
+      <title>How to run Python Linux commands in PyPy ?</title>
+      <link>https://kracekumar.github.io/post/36529827327/how-to-run-python-linux-commands-in-pypy/</link>
+      <pubDate>Sun, 25 Nov 2012 19:36:19 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/36529827327/how-to-run-python-linux-commands-in-pypy/</guid>
+      <description>I have been using PyPy from 1.6. Now PyPy 2.0beta1 is out. Most of python libraries which don’t have c extensions as dependencies work(exceptions are present).
+E.g: requests, fabric, gunicorn
+Install PyPy2.0beta1   Grab 32 or 64 bit pypy2.0 beta1. If you are using ubuntu grab libc2.5.
+  bzip2 pypy-2.0-beta1-linux64-libc2.15.tar.bz2
+  tar -xvf pypy-2.0-beta1-linux64-libc2.15.tar
+  curl -O http://python-distribute.org/distribute_setup.py
+  curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+  ./pypy-2.0-beta1/bin/pypy distribute_setup.</description>
+    </item>
+    
+    <item>
+      <title>Why did I install Ubuntu in MacBook ?</title>
+      <link>https://kracekumar.github.io/post/36222425955/why-did-i-install-ubuntu-in-macbook/</link>
+      <pubDate>Wed, 21 Nov 2012 18:43:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/36222425955/why-did-i-install-ubuntu-in-macbook/</guid>
+      <description>Reasons  Mac doesn’t have package manager like synaptic. But you have App Store for apps. You need to build xcode or gcc-installer to install any cocoa app. I Use USB Data card as result I don’t have privilege to experience high speed broadband connection. As I have noticed OSX apps are heavy to download. Linux fanboy :-)  </description>
+    </item>
+    
+    <item>
+      <title>Post PC OS Hate</title>
+      <link>https://kracekumar.github.io/post/35495203505/post-pc-os-hate/</link>
+      <pubDate>Sun, 11 Nov 2012 17:40:36 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/35495203505/post-pc-os-hate/</guid>
+      <description>Smartphones &amp;amp; Tablets are new plastic papers. Android and IOS dominates the market. I own Android Phone because its cheap. When it comes to Gadgets I am conservative. I really don’t like Android much because its written in Java and need a better hardware to run Interpreted Languages, JS. Android runs from low end cheap 4000Rs phone to Nexus Phone. So wide variety of device headaches to developers.
+Every Android phone is one layer coated with device makers code, same with Linux distros.</description>
+    </item>
+    
+    <item>
+      <title>Microframeworks produces micro level progress in project</title>
+      <link>https://kracekumar.github.io/post/35493348288/microframeworks-produces-micro-level-progress-in/</link>
+      <pubDate>Sun, 11 Nov 2012 17:14:24 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/35493348288/microframeworks-produces-micro-level-progress-in/</guid>
+      <description>I created my first web app in PHP 5.2 with * no frameworks *, then learned drupal, tried codeigniter, joomla. Then I learned Rails for HappySchool project and learned Django since I am python lover. Tried Pylons and settled with Flask and experimenting brubeck.
+Flask is microframework built around werkzeug datastructures.
+Advantages Vs Disadvantages  Learn in depth working of HTTP vs Time consuming Opportunity to create library vs Time consuming Less batteries available vs More development time  It is highly loosely coupled which is good to replace the parts with best tools if available.</description>
+    </item>
+    
+    <item>
+      <title>Hackathons are to hack and * headdesk * moments</title>
+      <link>https://kracekumar.github.io/post/35492377794/hackathons-are-to-hack-and-headdesk-moments/</link>
+      <pubDate>Sun, 11 Nov 2012 17:00:40 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/35492377794/hackathons-are-to-hack-and-headdesk-moments/</guid>
+      <description>I feel whole idea of hackathon is to build stuff over night or a day or two. All the outcome of the hackathon is for good. As a beginner it could be useful to get started to technology/language. I am biased towards prizes in hackathon.</description>
+    </item>
+    
+    <item>
+      <title>What GNU/Linux Operating System lacks ?</title>
+      <link>https://kracekumar.github.io/post/34154528432/what-gnulinux-operating-system-lacks/</link>
+      <pubDate>Tue, 23 Oct 2012 07:10:09 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/34154528432/what-gnulinux-operating-system-lacks/</guid>
+      <description>I am GNU/Linux user for almost 4 years, saying that I don’t switch back to windows for any day to day activities, being said that GNU/Linux operating system’s lacks lot of * applications *. There are lot superior command line applications but those are intended for religious command line humans.
+I have been using mac osx 10.6. for 3-4 weeks, it seems to have all applications but I don’t feel at ~.</description>
+    </item>
+    
+    <item>
+      <title>What I like about Python</title>
+      <link>https://kracekumar.github.io/post/33900573776/what-i-like-about-python/</link>
+      <pubDate>Fri, 19 Oct 2012 17:22:18 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/33900573776/what-i-like-about-python/</guid>
+      <description>Lynn Root  asked in twitter what you like and like to improve in python https://twitter.com/roguelynn/status/259338864664125440. Following are my observation
+Likes
+ Importance to documentation.. Clean syntax. Easy to get started for non CS background people. lot of smart programmers. Libraries like IPython, requests, flask. Creating libraries like pygments, sphinx, readthedocs to solve * REAL * problem.  I would like/want to improve
+ python.org site While programmers are reading docs.</description>
+    </item>
+    
+    <item>
+      <title>How Python makes learning simpler</title>
+      <link>https://kracekumar.github.io/post/31347683771/how-python-makes-learning-simpler/</link>
+      <pubDate>Tue, 11 Sep 2012 19:23:17 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/31347683771/how-python-makes-learning-simpler/</guid>
+      <description>Python is a simple language and developed with programmer’s productivity and code readability in mind. Learning new language would be simple to complicated depending on language syntax, wierdness and many other factors.
+Its universally accepted best way to learn programming language is to write programs and rewrite again.
+Python makes learning curve easier. Python has certain features which makes easier to learn inside interpreter.
+  help(object)  ,help is function which takes a object or function and tells what exactly the object documentation.</description>
+    </item>
+    
+    <item>
+      <title>How I got into HasGeek Crew</title>
+      <link>https://kracekumar.github.io/post/26494437210/how-i-got-into-hasgeek-crew/</link>
+      <pubDate>Wed, 04 Jul 2012 15:32:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/26494437210/how-i-got-into-hasgeek-crew/</guid>
+      <description>Background about me I am kracekumar, graduated from Amrita school of Engineering, Coimbatore in B.Tech IT (2007-2011). I am working with IBM India Pvt Ltd, Bangalore as Associate System Engineer from 14th July, 2011 til 16th July, 2012.(C# developer but never wrote single line of code in c# in IBM).
+I am GNU/Linux user for 3 years and developed application in PHP, Rails, Flask(all are hobby projects).
+Scene I was not happy with job at IBM and I had training bond for one year(14th July, 2011 to 13th July 2012), decided to resign from my job once bond period is over whether I have new job offer or not.</description>
+    </item>
+    
+    <item>
+      <title>Fake Python switch statement</title>
+      <link>https://kracekumar.github.io/post/24826905040/fake-python-switch-statement/</link>
+      <pubDate>Sun, 10 Jun 2012 18:28:39 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/24826905040/fake-python-switch-statement/</guid>
+      <description>Python has no switch statement.
+what is switch statement ? switch statement is an alternate to if - elseif - else statement.
+Example in C
+int payment_status=1; switch(payment_status){ case 1: process_pending_payment(); break; case 2: process_paid(); break; case 3: process_trans_failure(); break; default: process_default(); }  In python we can achieve same behaviour using dict.
+Fake switch statement in python
+payment_functions = { 1: process_pending_payment, 2: process_paid, 3: process_trans_failure } try: status =2 payment_functions[status]() except KeyError: process_default()  In above code payment_functions is dict, where key is the one of the value of status and corresponding value is function to be invoked(but () is not present immediately).</description>
+    </item>
+    
+    <item>
+      <title>python `in` operator use cases</title>
+      <link>https://kracekumar.github.io/post/22512660850/python-in-operator-use-cases/</link>
+      <pubDate>Sun, 06 May 2012 13:06:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/22512660850/python-in-operator-use-cases/</guid>
+      <description>Python *in* operator is membership test operator.*Examples:*List—-
+ In [1]: python_webframeworks = [&#39;flask&#39;, &#39;django&#39;, &#39;pylons&#39;, &#39;pyramid&#39;, &#39;brubeck&#39;] In [2]: &#39;flask&#39; in python_webframeworks Out[2]: True In [3]: &#39;web.py&#39; in python_webframeworks Out[3]: False  in operator iterates over the list of elements and returns True or False.
+What about nested list?
+ In [4]: webframeworks = [[&#39;flask&#39;, &#39;django&#39;, &#39;pyramid&#39;],[&#39;rails&#39;, &#39;sintara&#39;],[&#39;zend&#39;, &#39;symfony&#39;]] In [5]: &#39;flask&#39; in webframeworks Out[5]: False  in isnt handy for nested list, unless it is overriden.</description>
+    </item>
+    
+  </channel>
+</rss>

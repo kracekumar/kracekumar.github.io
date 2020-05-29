@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>yolov3 on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/yolov3/</link>
+    <description>Recent content in yolov3 on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 17 Mar 2020 07:01:22 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/yolov3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>“Don’t touch your face” - Neural Network will warn you</title>
+      <link>https://kracekumar.github.io/post/612817685627191296/dont-touch-your-face-neural-network-will-warn/</link>
+      <pubDate>Tue, 17 Mar 2020 07:01:22 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/612817685627191296/dont-touch-your-face-neural-network-will-warn/</guid>
+      <description>A few days back, Keras creator, Francois Chollet tweeted
+ A Keras/TF.js challenge: make a model that processes a webcam feed and detects when someone touches their face (triggering a loud beep).“ The very next day, I tried the Keras yolov3 model available in the Github. It was trained on the coco80 dataset and could detect person but not the face touch.
+  V1 Training The original Keras implementation lacked documentation to train fromscratch or transfer learning.</description>
+    </item>
+    
+  </channel>
+</rss>

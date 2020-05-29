@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>apt-get on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/apt-get/</link>
+    <description>Recent content in apt-get on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 25 Nov 2012 19:36:19 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/apt-get/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to run Python Linux commands in PyPy ?</title>
+      <link>https://kracekumar.github.io/post/36529827327/how-to-run-python-linux-commands-in-pypy/</link>
+      <pubDate>Sun, 25 Nov 2012 19:36:19 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/36529827327/how-to-run-python-linux-commands-in-pypy/</guid>
+      <description>I have been using PyPy from 1.6. Now PyPy 2.0beta1 is out. Most of python libraries which don’t have c extensions as dependencies work(exceptions are present).
+E.g: requests, fabric, gunicorn
+Install PyPy2.0beta1   Grab 32 or 64 bit pypy2.0 beta1. If you are using ubuntu grab libc2.5.
+  bzip2 pypy-2.0-beta1-linux64-libc2.15.tar.bz2
+  tar -xvf pypy-2.0-beta1-linux64-libc2.15.tar
+  curl -O http://python-distribute.org/distribute_setup.py
+  curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+  ./pypy-2.0-beta1/bin/pypy distribute_setup.</description>
+    </item>
+    
+  </channel>
+</rss>

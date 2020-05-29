@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>proxy on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/proxy/</link>
+    <description>Recent content in proxy on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 26 Jan 2020 17:31:40 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/proxy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Capture all browser HTTP[s] calls to load a web page</title>
+      <link>https://kracekumar.github.io/post/190478935610/capture-all-browser-https-calls-to-load-a-web/</link>
+      <pubDate>Sun, 26 Jan 2020 17:31:40 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/190478935610/capture-all-browser-https-calls-to-load-a-web/</guid>
+      <description>How does one find out what network calls, browser requests to load web pages?
+The simple method - download the HTML page, parse the page, find out all the network calls using web parsers like beautifulsoup.
+The shortcoming in the method, what about the network calls made by your browser before requesting the web page? For example, firefox makes a call to ocsp.digicert.com to obtain revocation status on digital certificates. The protocol is Online Certificate Status Protocol.</description>
+    </item>
+    
+    <item>
+      <title>Setting up privoxy proxy server for browsing</title>
+      <link>https://kracekumar.github.io/post/41956153813/setting-up-privoxy-proxy-server-for-browsing/</link>
+      <pubDate>Thu, 31 Jan 2013 18:21:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/41956153813/setting-up-privoxy-proxy-server-for-browsing/</guid>
+      <description>I wanted to setup proxy server for browsing. Tried http://www.squid-cache.org/ felt cumbersome to configure though it has advanced features.
+Finally decided to setup http://www.privoxy.org/. I assume you have personal server where all the requests are forwarded.
+Installation
+__ Server Config__
+sudo apt-get install privoxy
+sudo vim /etc/privoxy/config
+look for listen-address and add ip:port listen-address 78.12.204.2:8118
+To enable logging for all requests uncomment debug 1(you will need to rotate log file using cronjob).</description>
+    </item>
+    
+  </channel>
+</rss>

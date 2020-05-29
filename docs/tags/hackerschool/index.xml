@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hackerschool on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/hackerschool/</link>
+    <description>Recent content in hackerschool on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 27 Sep 2016 11:38:33 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/hackerschool/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>None</title>
+      <link>https://kracekumar.github.io/post/151005099060/im-attending-recurse-center-fall02-2016-batch/</link>
+      <pubDate>Tue, 27 Sep 2016 11:38:33 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/151005099060/im-attending-recurse-center-fall02-2016-batch/</guid>
+      <description>I’m attending Recurse Center fall&#39;02, 2016 batch. I’m excited (yes, without emoticons) to be in RC and New York. RC is different from schools, boot camps, universities for various reasons. The two reason I like the most is “Never Graduate” and “self-directed learning.”
+A lot to learn from peers, experiments, and discussions. Next, 12 weeks will be intense and what can a programmer ask for more than time to solve problems and understand how things for.</description>
+    </item>
+    
+    <item>
+      <title>How much will it cost to attend Hacker School ?</title>
+      <link>https://kracekumar.github.io/post/46275902528/how-much-will-it-cost-to-attend-hacker-school/</link>
+      <pubDate>Mon, 25 Mar 2013 20:41:28 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/46275902528/how-much-will-it-cost-to-attend-hacker-school/</guid>
+      <description>Hacker School is a three-month, full-time school in New York for becoming a better programmer for free, but stay, travels is yours.
+I have no idea how much it will cost for travel from India, stay, food, internet, transit so I asked the question in Quora. I got pretty good answers.
+Then I started do my lame math.
+Monthly Expense(USD)  Rent = 1000 Phone = 80 Transit = 100 Internet = 40 Electricity = 40 Food = 250 Snacks = 100 Outing = 120 Misc = 100  Total = 1830.</description>
+    </item>
+    
+  </channel>
+</rss>

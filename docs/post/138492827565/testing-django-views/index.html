@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Testing Django Views - Technical Ramblings</title>
+  <meta name="description" content="Majority of web frameworks promote MVC/MTV software pattern. The way web applications are designed today aren’t same as 5-6 years back. Back then it was server side templates, HTML, API’s weren’t widespread and mobile apps were becoming popular. Rise of mobile and Single Page Application shifted majority of web development towards API centric development. Testing API is super simple with data in and data out, but testing a django view in classic web application is difficult since HTML is returned."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Technical Ramblings",
+    
+    "url": "https:\/\/kracekumar.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/kracekumar.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/post\/138492827565\/testing-django-views\/",
+          "name": "Testing django views"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "Testing Django Views",
+  "description" : "Majority of web frameworks promote MVC\/MTV software pattern. The way web applications are designed today aren’t same as 5-6 years back. Back then it was server side templates, HTML, API’s weren’t widespread and mobile apps were becoming popular. Rise of mobile and Single Page Application shifted majority of web development towards API centric development. Testing API is super simple with data in and data out, but testing a django view in classic web application is difficult since HTML is returned.",
+  "inLanguage" : "en",
+  "wordCount":  170 ,
+  "datePublished" : "2016-02-01T19:17:49",
+  "dateModified" : "2016-02-01T19:17:49",
+  "image" : "https:\/\/kracekumar.github.io\/",
+  "keywords" : [ "django, testing" ],
+  "mainEntityOfPage" : "https:\/\/kracekumar.github.io\/post\/138492827565\/testing-django-views\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/kracekumar.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/kracekumar.github.io\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Testing Django Views" />
+<meta property="og:description" content="Majority of web frameworks promote MVC/MTV software pattern. The way web applications are designed today aren’t same as 5-6 years back. Back then it was server side templates, HTML, API’s weren’t widespread and mobile apps were becoming popular. Rise of mobile and Single Page Application shifted majority of web development towards API centric development. Testing API is super simple with data in and data out, but testing a django view in classic web application is difficult since HTML is returned.">
+<meta property="og:url" content="https://kracekumar.github.io/post/138492827565/testing-django-views/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Technical Ramblings" />
+
+  <meta name="twitter:title" content="Testing Django Views" />
+  <meta name="twitter:description" content="Majority of web frameworks promote MVC/MTV software pattern. The way web applications are designed today aren’t same as 5-6 years back. Back then it was server side templates, HTML, API’s weren’t …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.71.1" />
+  <link rel="alternate" href="https://kracekumar.github.io/index.xml" type="application/rss+xml" title="Technical Ramblings"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kracekumar.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://kracekumar.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://kracekumar.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://kracekumar.github.io/">Technical Ramblings</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Testing Django Views</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on February 1, 2016
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;170&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Majority of web frameworks promote <a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller" target="_blank">MVC/MTV</a> software pattern. The way web applications are designed today aren’t same as 5-6 years back. Back then it was server side templates, HTML, API’s weren’t widespread and mobile apps were becoming popular. Rise of mobile and Single Page Application shifted majority of web development towards API centric development. Testing API is super simple with data in and data out, but testing a django view in classic web application is difficult since HTML is returned. <a href="https://en.wikipedia.org/wiki/Representational_state_transfer" target="_blank">REST</a> semantics and <code>status code</code> helped to distinguish response without inspecting body.</p>
+<p><code>View</code> is the co ordinator in the web application. Writing integration tests makes sense for views. While writing integration tests most of the assertions are around <code>permission, status code, returned data</code>. Django provides set of nice helpers to test the views like <a href="https://docs.djangoproject.com/en/1.9/topics/testing/tools/#django.test.SimpleTestCase.assertTemplateUsed" target="_blank">assertTemplateUsed</a>, <a href="https://docs.djangoproject.com/en/1.9/topics/testing/tools/#django.test.SimpleTestCase.assertRedirects" target="_blank">assertRedirects</a>. The response returned contains the template <code>context</code>. All three are very handy to test majority of the view functionality and super helpful.</p>
+<h4 id="sample-test-cases">Sample test cases</h4>
+<script src="https://gist.github.com/kracekumar/59f8d68bc39947148956.js"></script>
+<p>More of these tests can be found in <a href="https://github.com/pythonindia/junction/tree/master/tests/integrations" target="_blank">junction</a>.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://kracekumar.github.io//tags/django/">django</a>&nbsp;
+            
+              <a href="https://kracekumar.github.io//tags/testing/">testing</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/618264170735009792/parameterize-python-tests/">Parameterize Python Tests</a></li>
+                
+                    <li><a href="/post/141377389440/permissions-in-django-admin/">Permissions in Django Admin</a></li>
+                
+                    <li><a href="/post/117948332935/simple-json-response-basic-test-between-flask-and/">Simple Json Response basic test between Flask and Django</a></li>
+                
+                    <li><a href="/post/113057636135/django-print-exception-to-console/">django print exception to console</a></li>
+                
+                    <li><a href="/post/76145181921/two-scoops-of-django/">Two scoops of django</a></li>
+                
+              </ul>
+
+          
+                  
+       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://kracekumar.github.io/post/117948332935/simple-json-response-basic-test-between-flask-and/" data-toggle="tooltip" data-placement="top" title="Simple Json Response basic test between Flask and Django">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://kracekumar.github.io/post/141377389440/permissions-in-django-admin/" data-toggle="tooltip" data-placement="top" title="Permissions in Django Admin">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://kracekumar.github.io/">Technical Ramblings</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.71.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://kracekumar.github.io/js/main.js"></script>
+<script src="https://kracekumar.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://kracekumar.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

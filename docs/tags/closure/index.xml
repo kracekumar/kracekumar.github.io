@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>closure on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/closure/</link>
+    <description>Recent content in closure on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 19 Oct 2014 11:14:08 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/closure/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python global keyword</title>
+      <link>https://kracekumar.github.io/post/100399630630/python-global-keyword/</link>
+      <pubDate>Sun, 19 Oct 2014 11:14:08 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/100399630630/python-global-keyword/</guid>
+      <description>Python’s global keyword allows to modify the variable which is out of current scope.
+In [13]: bar = 1 In [14]: def foo(): ....: global bar ....: bar = 2 ....: In [15]: bar Out[15]: 1 In [16]: foo() In [17]: bar Out[17]: 2  In the above example, bar was declared before foo function. global bar refers to the bar variablewhich is outside the foo scope. After foo invocation bar value was modified inside foo.</description>
+    </item>
+    
+  </channel>
+</rss>

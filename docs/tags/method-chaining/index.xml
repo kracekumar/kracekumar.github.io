@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>method chaining on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/method-chaining/</link>
+    <description>Recent content in method chaining on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 25 Oct 2014 09:32:01 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/method-chaining/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fluent interface in python</title>
+      <link>https://kracekumar.github.io/post/100897281440/fluent-interface-in-python/</link>
+      <pubDate>Sat, 25 Oct 2014 09:32:01 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/100897281440/fluent-interface-in-python/</guid>
+      <description>Fluent Interface is an implementation of API which improves readability.
+Example Poem(&#39;The Road Not Taken&#39;).indent(4).suffix(&#39;Robert Frost&#39;).
+Fluent Interface is similar to method chaining. I was wondering how to implement this in Python.Returning self during method call seemed good idea .
+class Poem(object): def __init__(self, content): self.content = content def indent(self, spaces=4): self.content = &amp;quot; &amp;quot; * spaces + self.content return self def suffix(self, content): self.content += &amp;quot; - {}&amp;quot;.format(content) return self def __str__(self): return self.</description>
+    </item>
+    
+  </channel>
+</rss>

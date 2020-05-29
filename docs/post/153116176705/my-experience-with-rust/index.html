@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>My Experience With Rust - Technical Ramblings</title>
+  <meta name="description" content="When I was about to leave to RC in few weeks, wrote an E-mail to Puneeth asking for Do&#39;s and Don&#39;ts at RC. One of the line in the mail said,
+ Since you are a Python guy, don’t write any Python code while you are there. Do something completely different.
+ I contemplated which language to choose. Other than Python, I knew a decent amount of Go-lang and Javascript. I previously attempted to learn rust but never dived deep into it."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Technical Ramblings",
+    
+    "url": "https:\/\/kracekumar.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/kracekumar.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/post\/153116176705\/my-experience-with-rust\/",
+          "name": "My experience with rust"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "My Experience With Rust",
+  "description" : "When I was about to leave to RC in few weeks, wrote an E-mail to Puneeth asking for Do\u0027s and Don\u0027ts at RC. One of the line in the mail said,\n Since you are a Python guy, don’t write any Python code while you are there. Do something completely different.\n I contemplated which language to choose. Other than Python, I knew a decent amount of Go-lang and Javascript. I previously attempted to learn rust but never dived deep into it.",
+  "inLanguage" : "en",
+  "wordCount":  1588 ,
+  "datePublished" : "2016-11-13T07:25:37",
+  "dateModified" : "2016-11-13T07:25:37",
+  "image" : "https:\/\/kracekumar.github.io\/",
+  "keywords" : [ "recursecenter, rust" ],
+  "mainEntityOfPage" : "https:\/\/kracekumar.github.io\/post\/153116176705\/my-experience-with-rust\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/kracekumar.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/kracekumar.github.io\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="My Experience With Rust" />
+<meta property="og:description" content="When I was about to leave to RC in few weeks, wrote an E-mail to Puneeth asking for Do&#39;s and Don&#39;ts at RC. One of the line in the mail said,
+ Since you are a Python guy, don’t write any Python code while you are there. Do something completely different.
+ I contemplated which language to choose. Other than Python, I knew a decent amount of Go-lang and Javascript. I previously attempted to learn rust but never dived deep into it.">
+<meta property="og:url" content="https://kracekumar.github.io/post/153116176705/my-experience-with-rust/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Technical Ramblings" />
+
+  <meta name="twitter:title" content="My Experience With Rust" />
+  <meta name="twitter:description" content="When I was about to leave to RC in few weeks, wrote an E-mail to Puneeth asking for Do&#39;s and Don&#39;ts at RC. One of the line in the mail said,
+ Since you are a Python guy, don’t write any Python code …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.71.1" />
+  <link rel="alternate" href="https://kracekumar.github.io/index.xml" type="application/rss+xml" title="Technical Ramblings"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kracekumar.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://kracekumar.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://kracekumar.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://kracekumar.github.io/">Technical Ramblings</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>My Experience With Rust</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on November 13, 2016
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1588&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>When I was about to leave to <a href="http://recurse.com" target="_blank">RC</a> in few weeks, wrote an E-mail to <a href="https://twitter.com/punchagan" target="_blank">Puneeth</a> asking for <code>Do's and Don'ts at RC</code>. One of the line in the mail said,</p>
+<blockquote>
+<p>Since you are a Python guy, don’t write any Python code while you are there. Do something completely different.</p>
+</blockquote>
+<p>I contemplated which language to choose. Other than <code>Python</code>, I knew a decent amount of <code>Go-lang</code> and <code>Javascript</code>. I previously attempted to learn <code>rust</code> but never dived deep into it. I reconsidered learning it and came up with the project idea.</p>
+<blockquote>
+<p>“Capture all the internet packet and figure out how much each website is consuming the bandwidth.”</p>
+</blockquote>
+<p>After spending three weeks at RC, I started to work on the project <a href="http://slides.com/kracekumarramaraju/who-is-eating-my-bandwidth" target="_blank">imon</a>. I was excited to work on the project for several reasons</p>
+<ul>
+<li>Everyone around me spoke about Rust’s memory model and how well rust is a good candidate for writing safe system programming code.</li>
+<li>I have never done any low-level networking projects, though I had built a real-time backend for a messaging app.</li>
+<li>This project involved working with multi-threaded programming, coroutine, and async networking at the same time.</li>
+</ul>
+<h3 id="first-bummer---lifetime">First bummer - Lifetime</h3>
+<p><a href="https://github.com/ebfull/pcap" target="_blank">pcap</a> is a rust crate to capture the packets from a device(<code>Wifi</code>, <code>Ethernet port</code>). To get any useful information from the packet, you need to decode the packet carrying data of various layers. So decode <code>Ethernet packet</code> to pull out the payload. The payload becomes the next layer packet. The step goes on till you find required information. In my case, I need to have <code>TCP</code> or <code>UDP</code> packet to pull out wanted data. Capturing and decoding packet in same thread will make the program drop a lot of frames. So having a separate thread to sniff and decode made the program performant. So how do you communicate between two threads? I choose message passing since I had experience with <code>coroutines</code>, and <code>go channels</code>.</p>
+<p>While passing the message via the channel from <code>sniffer</code> thread to <code>decoder</code> thread, packet didn’t live long enough to go through the channel. Here is the <a href="https://github.com/ebfull/pcap/issues/58" target="_blank">GH issue</a>.</p>
+<p>The first suggestion which came up when I asked around was <code>clone</code> the packet and send across the channel. After hours of debugging, I didn’t get the solutions. After few days, <a href="https://twitter.com/k4rtik" target="_blank">karthik</a> replied</p>
+<blockquote>
+<p>The problem is that you are trying to send a reference with a limited lifetime across a thread boundary, which is not allowed. The <code>clone</code> is for a slice (a reference to a byte array), you probably want to do a <code>clone_from_slice</code> as shown here into a static byte array, then you should be able to talk across a thread (though this technique requires using unsafe).</p>
+</blockquote>
+<p>I had multiple encounters with a lifetime of <code>strings</code>, <code>string slice</code>. Still, I am facing life time issues. As name suggests, <code>life time</code> problem is for <code>life time</code>.</p>
+<h3 id="traits">Traits</h3>
+<p>To collate the traffic data, the inferred information from packets needs to reside somewhere. SQLite was my preferred choice for ease of installation - I <a href="https://gist.github.com/kracekumar/d58ec0beab1d2ea4b17dff77aab22a58" target="_blank"><a href="https://gist.github.com/kracekumar/d58ec0beab1d2ea4b17dff77aab22a58">https://gist.github.com/kracekumar/d58ec0beab1d2ea4b17dff77aab22a58</a></a></p>
+<p>Using the above code to insert records failed because <code>FromSql trait</code> wasn’t satisfied for the field <code>date</code>.</p>
+<p>Adding the following lines didn’t fix the problem either.</p>
+<pre><code>impl FromSql for chrono::Date&lt;utc&gt; {
+    fn column_result(value: u32){
+         println!(&quot;{:?}&quot;, value);
+    }
+}
+</code></pre>
+<p>The compiler threw up an another error</p>
+<p><code>The compiler allows declaring trait for types defined in the current crate. Date&lt;utc&gt; in Chrono doesn't implement FromSql trait.</code></p>
+<p><code>rusqlite</code> included support for <code>DateTime</code> <a href="https://github.com/jgallagher/rusqlite/blob/master/src/types/chrono.rs" target="_blank">in separate file</a>. Importing <code>use rusqlite::type::chrono::{DateTime&lt;utc&gt;}</code> failed. For a couple of hours, I was puzzled, how come code in the project directory is unimportable? Reading the <a href="https://github.com/jgallagher/rusqlite#optional-features" target="_blank">README</a> file carefully revealed, the <a href="http://doc.crates.io/manifest.html#the-features-section" target="_blank">Cargo</a> supports optional features to be included along with core library. Changing the <code>Cargo.toml</code> to have <code>features</code> attribute to <code>dependencies.rusqlite</code> fixed the issue.</p>
+<pre><code>[dependencies.rusqlite]
+version = &quot;0.7.3&quot;
+features = [&quot;chrono&quot;]
+</code></pre>
+<p>What this means, the additional features which are part of the code base is compiled with binary only when specified. The use case is similar to installing <code>SQLAlchemy</code> and installing <code>psycopg2</code> driver to connect <code>Postgres</code>.</p>
+<h3 id="serialization">Serialization</h3>
+<p>The program follows <code>daemon</code> and <code>client</code> architecture. When client queries <code>daemon</code> to send traffic data like <code>./binary site kracekumar.com</code>, the daemon sends out all the traffic data associated with the domain. I choose <a href="https://docs.rs/rmp/0.7.5/rmp/" target="_blank">msgpack</a> format to communicate. The <code>rmp</code> crate can automatically encode/decode <code>struct</code> to <code>msgpack</code> as long as attribute <code>#[derive(RustcDecodable, RustcEncodable)]</code> is used.</p>
+<div class="gist"><a href="https://gist.github.com/kracekumar/91bbc05d4d8201c35db0547bb8db086b" target="_blank">https://gist.github.com/kracekumar/91bbc05d4d8201c35db0547bb8db086b</a></div>
+<p>If the struct field is declared in an another crate like <code>rusqlite</code>, the source crate needs to support <code>serialization</code>. <code>rusqlite</code> supports <code>serde_json</code> and not <code>rustc_serialize</code>. So I ended up using custom tuple for serialization. Probably a good candidate for PR to <code>rmp</code>!</p>
+<h3 id="signal-handler">Signal Handler</h3>
+<p>Rust natively doesn’t support signal handler like <code>SIGTERM</code>, <code>SIGINT(Ctrl - C)</code>. This is a good and bad decision. When the <code>SIGINT</code> interrupt is received; the daemon could write all the cached DNS mapping to a file and read the file during startup. <a href="https://github.com/BurntSushi/chan-signal" target="_blank">chan-signal</a> provides a way to do this, but only works for threaded code. Even if the program is designed to run on a single thread, <code>chan_select</code> requires you to spin a new thread, when the new thread receives the interrupt, the main thread executes <code>chan_select!</code> and clean up is performed inside macro.</p>
+<div class="gist"><a href="https://gist.github.com/kracekumar/c4012062b73612b3699e1de03774d11e" target="_blank">https://gist.github.com/kracekumar/c4012062b73612b3699e1de03774d11e</a></div>
+<p>My program uses a <code>HashMap,  Arc</code> to share data between threads safely. Using <code>chan_signal</code> with existing code structure caused lifetime issues for <code>hashmap</code>. I tried for a couple of hours to get it working, and it looked complicated than I thought. I have left to figure this out for future. Do you know any multi-threaded rust program that handles signals?</p>
+<h3 id="tests">Tests</h3>
+<p>I enjoy writing tests. It spots design smell and gifts subtle hints on <code>API flexibility</code>. Rust follows a different convention for <code>unit tests</code> and <code>integration tests</code>. Unit tests reside in the same file where the function is defined marked by the attribute <code>#[test]</code>. Integration tests are set in <code>tests</code> directory at the same level as <code>src</code>. By default rust, compiler harnesses multi-threading. If you’re web developer, you can think of what can happen in integration tests :-)</p>
+<p>Running tests in multiple threads saves a considerable amount of time for large test suites. But tearing down tables or database for every test causes race conditions in DB. Test case for <code>create_or_update_record</code> requires serial execution. Setting environment variable <code>RUST_TEST_THREADS=1</code> runs all tests in serial mode. <code>RUST_TEST_THREADS</code> environment variable affects both <code>unit</code> and <code>integration</code> tests.</p>
+<p><code>Cargo.toml</code> supports <code>[[test]]</code> section. Test section looks like</p>
+<pre><code>[[test]]
+name = &quot;db_integration&quot;
+harness = false
+test = true
+</code></pre>
+<p><code>name</code> points to file inside <code>tests/db_integration.rs</code>. <code>db_integration.rs</code> should have a entry point i.e <code>main function</code>. Tests inside <code>db_integration.rs</code> doesn’t contain <code>#[test]</code> attribute. The code looks like</p>
+<div class="gist"><a href="https://gist.github.com/kracekumar/dd289aa669e434c302b4620f987eb99e" target="_blank">https://gist.github.com/kracekumar/dd289aa669e434c302b4620f987eb99e</a></div>
+<p>Integration tests can only access <code>public module/struct</code>in the project crate. To assert on a struct’s field, the field should be declared <code>pub</code> keyword like <code>pub has_changed: bool</code> which makes sense.</p>
+<h3 id="error-messages">Error Messages</h3>
+<p>Rust error message is clear, concise, colorful and comes with a error code most of the times. Error code gives detailed write up about the possible scenario with an example. Here is an error message</p>
+<div class="gist"><a href="https://gist.github.com/kracekumar/ad339891e0792229ebce93d5eea90dca" target="_blank">https://gist.github.com/kracekumar/ad339891e0792229ebce93d5eea90dca</a></div>
+<p>Cargo <code>explain</code> flag displays verbose information about the error and link to the RFC.</p>
+<div class="gist"><a href="https://gist.github.com/kracekumar/3800fe67395acc5b8794c89e1597d830" target="_blank">https://gist.github.com/kracekumar/3800fe67395acc5b8794c89e1597d830</a></div>
+<p>This kind of error message explanation kindles interest to learn more. Some error message comes with excellent apt suggestions to fix the error.</p>
+<p>At one place, rust error message is confusing and annoying. Error message returned while <code>unwrapping a None</code> is confusing and doesn’t print line number where error occurred. Here is an example</p>
+<div class="gist"><a href="https://gist.github.com/kracekumar/df1d975acfae9bc2a40ba3732b8b3ccf" target="_blank">https://gist.github.com/kracekumar/df1d975acfae9bc2a40ba3732b8b3ccf</a></div>
+<p>The correct way to unwrap an <code>option</code> is <code>match</code>, <code>try!</code>, <code>?</code>, operator which is available in 1.13 or <code>unwrap_or_else</code>. Once I mistakenly accused foreign crate as unstable for the error. This took many encounters for me to figure out, the problem is with <code>unwrap</code>.</p>
+<p>Here is output after setting <code>RUST_BACKTRACE</code>.</p>
+<div class="gist"><a href="https://gist.github.com/kracekumar/ac29d0f89ed9dfbcdf03b32b0d8a511b" target="_blank">https://gist.github.com/kracekumar/ac29d0f89ed9dfbcdf03b32b0d8a511b</a></div>
+<p>Having some sort of way to highlight the current project code in the backtrace can be visually useful for bigger project and nested code path.</p>
+<h3 id="-librs--and--mainrs-"><code>lib.rs</code> and <code>main.rs</code>.</h3>
+<p>Here is my <code>src</code> directory structure.</p>
+<pre><code>user@user-ThinkPad-T400 ~/c/imon&gt; ls src
+cli.rs*  decoder.rs    ipc.rs   main.rs
+db.rs    formatter.rs  lib.rs*  packet.rs
+</code></pre>
+<p><code>main.rs</code> is the entry point for the <code>daemon</code> and <code>client</code>. The code looks like</p>
+<pre><code>#[macro_use] extern crate log;
+extern crate env_logger;
+extern crate imon;
+fn main(){
+    env_logger::init().unwrap();
+    imon::cli::parse_arguments();
+}
+</code></pre>
+<p><code>lib.rs</code> contains all the external crate imports and public modules. The public modules declared here are only importable in any foreign crate utilizing the project.</p>
+<pre><code>#[macro_use] extern crate log;
+extern crate env_logger;
+use std::fmt;
+pub mod cli;
+pub mod decoder;
+pub mod packet;
+</code></pre>
+<p>To use a <code>macro</code> defined in the crate <code>log</code> in any rust file inside <code>src</code> except <code>lib.rs</code> no import is needed. All foreign crate are imported in <code>lib.rs</code> and another rust file can use importables like <code>use foo; foo.method()</code> but in <code>main.rs</code> needs <code>extern crate log;</code> statement and doesn’t look in <code>lib.rs</code>. The import distinction between <code>lib.rs</code> and <code>main.rs</code> is a gray area to understand since both the files reside in the same directory.</p>
+<p>Currently, I feel comfortable with <code>rust</code>. I haven’t used most of the features in <code>rust</code> like <code>mutex, macros</code> or distributed binaries. I have lots to read about rust, writing idiomatic rust but I am confident of using <code>rust</code> in production. I am learning what pieces can fall apart. There has been an enormous amount of work gone into rust compiler and tooling especially <code>cargo</code>. If you’re aware of Python world, <code>Cargo</code> is a single crate which performs multiple Python packages work <code>pip</code>, <code>virtualenv</code>, <code>pytest</code> and <code>cookiecutter</code>.</p>
+<p>I owe a big part to RC folks who patiently assisted during the learning curve. Thanks to <a href="http://github.com/caipre" target="_blank">Nick Platt</a>, <a href="https://github.com/kamalmarhubi" target="_blank">Kamal Marhubi</a>, Mike Nielsen and others.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://kracekumar.github.io//tags/recursecenter/">recursecenter</a>&nbsp;
+            
+              <a href="https://kracekumar.github.io//tags/rust/">rust</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/157858156340/rc-checklist-for-indian-applicants/">RC checklist for Indian Applicants</a></li>
+                
+                    <li><a href="/post/155718711280/rc-return-statement/">RC Return Statement</a></li>
+                
+                    <li><a href="/post/154669792910/rc-week-1011/">RC Week 1011</a></li>
+                
+                    <li><a href="/post/154363774320/rc-week-1010/">RC Week 1010</a></li>
+                
+                    <li><a href="/post/154068164505/rc-week-1001/">RC week 1001</a></li>
+                
+              </ul>
+
+          
+                  
+       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://kracekumar.github.io/post/152847253135/rc-week-0101/" data-toggle="tooltip" data-placement="top" title="RC week 0101">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://kracekumar.github.io/post/153157531640/rc-week-0110/" data-toggle="tooltip" data-placement="top" title="RC Week 0110">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://kracekumar.github.io/">Technical Ramblings</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.71.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://kracekumar.github.io/js/main.js"></script>
+<script src="https://kracekumar.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://kracekumar.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

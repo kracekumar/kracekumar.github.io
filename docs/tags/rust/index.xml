@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rust on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/rust/</link>
+    <description>Recent content in rust on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 14 Nov 2016 04:17:29 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/rust/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>RC Week 0110</title>
+      <link>https://kracekumar.github.io/post/153157531640/rc-week-0110/</link>
+      <pubDate>Mon, 14 Nov 2016 04:17:29 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/153157531640/rc-week-0110/</guid>
+      <description>This week, I reached the first milestone of the project - imon which I worked on for past couple of weeks.
+imon is a command-line utility to record all network traffic and classify the data according to the domain name.
+Here is a high-level presentation of the project.I am looking for code review on the project and happy to answer any questions.
+I wrote a blog post about my experience with Rust.</description>
+    </item>
+    
+    <item>
+      <title>My Experience With Rust</title>
+      <link>https://kracekumar.github.io/post/153116176705/my-experience-with-rust/</link>
+      <pubDate>Sun, 13 Nov 2016 07:25:37 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/153116176705/my-experience-with-rust/</guid>
+      <description>When I was about to leave to RC in few weeks, wrote an E-mail to Puneeth asking for Do&#39;s and Don&#39;ts at RC. One of the line in the mail said,
+ Since you are a Python guy, don’t write any Python code while you are there. Do something completely different.
+ I contemplated which language to choose. Other than Python, I knew a decent amount of Go-lang and Javascript. I previously attempted to learn rust but never dived deep into it.</description>
+    </item>
+    
+    <item>
+      <title>RC week 0101</title>
+      <link>https://kracekumar.github.io/post/152847253135/rc-week-0101/</link>
+      <pubDate>Mon, 07 Nov 2016 06:53:52 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/152847253135/rc-week-0101/</guid>
+      <description>Time flies faster than you can perceive.
+ The first half of twelve weeks experimental journey ends this week.
+This week was the last week for Fall 01, 2016 batch and my batch is due in next six weeks. I wish everyone in Fall 01, 2016 batch Good luck for their future endeavors. I made few friends, helped few people in their project; few helped me in my projects and a lot of unnoticed learnings.</description>
+    </item>
+    
+    <item>
+      <title>RC Week 0100</title>
+      <link>https://kracekumar.github.io/post/152543733085/rc-week-0100/</link>
+      <pubDate>Mon, 31 Oct 2016 05:31:05 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/152543733085/rc-week-0100/</guid>
+      <description>I had a decent progress with my rust HTTP traffic monitor. I read a lot about the different type of packets like Ethernet Packet, IPv4 Packet, TCP Packet, UDP Packet, DNS Packets. I wrote a parser for Physical Layer packet, TCP Packet, UDP Packet, DNS Packet. The parser helped me understand a lot about rust functions, data types like array, vectors, string and string literal. I am not enjoying the relationship with rust lifetimes.</description>
+    </item>
+    
+  </channel>
+</rss>

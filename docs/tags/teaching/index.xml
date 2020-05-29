@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>teaching on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/teaching/</link>
+    <description>Recent content in teaching on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Aug 2013 18:06:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/teaching/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Observations from handling python workshop in engineering colleges</title>
+      <link>https://kracekumar.github.io/post/58802831892/observations-from-handling-python-workshop-in/</link>
+      <pubDate>Tue, 20 Aug 2013 18:06:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/58802831892/observations-from-handling-python-workshop-in/</guid>
+      <description>Observations from handling python workshop in engineering colleges
+I handled 5 python workshop/sessions for novices from 8th march to 20th august, each one stretching from 1 hour to 2 days. It was worth the time.
+Students who participated in the workshop where from Computer Science, Electronics background of Under Graduate and Post Graduate level. Minimum strength was 60 and maximum was close to 100.
+ When handling the strength of 60 students in lab, remember every one have their own pace of picking up.</description>
+    </item>
+    
+  </channel>
+</rss>

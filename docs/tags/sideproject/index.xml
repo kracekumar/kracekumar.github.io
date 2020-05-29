@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sideproject on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/sideproject/</link>
+    <description>Recent content in sideproject on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 16 Nov 2016 08:27:53 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/sideproject/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Side Project Feasibility</title>
+      <link>https://kracekumar.github.io/post/153252087240/side-project-feasibility/</link>
+      <pubDate>Wed, 16 Nov 2016 08:27:53 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/153252087240/side-project-feasibility/</guid>
+      <description>It’s common for developers to work on side projects. The reason why developers work on a side project is a long list of imaginable and unimaginable reasons. My main reason to work on a side project is to learn how things work or to build a utility program for use.
+One of my recent projects is to monitor the internet traffic and aggregate the traffic based on the domain name - bandwidth monitor.</description>
+    </item>
+    
+  </channel>
+</rss>

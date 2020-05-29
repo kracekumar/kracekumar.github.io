@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>django on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/django/</link>
+    <description>Recent content in django on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 20 Mar 2016 17:07:40 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/django/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Permissions in Django Admin</title>
+      <link>https://kracekumar.github.io/post/141377389440/permissions-in-django-admin/</link>
+      <pubDate>Sun, 20 Mar 2016 17:07:40 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/141377389440/permissions-in-django-admin/</guid>
+      <description>Admin dashboard is one of the Django’s useful feature. Admin dashboard allows super users to create, read, update, delete database objects. The super users have full control over the data. Staff user can login into admin dashboard but can’t access data. In few cases, staff users needs restricted access . Super user can access all data from various in built and third party apps. Here is a screenshot of Super user admin interface after login.</description>
+    </item>
+    
+    <item>
+      <title>Testing Django Views</title>
+      <link>https://kracekumar.github.io/post/138492827565/testing-django-views/</link>
+      <pubDate>Mon, 01 Feb 2016 19:17:49 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/138492827565/testing-django-views/</guid>
+      <description>Majority of web frameworks promote MVC/MTV software pattern. The way web applications are designed today aren’t same as 5-6 years back. Back then it was server side templates, HTML, API’s weren’t widespread and mobile apps were becoming popular. Rise of mobile and Single Page Application shifted majority of web development towards API centric development. Testing API is super simple with data in and data out, but testing a django view in classic web application is difficult since HTML is returned.</description>
+    </item>
+    
+    <item>
+      <title>Simple Json Response basic test between Flask and Django</title>
+      <link>https://kracekumar.github.io/post/117948332935/simple-json-response-basic-test-between-flask-and/</link>
+      <pubDate>Sat, 02 May 2015 16:42:40 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/117948332935/simple-json-response-basic-test-between-flask-and/</guid>
+      <description>Django and Flask are two well known Python web frameworks. There are lot of benchmarks claim Flask is 2xfaster for simple JSON Response, one such is Techempower. After lookinginto the source, it struckme Django can do better!
+I will compare Flask and Django for simple json response. The machine used is Macbook pro, Intel Core i5-4258U CPU @ 2.40GHz,with 8 GB Memory on OS X 10.10.3. gunicorn==19.3.0 will be used for serving WSGI application.</description>
+    </item>
+    
+    <item>
+      <title>django print exception to console</title>
+      <link>https://kracekumar.github.io/post/113057636135/django-print-exception-to-console/</link>
+      <pubDate>Sun, 08 Mar 2015 11:10:09 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/113057636135/django-print-exception-to-console/</guid>
+      <description>Django has very good debug toolbar for debugging SQL. While working with Single Page Application and API exceptions can’t be displayed in browser. Exception is sent to front end. What if the exception can be printed to console ?
+Django middleware gets called for every request/response. The small helper class looks like
+ Add the filename and class name to MIDDLEWARE_CLASSES in settings file like
+ This is how exceptions looks</description>
+    </item>
+    
+    <item>
+      <title>Two scoops of django</title>
+      <link>https://kracekumar.github.io/post/76145181921/two-scoops-of-django/</link>
+      <pubDate>Sun, 09 Feb 2014 20:44:31 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/76145181921/two-scoops-of-django/</guid>
+      <description>Two Scoops of Django -1.5 is book by Pydanny and Audrey Roy focusing on writing clean and better Django application.
+If you are using Django in production this is must read book.
+Q: I am using django since 0.8 do I need this book ?
+A: Yes, consider the book as starting point to validate your assumption.
+Q: I just started using django, should I read this ?
+A: Yes. I started to use django in production last month.</description>
+    </item>
+    
+    <item>
+      <title>Updating model instance attribute in django</title>
+      <link>https://kracekumar.github.io/post/75983294047/updating-model-instance-attribute-in-django/</link>
+      <pubDate>Sat, 08 Feb 2014 09:01:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/75983294047/updating-model-instance-attribute-in-django/</guid>
+      <description>It is very common to update single attribute of a model instance (say update first name in user profile) and save it to db.
+In [18]: u = User.objects.get(id=1) In [19]: u.first_name = u&amp;quot;kracekumar&amp;quot; In [20]: u.save()  Very straight forward approach. How does django send the sql query to database ?
+In [22]: from django.db import connection In [22]: connection.queries Out[22]: [... {u&#39;sql&#39;: u&#39;UPDATE &amp;quot;auth_user&amp;quot; SET &amp;quot;password&amp;quot; = \&#39;pbkdf2_sha256$12000$vsHWOlo1ZhZg$DrC46wq+a2jEtEzxmUEw4vQw8oV/rxEK7zVi30QLGF4=\&#39;, &amp;quot;last_login&amp;quot; = \&#39;2014-02-01 06:55:44.</description>
+    </item>
+    
+  </channel>
+</rss>

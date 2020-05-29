@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>uber on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/uber/</link>
+    <description>Recent content in uber on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 13 Aug 2016 18:16:55 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/uber/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Real time mobile app failure</title>
+      <link>https://kracekumar.github.io/post/148892131765/real-time-mobile-app-failure/</link>
+      <pubDate>Sat, 13 Aug 2016 18:16:55 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/148892131765/real-time-mobile-app-failure/</guid>
+      <description>August 11th to 15th is a long weekend and I decided to leave Bangalore on August 11th. I booked KSRTC to Coimbatore. The boarding point, St John’s office is few kilometers away from my office in teachers colony. The pickup time was 9:45 PM. I booked Uber pool at 8:35. The first driver handcuffed me to cancel the ride with notorious usual reason - traffic. It took fifteen minutes to find an another car.</description>
+    </item>
+    
+  </channel>
+</rss>

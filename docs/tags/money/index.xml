@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>money on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/money/</link>
+    <description>Recent content in money on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 25 Mar 2013 20:41:28 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/money/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How much will it cost to attend Hacker School ?</title>
+      <link>https://kracekumar.github.io/post/46275902528/how-much-will-it-cost-to-attend-hacker-school/</link>
+      <pubDate>Mon, 25 Mar 2013 20:41:28 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/46275902528/how-much-will-it-cost-to-attend-hacker-school/</guid>
+      <description>Hacker School is a three-month, full-time school in New York for becoming a better programmer for free, but stay, travels is yours.
+I have no idea how much it will cost for travel from India, stay, food, internet, transit so I asked the question in Quora. I got pretty good answers.
+Then I started do my lame math.
+Monthly Expense(USD)  Rent = 1000 Phone = 80 Transit = 100 Internet = 40 Electricity = 40 Food = 250 Snacks = 100 Outing = 120 Misc = 100  Total = 1830.</description>
+    </item>
+    
+  </channel>
+</rss>

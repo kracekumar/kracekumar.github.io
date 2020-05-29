@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>asyncio on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/asyncio/</link>
+    <description>Recent content in asyncio on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 08 May 2016 20:18:48 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/asyncio/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Asyncio and uvloop</title>
+      <link>https://kracekumar.github.io/post/144058400775/asyncio-and-uvloop/</link>
+      <pubDate>Sun, 08 May 2016 20:18:48 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/144058400775/asyncio-and-uvloop/</guid>
+      <description>Today, I read an article about uvloop. I am aware of libuv and its behind nodejs. What caught me was “In fact, it is at least 2x faster than any other Python asynchronous framework.”. So I decided to give it a try with aiohttp.
+The test program was simple websocket code which receives a text message, doubles the content and echoes back. Here is the complete snippet with uvloop.
+I ran naive benchmark using thor and results favoured uvloop.</description>
+    </item>
+    
+  </channel>
+</rss>

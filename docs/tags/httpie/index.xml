@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>httpie on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/httpie/</link>
+    <description>Recent content in httpie on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 27 Jul 2013 21:35:32 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/httpie/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Funny experience of using trace module to trace function call</title>
+      <link>https://kracekumar.github.io/post/56633639978/funny-experience-of-using-trace-module-to-trace/</link>
+      <pubDate>Sat, 27 Jul 2013 21:35:32 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/56633639978/funny-experience-of-using-trace-module-to-trace/</guid>
+      <description>I came across this issue in httpie and started my investigation.
+The problem is while pretty printing the json, output is alpha sorted because keys are hashed and user wanted to preserve the order. Then I made 3 comments to the issue. First comment was half correct and explained why it isn’t possible to get the desired output, quickly I figured my assumptions were wrong and second comment explained what is actually happening, finally I proposed the solution.</description>
+    </item>
+    
+  </channel>
+</rss>

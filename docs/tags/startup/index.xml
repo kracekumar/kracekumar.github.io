@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>startup on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/startup/</link>
+    <description>Recent content in startup on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 31 Jan 2014 20:28:18 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/startup/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>how not to insult developer while hiring</title>
+      <link>https://kracekumar.github.io/post/75177239638/how-not-to-insult-developer-while-hiring/</link>
+      <pubDate>Fri, 31 Jan 2014 20:28:18 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/75177239638/how-not-to-insult-developer-while-hiring/</guid>
+      <description>In December I was looking for new job. I came across one and applied. After couple of rounds of interview, co founder informed me we will get back to you, but never happened. This sounds normal but it is not.
+Interview First round of interview started with online pair programming with one of the co-founder X. After that I went to their office, met product manager, co founder X had discussion for an hour.</description>
+    </item>
+    
+  </channel>
+</rss>

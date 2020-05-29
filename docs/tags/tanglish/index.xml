@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tanglish on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/tanglish/</link>
+    <description>Recent content in tanglish on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 18 Jul 2013 18:26:20 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/tanglish/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Why This Kolaveri Di song words language </title>
+      <link>https://kracekumar.github.io/post/55796363713/why-this-kolaveri-di-song-words-language/</link>
+      <pubDate>Thu, 18 Jul 2013 18:26:20 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/55796363713/why-this-kolaveri-di-song-words-language/</guid>
+      <description>I was wondering how many words in why this kolaveri di song belongs to english. So I wrote this code to evaluate.
+#! /usr/bin/env #! -*- coding: utf-8 -*- lyrics = &amp;quot;&amp;quot;&amp;quot; yo boys i am singing song soup song flop song why this kolaveri kolaveri kolaveri di why this kolaveri kolaveri kolaveri di rhythm correct why this kolaveri kolaveri kolaveri di maintain please why this kolaveri di distance la moon-u moon-u moon-u color-u white-u white background night-u night-u night-u color-u black-u why this kolaveri kolaveri kolaveri di why this kolaveri kolaveri kolaveri di white skin-u girl-u girl-u girl-u heart-u black-u eyes-u eyes-u meet-u meet-u my future dark why this kolaveri kolaveri kolaveri di why this kolaveri kolaveri kolaveri di maama notes eduthuko apdiye kaila snacks eduthuko pa pa paan pa pa paan pa pa paa pa pa paan sariya vaasi super maama ready ready 1 2 3 4 whaa wat a change over maama ok maama now tune change-u kaila glass only english hand la glass glass la scotch eyes-u full-a tear-u empty life-u girl-u come-u life reverse gear-u love-u love-u oh my love-u you showed me bouv-u cow-u cow-u holy cow-u i want you hear now-u god i am dying now-u she is happy how-u this song for soup boys-u we dont have choice-u why this kolaveri kolaveri kolaveri di why this kolaveri kolaveri kolaveri di why this kolaveri kolaveri kolaveri di why this kolaveri kolaveri kolaveri di flop song &amp;quot;&amp;quot;&amp;quot; dict_file_path = &amp;quot;/usr/share/dict/words&amp;quot; def sanitize(words): for index, word in enumerate(words): if word.</description>
+    </item>
+    
+  </channel>
+</rss>

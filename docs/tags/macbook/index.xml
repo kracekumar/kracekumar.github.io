@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>macbook on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/macbook/</link>
+    <description>Recent content in macbook on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Nov 2012 18:43:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/macbook/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Why did I install Ubuntu in MacBook ?</title>
+      <link>https://kracekumar.github.io/post/36222425955/why-did-i-install-ubuntu-in-macbook/</link>
+      <pubDate>Wed, 21 Nov 2012 18:43:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/36222425955/why-did-i-install-ubuntu-in-macbook/</guid>
+      <description>Reasons  Mac doesn’t have package manager like synaptic. But you have App Store for apps. You need to build xcode or gcc-installer to install any cocoa app. I Use USB Data card as result I don’t have privilege to experience high speed broadband connection. As I have noticed OSX apps are heavy to download. Linux fanboy :-)  </description>
+    </item>
+    
+  </channel>
+</rss>

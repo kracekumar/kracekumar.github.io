@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>uwsgi on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/uwsgi/</link>
+    <description>Recent content in uwsgi on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 25 Dec 2013 18:08:34 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/uwsgi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Deploying full fledged flask app in production</title>
+      <link>https://kracekumar.github.io/post/71120049966/deploying-full-fledged-flask-app-in-production/</link>
+      <pubDate>Wed, 25 Dec 2013 18:08:34 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/71120049966/deploying-full-fledged-flask-app-in-production/</guid>
+      <description>This article will focus on deploying flask app starting from scratch like creating separate linux user, installating database, web server. Web server will be nginx, database will be postgres, python 2.7 middleware will be uwsgi, server ubuntu 13.10 x64. Flask app name is fido. Demo is carried out in Digital ocean.
+Step 1 - Installation Python header
+root@fido:~# apt-get install -y build-essential python-dev  Install uwsgi dependencies
+root@fido:~# apt-get install -y libxml2-dev libxslt1-dev  Nginx, uwsgi</description>
+    </item>
+    
+  </channel>
+</rss>

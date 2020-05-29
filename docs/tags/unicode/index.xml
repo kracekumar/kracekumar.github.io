@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>unicode on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/unicode/</link>
+    <description>Recent content in unicode on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 22 May 2014 20:35:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/unicode/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>python source fileencoding</title>
+      <link>https://kracekumar.github.io/post/86530203730/python-source-fileencoding/</link>
+      <pubDate>Thu, 22 May 2014 20:35:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/86530203730/python-source-fileencoding/</guid>
+      <description>Some of the python source file starts with -*- coding: utf-8 -*-. This particular linetells python interpreter all the content (byte string) is utf-8 encoded. Lets see how it affects the code.
+uni1.py:
+# -*- coding: utf-8 -*- print(&amp;quot;welcome&amp;quot;) print(&amp;quot;animé&amp;quot;)  output:
+➜ code$ python2 uni1.py welcome animé  Third line had a accented character and it wasn’t explictly stated as unicode. print function passed successfully.Since first line instructed interpreter all the sequences from here on will follow utf-8, so it worked.</description>
+    </item>
+    
+    <item>
+      <title>How Tamil Unicode works</title>
+      <link>https://kracekumar.github.io/post/63832712202/how-tamil-unicode-works/</link>
+      <pubDate>Sat, 12 Oct 2013 16:36:37 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/63832712202/how-tamil-unicode-works/</guid>
+      <description>Tamil has 247 characters. No panic. It is simple. 12 uyir eluthu(அ,ஆ..ஔ), 18 mei eluthu(க்,ங்..) , 216 uyirmei eluthu(12 * 18 க,ங ).1 ayutham(ஃ).
+I assume you know what is unicode. If not read The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets and then read wikipedia page. You will understand most of it. Back to the post.
+Every character or letter in unicode has value called code point.</description>
+    </item>
+    
+  </channel>
+</rss>

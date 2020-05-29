@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Deploying full fledged flask app in production - Technical Ramblings</title>
+  <meta name="description" content="This article will focus on deploying flask app starting from scratch like creating separate linux user, installating database, web server. Web server will be nginx, database will be postgres, python 2.7 middleware will be uwsgi, server ubuntu 13.10 x64. Flask app name is fido. Demo is carried out in Digital ocean.
+Step 1 - Installation Python header
+root@fido:~# apt-get install -y build-essential python-dev  Install uwsgi dependencies
+root@fido:~# apt-get install -y libxml2-dev libxslt1-dev  Nginx, uwsgi"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Technical Ramblings",
+    
+    "url": "https:\/\/kracekumar.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/kracekumar.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/post\/71120049966\/deploying-full-fledged-flask-app-in-production\/",
+          "name": "Deploying full fledged flask app in production"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "Deploying full fledged flask app in production",
+  "description" : "This article will focus on deploying flask app starting from scratch like creating separate linux user, installating database, web server. Web server will be nginx, database will be postgres, python 2.7 middleware will be uwsgi, server ubuntu 13.10 x64. Flask app name is fido. Demo is carried out in Digital ocean.\nStep 1 - Installation Python header\nroot@fido:~# apt-get install -y build-essential python-dev  Install uwsgi dependencies\nroot@fido:~# apt-get install -y libxml2-dev libxslt1-dev  Nginx, uwsgi",
+  "inLanguage" : "en",
+  "wordCount":  992 ,
+  "datePublished" : "2013-12-25T18:08:34",
+  "dateModified" : "2013-12-25T18:08:34",
+  "image" : "https:\/\/kracekumar.github.io\/",
+  "keywords" : [ "python, flask, nginx, uwsgi, deployment" ],
+  "mainEntityOfPage" : "https:\/\/kracekumar.github.io\/post\/71120049966\/deploying-full-fledged-flask-app-in-production\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/kracekumar.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/kracekumar.github.io\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Deploying full fledged flask app in production" />
+<meta property="og:description" content="This article will focus on deploying flask app starting from scratch like creating separate linux user, installating database, web server. Web server will be nginx, database will be postgres, python 2.7 middleware will be uwsgi, server ubuntu 13.10 x64. Flask app name is fido. Demo is carried out in Digital ocean.
+Step 1 - Installation Python header
+root@fido:~# apt-get install -y build-essential python-dev  Install uwsgi dependencies
+root@fido:~# apt-get install -y libxml2-dev libxslt1-dev  Nginx, uwsgi">
+<meta property="og:url" content="https://kracekumar.github.io/post/71120049966/deploying-full-fledged-flask-app-in-production/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Technical Ramblings" />
+
+  <meta name="twitter:title" content="Deploying full fledged flask app in production" />
+  <meta name="twitter:description" content="This article will focus on deploying flask app starting from scratch like creating separate linux user, installating database, web server. Web server will be nginx, database will be postgres, python …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.71.1" />
+  <link rel="alternate" href="https://kracekumar.github.io/index.xml" type="application/rss+xml" title="Technical Ramblings"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kracekumar.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://kracekumar.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://kracekumar.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://kracekumar.github.io/">Technical Ramblings</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Deploying full fledged flask app in production</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on December 25, 2013
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;992&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>This article will focus on deploying flask app starting from scratch like creating separate linux user, installating database, web server. Web server will be <a href="http://wiki.nginx.org/Main" target="_blank">nginx</a>, database will be <a href="http://www.postgresql.org/" target="_blank">postgres</a>, python 2.7 middleware will be <a href="http://uwsgi-docs.readthedocs.org" target="_blank">uwsgi</a>, server <a href="http://www.ubuntu.com/download/server" target="_blank">ubuntu 13.10 x64</a>. Flask app name is <code>fido</code>. Demo is carried out in <a href="https://www.digitalocean.com/?refcode=6c1c3a08e4ab" target="_blank">Digital ocean</a>.</p>
+<h3 id="step-1---installation">Step 1 - Installation</h3>
+<p><strong>Python header</strong></p>
+<pre><code>root@fido:~# apt-get install -y build-essential python-dev
+</code></pre>
+<p><strong>Install uwsgi dependencies</strong></p>
+<pre><code>root@fido:~# apt-get install -y libxml2-dev libxslt1-dev
+</code></pre>
+<p><strong>Nginx, uwsgi</strong></p>
+<pre><code>root@fido:~#  apt-get install -y nginx uwsgi uwsgi-plugin-python
+</code></pre>
+<p>Start nginx</p>
+<pre><code>root@fido:~# service nginx start
+* Starting nginx nginx                                                          [ OK ]
+</code></pre>
+<p><strong>Postgres</strong></p>
+<pre><code>root@fido:~# apt-get install -y postgresql postgresql-contrib libpq-dev
+</code></pre>
+<h3 id="step-2---user">Step 2 - User</h3>
+<p><strong>Create a new linux user fido</strong></p>
+<pre><code>root@fido:~# adduser fido
+</code></pre>
+<p>Enter all the required details.</p>
+<pre><code>root@fido:~# ls /home
+fido
+</code></pre>
+<p>Successfully new user is created.</p>
+<p>Grant <code>fido</code> root privilege.</p>
+<pre><code>root@fido:~# /usr/sbin/visudo
+# User privilege specification
+
+root    ALL=(ALL:ALL) ALL
+fido    ALL=(ALL:ALL) ALL
+</code></pre>
+<p>Since <code>fido</code> is not normal user, delete fido’s home directory.</p>
+<pre><code>root@fido:~# rm -rf /home/fido
+root@fido:~# ls /home
+root@fido:~#
+</code></pre>
+<p><strong>Create a new db user fido</strong></p>
+<pre><code>root@fido:~# su - postgres
+postgres@fido:~$ createuser --pwprompt
+Enter name of role to add: fido
+Enter password for new role:
+Enter it again:
+Shall the new role be a superuser? (y/n) y
+</code></pre>
+<p><code>--pwprompt</code> will prompt for password. <code>release</code> is the password I typed (we need this to connect db from app).</p>
+<p><strong>Create a new database fido</strong></p>
+<pre><code>postgres@fido:~$ createdb fido;
+postgres@fido:~$ psql -U fido -h localhost
+Password for user fido:
+psql (9.1.10)
+SSL connection (cipher: DHE-RSA-AES256-SHA, bits: 256)
+Type &quot;help&quot; for help.
+fido=# \d
+No relations found.
+</code></pre>
+<p>Done. New database role <code>fido</code> and database is created. We are successfully able to login.</p>
+<h3 id="step-3---python-dependencies">Step 3 - Python dependencies</h3>
+<p><strong>Install pip</strong></p>
+<pre><code>root@fido:# cd /tmp
+root@fido:/tmp# wget <a href="https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py" target="_blank">https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py</a>
+root@fido:/tmp# python ez_setup.py install
+root@fido:/tmp# easy_install pip
+# What is easy_install ? Python package manager.
+# what is pip ? Python package manager.
+# How to install pip ? easy_install pip.
+# Shame on python :-(
+...
+Installed /usr/local/lib/python2.7/dist-packages/pip-1.4.1-py2.7.egg
+Processing dependencies for pip
+Finished processing dependencies for pip
+</code></pre>
+<p><strong>Install virtualenv</strong></p>
+<pre><code>root@fido:/tmp# pip install virtualenv
+</code></pre>
+<h3 id="step-4---install-app-dependencies">Step 4 - Install app dependencies</h3>
+<p>Here is the sample app code. The app is just for demo. The app will be placed in <code>/var/www/fido</code>. Normally in production, this will be similar to <code>git clone &lt;url&gt;</code> or <code>hg clone &lt;url&gt;</code> inside directory. Make sure you aren’t sudo while cloning.</p>
+<pre><code>root@fido:/tmp# cd /var
+root@fido:/var# mkdir www
+root@fido:/var# mkdir www/fido
+</code></pre>
+<p>Change the owner of the repo to <code>fido</code>.</p>
+<pre><code>root@fido:/var# chown fido:fido www/fido
+root@fido:/var# ls -la www/
+total 12
+drwxr-xr-x  3 root root 4096 Dec 25 03:18 .
+drwxr-xr-x 14 root root 4096 Dec 25 03:18 ..
+drwxr-xr-x  2 fido fido 4096 Dec 25 03:18 fido
+</code></pre>
+<p><code>app.py</code> - fido application.</p>
+<pre><code># /usr/bin/env python
+
+from flask import Flask, request
+from flask.ext.sqlalchemy import SQLAlchemy
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = &quot;postgres://fido:release@localhost:5432/fido&quot;
+db = SQLAlchemy(app)
+
+
+class Todo(db.Model):
+    id = db.Column(db.Integer(), nullable=False, primary_key=True)
+    name = db.Column(db.UnicodeText(), nullable=False)
+    status = db.Column(db.Boolean(), default=False, nullable=True)
+
+
+@app.route(&quot;/&quot;)
+def index():
+    return &quot;Index page. Use /new create a new todo&quot;
+
+
+@app.route('/new', methods=['POST'])
+def new():
+    form = request.form
+    name, status = form.get('name'), form.get('status') or False
+    todo = Todo(name=name, status=status)
+    db.session.add(todo)
+    db.session.commit()
+    return &quot;Created todo: {}&quot;.format(name)
+
+
+if __name__ == &quot;__main__&quot;:
+    db.create_all()
+    app.run('0.0.0.0', port=3333, debug=True)
+</code></pre>
+<p>Add a <code>wsgi</code> file <code>website.py</code></p>
+<pre><code>root@fido:/var/www/fido# cat website.py
+import sys
+import os.path
+sys.path.insert(0, os.path.dirname(__file__))
+from app import app as application
+</code></pre>
+<p>Files in <code>fido</code> directory.</p>
+<pre><code>root@fido:/var/www/fido# tree .
+.
+├── app.py
+├── __init__.py
+└── website.wsgi
+
+0 directories, 3 files
+</code></pre>
+<h3 id="step-5---virtual-env-and-dependencies">Step 5 - Virtual env and dependencies</h3>
+<pre><code>root@fido:/var/www/fido# virtualenv --no-site-packages env
+root@fido:/var/www/fido# . env/bin/activate
+(env)root@fido:/var/www/fido# pip install flask sqlalchemy flask-sqlalchemy psycopg2
+</code></pre>
+<h3 id="step-6---final-setup">Step 6 - final setup</h3>
+<p><strong>Create uwsgi config file</strong></p>
+<pre><code># Add following lines to fido.ini file
+root@fido:/etc# cat uwsgi/apps-enabled/fido.ini
+[uwsgi]
+socket = 127.0.0.1:5000
+threads = 2
+master = true
+uid = fido
+gid = fido
+chdir = /var/www/fido
+home = /var/www/fido/env/
+pp = ..
+module = website
+</code></pre>
+<p>Check whether uwsgi is booting up properly.</p>
+<pre><code>root@fido:/var/www/fido# uwsgi --ini /etc/uwsgi/apps-enabled/fido.ini
+...
+...
+Python version: 2.7.5+ (default, Sep 19 2013, 13:52:09)  [GCC 4.8.1]
+Set PythonHome to /var/www/fido/env/
+Python main interpreter initialized at 0xb96a70
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 165920 bytes (162 KB) for 2 cores
+*** Operational MODE: threaded ***
+added ../ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xb96a70 pid:  17559 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 17559)
+spawned uWSGI worker 1 (pid: 17562, cores: 2)
+</code></pre>
+<p><code>uwsgi</code> is able to load the app without any issues. Kill the uwsgi using keyboard interrupt.</p>
+<p>Now lets create table.</p>
+<pre><code>root@fido:/var/www/fido# . env/bin/activate
+(env)root@fido:/var/www/fido# python app.py
+* Running on <a href="http://0.0.0.0:3333/" target="_blank">http://0.0.0.0:3333/</a>
+* Restarting with reloader
+</code></pre>
+<p>Exit the program, <code>db.create_all()</code> must have created the table. Normally in production environment, it is advised to use <code>python manage.py db create</code> or any similar approach.</p>
+<p><strong>Configure nginx</strong></p>
+<pre><code>root@fido:/var/www/fido# cat /etc/nginx/sites-enabled/fido.in
+upstream flask {
+    server 127.0.0.1:5000;
+}
+
+# configuration of the server
+server {
+    # the domain name it will serve for
+    listen 127.0.0.1; # This is very important to test the server locally
+    server_name fido.in; # substitute your machine's IP address or FQDN
+    charset     utf-8;
+
+    location / {
+        uwsgi_pass  flask;
+        include uwsgi_params;
+    }
+}
+</code></pre>
+<p>Now <code>nginx</code> and <code>uwsgi</code> will be running in background. Restart them.</p>
+<pre><code>root@fido:/var/www/fido# service nginx restart
+* Restarting nginx nginx                                                             [ OK ]
+root@fido:/var/www/fido# service uwsgi restart
+* Restarting app server(s) uwsgi                                                    [ OK ]
+</code></pre>
+<p>Machine name is <code>fido</code>, so lets try <code>curl http://fido</code></p>
+<pre><code>root@fido:/var/www/fido# curl http://fido
+Index page. Use /new create a new todo
+</code></pre>
+<p>Create a new task.</p>
+<pre><code>root@fido:/var/www/fido#curl --data &quot;name=write blog post about flask deployment&quot;  http://fido/new
+Created todo: write blog post about flask deployment
+</code></pre>
+<p>We have successfully deployed <code>flask</code> + <code>uwsgi</code> + <code>nginx</code>.</p>
+<p>Since we installed <code>uwsgi</code> from ubuntu repo, it is started as <code>upstart</code> process, that is why we issue commands like <code>service uwsgi restart</code>.</p>
+<p>To see all upstart service, try <code>service --status-all</code>.</p>
+<p>If you are running multiple web application in a single server, create one user per application.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://kracekumar.github.io//tags/python/">python</a>&nbsp;
+            
+              <a href="https://kracekumar.github.io//tags/flask/">flask</a>&nbsp;
+            
+              <a href="https://kracekumar.github.io//tags/nginx/">nginx</a>&nbsp;
+            
+              <a href="https://kracekumar.github.io//tags/uwsgi/">uwsgi</a>&nbsp;
+            
+              <a href="https://kracekumar.github.io//tags/deployment/">deployment</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/618264170735009792/parameterize-python-tests/">Parameterize Python Tests</a></li>
+                
+                    <li><a href="/post/612817685627191296/dont-touch-your-face-neural-network-will-warn/">“Don’t touch your face” - Neural Network will warn you</a></li>
+                
+                    <li><a href="/post/190478935610/capture-all-browser-https-calls-to-load-a-web/">Capture all browser HTTP[s] calls to load a web page</a></li>
+                
+                    <li><a href="/post/170492996890/how-long-do-python-postgres-tools-take-to-load/">How long do Python Postgres tools take to load data?</a></li>
+                
+                    <li><a href="/post/168364964555/debugging-python-multiprocessing-program-with/">Debugging Python multiprocessing program with strace</a></li>
+                
+              </ul>
+
+          
+                  
+       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://kracekumar.github.io/post/70778191617/ipynb2viewer-afternoon-hack/" data-toggle="tooltip" data-placement="top" title="ipynb2viewer - Afternoon hack">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://kracekumar.github.io/post/71171551647/introduction-to-python/" data-toggle="tooltip" data-placement="top" title="introduction to python">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://kracekumar.github.io/">Technical Ramblings</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.71.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://kracekumar.github.io/js/main.js"></script>
+<script src="https://kracekumar.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://kracekumar.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

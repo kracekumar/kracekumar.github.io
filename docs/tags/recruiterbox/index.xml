@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Recruiterbox on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/recruiterbox/</link>
+    <description>Recent content in Recruiterbox on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 31 Dec 2013 03:41:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/recruiterbox/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>On leaving HasGeek</title>
+      <link>https://kracekumar.github.io/post/71708603301/on-leaving-hasgeek/</link>
+      <pubDate>Tue, 31 Dec 2013 03:41:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/71708603301/on-leaving-hasgeek/</guid>
+      <description>Today (31-12-2013) is my last working day at HasGeek. It was in July 2012, I joined HasGeek. It was fabulous journey for past 18 months, meeting lot of new people, being part of events, writing lot of code. I was part of large, medium, small conferences like Fifth elephant (2012, 2013), Cartonama (2012), JSFoo(2012, 2013), Droidcon (2012, 2013), Metarefresh (2013), various hacknight and geekup.
+I will be joning Aplopio Technology Inc, flagship product recruiterbox on 16 January, 2014.</description>
+    </item>
+    
+  </channel>
+</rss>

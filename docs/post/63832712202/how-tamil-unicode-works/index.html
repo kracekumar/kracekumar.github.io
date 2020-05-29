@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>How Tamil Unicode works - Technical Ramblings</title>
+  <meta name="description" content="Tamil has 247 characters. No panic. It is simple. 12 uyir eluthu(அ,ஆ..ஔ), 18 mei eluthu(க்,ங்..) , 216 uyirmei eluthu(12 * 18 க,ங ).1 ayutham(ஃ).
+I assume you know what is unicode. If not read The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets and then read wikipedia page. You will understand most of it. Back to the post.
+Every character or letter in unicode has value called code point."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Technical Ramblings",
+    
+    "url": "https:\/\/kracekumar.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/kracekumar.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/post\/63832712202\/how-tamil-unicode-works\/",
+          "name": "How tamil unicode works"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "How Tamil Unicode works",
+  "description" : "Tamil has 247 characters. No panic. It is simple. 12 uyir eluthu(அ,ஆ..ஔ), 18 mei eluthu(க்,ங்..) , 216 uyirmei eluthu(12 * 18 க,ங ).1 ayutham(ஃ).\nI assume you know what is unicode. If not read The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets and then read wikipedia page. You will understand most of it. Back to the post.\nEvery character or letter in unicode has value called code point.",
+  "inLanguage" : "en",
+  "wordCount":  521 ,
+  "datePublished" : "2013-10-12T16:36:37",
+  "dateModified" : "2013-10-12T16:36:37",
+  "image" : "https:\/\/kracekumar.github.io\/",
+  "keywords" : [ "unicode, python, Tamil" ],
+  "mainEntityOfPage" : "https:\/\/kracekumar.github.io\/post\/63832712202\/how-tamil-unicode-works\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/kracekumar.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/kracekumar.github.io\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="How Tamil Unicode works" />
+<meta property="og:description" content="Tamil has 247 characters. No panic. It is simple. 12 uyir eluthu(அ,ஆ..ஔ), 18 mei eluthu(க்,ங்..) , 216 uyirmei eluthu(12 * 18 க,ங ).1 ayutham(ஃ).
+I assume you know what is unicode. If not read The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets and then read wikipedia page. You will understand most of it. Back to the post.
+Every character or letter in unicode has value called code point.">
+<meta property="og:url" content="https://kracekumar.github.io/post/63832712202/how-tamil-unicode-works/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Technical Ramblings" />
+
+  <meta name="twitter:title" content="How Tamil Unicode works" />
+  <meta name="twitter:description" content="Tamil has 247 characters. No panic. It is simple. 12 uyir eluthu(அ,ஆ..ஔ), 18 mei eluthu(க்,ங்..) , 216 uyirmei eluthu(12 * 18 க,ங ).1 ayutham(ஃ).
+I assume you know what is unicode. If not read The …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.71.1" />
+  <link rel="alternate" href="https://kracekumar.github.io/index.xml" type="application/rss+xml" title="Technical Ramblings"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kracekumar.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://kracekumar.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://kracekumar.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://kracekumar.github.io/">Technical Ramblings</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>How Tamil Unicode works</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on October 12, 2013
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;521&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Tamil has 247 characters. No panic. It is simple. 12 uyir eluthu(அ,ஆ..ஔ), 18 mei eluthu(க்,ங்..) , 216 uyirmei eluthu(12 * 18 க,ங ).1 ayutham(ஃ).</p>
+<p>I assume you know what is unicode. If not read <a href="http://www.joelonsoftware.com/articles/Unicode.html" target="_blank">The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets</a> and then read wikipedia page. You will understand most of it. Back to the post.</p>
+<p>Every character or letter in unicode has value called <code>code point</code>. This is similar to ASCII where value of <code>a</code> is 97. All code point value is represented in hexadecimal. Tamil unicode character range starts from <code>0B80 - 0BFF</code>. Unicode consortium has a <a href="http://www.unicode.org/charts/PDF/U0B80.pdf" target="_blank">complete mappings</a>. So value of அ is <code>0B85</code>.</p>
+<p>You don’t believe me ? I will show you the code. Fireup <code>python2</code> console(I am using ipython).</p>
+<pre><code>In [343]: print(unichr(0x0b85))
+அ
+</code></pre>
+<p>How to find hex of a character ?</p>
+<pre><code>In [344]: print(hex(ord(u'க')))
+0xb95
+</code></pre>
+<p>What is the code point of கி?</p>
+<pre><code>In [345]: print(hex(ord(u'கி')))
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+&lt;ipython-input-345-9e02bf5958df&gt; in &lt;module&gt;()
+----&gt; 1 print(hex(ord(u'கி')))
+
+TypeError: ord() expected a character, but string of length 2 found
+</code></pre>
+<p>Python says len of the unicode character <code>கி</code> is 2. Lets check.</p>
+<pre><code>In [346]: print(len(u'கி'))
+2
+
+In [348]: print(len(unichr(0x0b85)))
+1
+
+In [349]: print(unichr(0x0b85))
+அ
+</code></pre>
+<p>So clearly <code>கி</code> is composed of two characters.<code>கி</code>=<code>க்</code>+ <code>இ</code> from language point of view. Lets see what program says.</p>
+<pre><code>In [355]: for c in u'கி':
+    print c, hex(ord(c))
+   .....:
+க 0xb95
+ ி 0xbbf
+</code></pre>
+<p>When you are typing in browser or editor, you use <code>க</code> + <code>இ</code> after that it is the work of font and others work to replace it.</p>
+<p>Below is the javascript code executed in chrome console.</p>
+<pre><code>chr = &quot;கி&quot;
+for (var i in chr){console.log(chr[i]);}
+க
+ி
+undefined
+</code></pre>
+<p>So irrespective of the programming language or console or browser unicode is stored in the same way.</p>
+<p><code>ி</code>is dependent vowel sign. Let me list all of them.</p>
+<pre><code>In [362]: for c in range(0xbbe, 0xbce):
+    print c, unichr(c)
+   .....:
+3006 ா
+3007 ி
+3008 ீ
+3009 ு
+3010 ூ
+3011 ௃
+3012 ௄
+3013 ௅
+3014 ெ
+3015 ே
+3016 ை
+3017 ௉
+3018 ொ
+3019 ோ
+3020 ௌ
+3021 ்
+</code></pre>
+<p><code>௅</code> is a placeholder and that hex value doesn’t have any symbol or character. Dependent vowel will be used for replacing uyir eluthu.</p>
+<p>Now lets read character by character in a word .</p>
+<pre><code>In [366]: for i in u'விகடகவி':
+        print i, hex(ord(i))
+   .....:
+வ 0xbb5
+ ி 0xbbf
+க 0xb95
+ட 0xb9f
+க 0xb95
+வ 0xbb5
+ ி 0xbbf
+</code></pre>
+<p>Well above logic holds true for english but not for Tamil.</p>
+<pre><code>In [395]: word = u'விகடகவி'
+
+In [396]: dependent_vowel_range = range(0xbbe, 0xbce)
+
+In [397]: pos, stop = 0, len(word) - 1
+
+In [398]: while not pos &gt;= stop:
+    #check if next char is dependent vowel if so, print together
+    if ord(word[pos+1]) in dependent_vowel_range:
+        print word[pos], word[pos+1]
+        pos += 2
+    else:
+        print word[pos]
+        pos += 1
+வ ி
+க
+ட
+க
+வ ி
+</code></pre>
+<p>Now try to write a program that will find a tamil word is palindrome or not and see the fun.</p>
+<p>Note: I need to figure font that will club dependent vowel and print properly in terminal.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://kracekumar.github.io//tags/unicode/">unicode</a>&nbsp;
+            
+              <a href="https://kracekumar.github.io//tags/python/">python</a>&nbsp;
+            
+              <a href="https://kracekumar.github.io//tags/tamil/">Tamil</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/618264170735009792/parameterize-python-tests/">Parameterize Python Tests</a></li>
+                
+                    <li><a href="/post/612817685627191296/dont-touch-your-face-neural-network-will-warn/">“Don’t touch your face” - Neural Network will warn you</a></li>
+                
+                    <li><a href="/post/190478935610/capture-all-browser-https-calls-to-load-a-web/">Capture all browser HTTP[s] calls to load a web page</a></li>
+                
+                    <li><a href="/post/170492996890/how-long-do-python-postgres-tools-take-to-load/">How long do Python Postgres tools take to load data?</a></li>
+                
+                    <li><a href="/post/168364964555/debugging-python-multiprocessing-program-with/">Debugging Python multiprocessing program with strace</a></li>
+                
+              </ul>
+
+          
+                  
+       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://kracekumar.github.io/post/63657996702/code-simplicity-book-review/" data-toggle="tooltip" data-placement="top" title="code simplicity book review">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://kracekumar.github.io/post/63834696015/check-tamil-word-or-sentence-is-palindrome/" data-toggle="tooltip" data-placement="top" title="Check Tamil word or sentence is palindrome">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://kracekumar.github.io/">Technical Ramblings</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.71.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://kracekumar.github.io/js/main.js"></script>
+<script src="https://kracekumar.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://kracekumar.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

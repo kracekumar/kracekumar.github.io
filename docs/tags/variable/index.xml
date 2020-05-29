@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>variable on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/variable/</link>
+    <description>Recent content in variable on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 16 Mar 2013 15:31:21 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/variable/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Python parallel assignment</title>
+      <link>https://kracekumar.github.io/post/45502206532/python-parallel-assignment/</link>
+      <pubDate>Sat, 16 Mar 2013 15:31:21 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/45502206532/python-parallel-assignment/</guid>
+      <description>Python supports parallel assignment like
+&amp;gt;&amp;gt;&amp;gt; lang, version = &amp;quot;python&amp;quot;, 2.7 &amp;gt;&amp;gt;&amp;gt; print lang, version python 2.7  values are assigned to each variable without any issues.
+&amp;gt;&amp;gt;&amp;gt; x, y, z = 1, 2, x + y Traceback (most recent call last): File &amp;quot;&amp;lt;stdin&amp;gt;&amp;quot;, line 1, in &amp;lt;module&amp;gt; NameError: name &#39;x&#39; is not defined  First python tries to evaluate x + y expression. Since x, y is defined in same line, python is unable to access the variable x and y, so NameError is raised.</description>
+    </item>
+    
+  </channel>
+</rss>

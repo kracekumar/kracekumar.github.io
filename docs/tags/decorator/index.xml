@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>decorator on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/decorator/</link>
+    <description>Recent content in decorator on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 02 Nov 2014 01:17:42 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/decorator/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>class as decorator</title>
+      <link>https://kracekumar.github.io/post/101540141725/class-as-decorator/</link>
+      <pubDate>Sun, 02 Nov 2014 01:17:42 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/101540141725/class-as-decorator/</guid>
+      <description>Decorator Decorator is a callable which can modify the function, method, class on runtime. Most ofthe decorators uses closure but it is possible to use class.
+Closure import functools def cache(f): storage = {} @functools.wraps(f) def inner(n): value = storage.get(n) if value: print(&amp;quot;Returning value from cache&amp;quot;) return value value = f(n) storage[n] = value return value return inner @cache def factorial(n): if n &amp;lt;= 1: return 1 return n * factorial(n - 1) &amp;gt;&amp;gt;&amp;gt;factorial(20) 2432902008176640000 &amp;gt;&amp;gt;&amp;gt;factorial(20) Returning from cache 2432902008176640000  cache is a function which takes function as an argument and returns a function.</description>
+    </item>
+    
+  </channel>
+</rss>

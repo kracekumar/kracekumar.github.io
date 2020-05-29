@@ -1,0 +1,1248 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/</link>
+    <description>Recent content in Tags on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 16 May 2020 09:51:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>pytest</title>
+      <link>https://kracekumar.github.io/tags/pytest/</link>
+      <pubDate>Sat, 16 May 2020 09:51:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/pytest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://kracekumar.github.io/tags/python/</link>
+      <pubDate>Sat, 16 May 2020 09:51:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>testing</title>
+      <link>https://kracekumar.github.io/tags/testing/</link>
+      <pubDate>Sat, 16 May 2020 09:51:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/testing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>covid-19</title>
+      <link>https://kracekumar.github.io/tags/covid-19/</link>
+      <pubDate>Mon, 20 Apr 2020 19:56:04 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/covid-19/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data analysis</title>
+      <link>https://kracekumar.github.io/tags/data-analysis/</link>
+      <pubDate>Mon, 20 Apr 2020 19:56:04 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/data-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pytorch</title>
+      <link>https://kracekumar.github.io/tags/pytorch/</link>
+      <pubDate>Tue, 17 Mar 2020 07:01:22 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/pytorch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>yolov3</title>
+      <link>https://kracekumar.github.io/tags/yolov3/</link>
+      <pubDate>Tue, 17 Mar 2020 07:01:22 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/yolov3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>censor</title>
+      <link>https://kracekumar.github.io/tags/censor/</link>
+      <pubDate>Fri, 21 Feb 2020 20:13:15 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/censor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kashmir</title>
+      <link>https://kracekumar.github.io/tags/kashmir/</link>
+      <pubDate>Fri, 21 Feb 2020 20:13:15 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/kashmir/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HTTP</title>
+      <link>https://kracekumar.github.io/tags/http/</link>
+      <pubDate>Sun, 26 Jan 2020 17:31:40 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/http/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>proxy</title>
+      <link>https://kracekumar.github.io/tags/proxy/</link>
+      <pubDate>Sun, 26 Jan 2020 17:31:40 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/proxy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>performance</title>
+      <link>https://kracekumar.github.io/tags/performance/</link>
+      <pubDate>Sun, 04 Feb 2018 13:15:49 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/performance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>postgres</title>
+      <link>https://kracekumar.github.io/tags/postgres/</link>
+      <pubDate>Sun, 04 Feb 2018 13:15:49 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/postgres/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>debugging</title>
+      <link>https://kracekumar.github.io/tags/debugging/</link>
+      <pubDate>Sat, 09 Dec 2017 19:19:08 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/debugging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>multiprocessing</title>
+      <link>https://kracekumar.github.io/tags/multiprocessing/</link>
+      <pubDate>Sat, 09 Dec 2017 19:19:08 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/multiprocessing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>conference</title>
+      <link>https://kracekumar.github.io/tags/conference/</link>
+      <pubDate>Sat, 13 May 2017 15:51:29 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/conference/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>devops</title>
+      <link>https://kracekumar.github.io/tags/devops/</link>
+      <pubDate>Sat, 13 May 2017 15:51:29 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>notes</title>
+      <link>https://kracekumar.github.io/tags/notes/</link>
+      <pubDate>Sat, 13 May 2017 15:51:29 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>book-review</title>
+      <link>https://kracekumar.github.io/tags/book-review/</link>
+      <pubDate>Wed, 10 May 2017 19:22:01 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/book-review/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>culture</title>
+      <link>https://kracekumar.github.io/tags/culture/</link>
+      <pubDate>Wed, 10 May 2017 19:22:01 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/culture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>recursecenter</title>
+      <link>https://kracekumar.github.io/tags/recursecenter/</link>
+      <pubDate>Wed, 01 Mar 2017 10:51:23 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/recursecenter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rfcs_we_love</title>
+      <link>https://kracekumar.github.io/tags/rfcs_we_love/</link>
+      <pubDate>Sat, 28 Jan 2017 17:47:02 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/rfcs_we_love/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ipython</title>
+      <link>https://kracekumar.github.io/tags/ipython/</link>
+      <pubDate>Tue, 24 Jan 2017 20:21:21 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/ipython/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jupyter</title>
+      <link>https://kracekumar.github.io/tags/jupyter/</link>
+      <pubDate>Tue, 24 Jan 2017 20:21:21 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/jupyter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>algorithm</title>
+      <link>https://kracekumar.github.io/tags/algorithm/</link>
+      <pubDate>Fri, 06 Jan 2017 18:32:51 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/algorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bookreview</title>
+      <link>https://kracekumar.github.io/tags/bookreview/</link>
+      <pubDate>Fri, 06 Jan 2017 18:32:51 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/bookreview/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>books</title>
+      <link>https://kracekumar.github.io/tags/books/</link>
+      <pubDate>Sat, 31 Dec 2016 11:43:21 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/books/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sideproject</title>
+      <link>https://kracekumar.github.io/tags/sideproject/</link>
+      <pubDate>Wed, 16 Nov 2016 08:27:53 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/sideproject/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rust</title>
+      <link>https://kracekumar.github.io/tags/rust/</link>
+      <pubDate>Mon, 14 Nov 2016 04:17:29 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/rust/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>philosophy</title>
+      <link>https://kracekumar.github.io/tags/philosophy/</link>
+      <pubDate>Mon, 07 Nov 2016 05:48:12 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/philosophy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bittorrent</title>
+      <link>https://kracekumar.github.io/tags/bittorrent/</link>
+      <pubDate>Sun, 09 Oct 2016 05:09:09 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/bittorrent/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hackerschool</title>
+      <link>https://kracekumar.github.io/tags/hackerschool/</link>
+      <pubDate>Tue, 27 Sep 2016 11:38:33 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/hackerschool/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hindi</title>
+      <link>https://kracekumar.github.io/tags/hindi/</link>
+      <pubDate>Tue, 20 Sep 2016 07:50:53 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/hindi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>politics</title>
+      <link>https://kracekumar.github.io/tags/politics/</link>
+      <pubDate>Tue, 20 Sep 2016 07:50:53 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/politics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tamil</title>
+      <link>https://kracekumar.github.io/tags/tamil/</link>
+      <pubDate>Tue, 20 Sep 2016 07:50:53 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/tamil/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tamilnadu</title>
+      <link>https://kracekumar.github.io/tags/tamilnadu/</link>
+      <pubDate>Tue, 20 Sep 2016 07:50:53 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/tamilnadu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bangalore</title>
+      <link>https://kracekumar.github.io/tags/bangalore/</link>
+      <pubDate>Tue, 06 Sep 2016 19:18:59 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/bangalore/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flowers</title>
+      <link>https://kracekumar.github.io/tags/flowers/</link>
+      <pubDate>Tue, 06 Sep 2016 19:18:59 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/flowers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>travel</title>
+      <link>https://kracekumar.github.io/tags/travel/</link>
+      <pubDate>Sat, 13 Aug 2016 18:16:55 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/travel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>uber</title>
+      <link>https://kracekumar.github.io/tags/uber/</link>
+      <pubDate>Sat, 13 Aug 2016 18:16:55 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/uber/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>exception</title>
+      <link>https://kracekumar.github.io/tags/exception/</link>
+      <pubDate>Sun, 24 Jul 2016 14:37:20 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/exception/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>https://kracekumar.github.io/tags/web/</link>
+      <pubDate>Sun, 24 Jul 2016 14:37:20 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>state machine</title>
+      <link>https://kracekumar.github.io/tags/state-machine/</link>
+      <pubDate>Sat, 16 Jul 2016 20:25:06 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/state-machine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>asyncio</title>
+      <link>https://kracekumar.github.io/tags/asyncio/</link>
+      <pubDate>Sun, 08 May 2016 20:18:48 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/asyncio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>uvloop</title>
+      <link>https://kracekumar.github.io/tags/uvloop/</link>
+      <pubDate>Sun, 08 May 2016 20:18:48 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/uvloop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>django</title>
+      <link>https://kracekumar.github.io/tags/django/</link>
+      <pubDate>Sun, 20 Mar 2016 17:07:40 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/django/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flask</title>
+      <link>https://kracekumar.github.io/tags/flask/</link>
+      <pubDate>Sat, 02 May 2015 16:42:40 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/flask/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>set</title>
+      <link>https://kracekumar.github.io/tags/set/</link>
+      <pubDate>Fri, 09 Jan 2015 19:50:06 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/set/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>class</title>
+      <link>https://kracekumar.github.io/tags/class/</link>
+      <pubDate>Sun, 02 Nov 2014 01:17:42 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/class/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>decorator</title>
+      <link>https://kracekumar.github.io/tags/decorator/</link>
+      <pubDate>Sun, 02 Nov 2014 01:17:42 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/decorator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fluent interface</title>
+      <link>https://kracekumar.github.io/tags/fluent-interface/</link>
+      <pubDate>Sat, 25 Oct 2014 09:32:01 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/fluent-interface/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>method chaining</title>
+      <link>https://kracekumar.github.io/tags/method-chaining/</link>
+      <pubDate>Sat, 25 Oct 2014 09:32:01 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/method-chaining/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>closure</title>
+      <link>https://kracekumar.github.io/tags/closure/</link>
+      <pubDate>Sun, 19 Oct 2014 11:14:08 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/closure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>global</title>
+      <link>https://kracekumar.github.io/tags/global/</link>
+      <pubDate>Sun, 19 Oct 2014 11:14:08 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/global/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>unicode</title>
+      <link>https://kracekumar.github.io/tags/unicode/</link>
+      <pubDate>Thu, 22 May 2014 20:35:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/unicode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pip</title>
+      <link>https://kracekumar.github.io/tags/pip/</link>
+      <pubDate>Mon, 12 May 2014 18:56:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/pip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bus</title>
+      <link>https://kracekumar.github.io/tags/bus/</link>
+      <pubDate>Sun, 27 Apr 2014 17:43:51 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/bus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wind</title>
+      <link>https://kracekumar.github.io/tags/wind/</link>
+      <pubDate>Sun, 27 Apr 2014 17:43:51 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/wind/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>learning</title>
+      <link>https://kracekumar.github.io/tags/learning/</link>
+      <pubDate>Sun, 06 Apr 2014 20:30:30 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>any</title>
+      <link>https://kracekumar.github.io/tags/any/</link>
+      <pubDate>Sat, 22 Mar 2014 08:34:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/any/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>next</title>
+      <link>https://kracekumar.github.io/tags/next/</link>
+      <pubDate>Sat, 22 Mar 2014 08:34:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/next/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>heapq</title>
+      <link>https://kracekumar.github.io/tags/heapq/</link>
+      <pubDate>Fri, 07 Mar 2014 18:24:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/heapq/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dictionary</title>
+      <link>https://kracekumar.github.io/tags/dictionary/</link>
+      <pubDate>Wed, 26 Feb 2014 19:07:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/dictionary/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hiring</title>
+      <link>https://kracekumar.github.io/tags/hiring/</link>
+      <pubDate>Fri, 31 Jan 2014 20:28:18 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/hiring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>startup</title>
+      <link>https://kracekumar.github.io/tags/startup/</link>
+      <pubDate>Fri, 31 Jan 2014 20:28:18 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/startup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hasgeek</title>
+      <link>https://kracekumar.github.io/tags/hasgeek/</link>
+      <pubDate>Tue, 31 Dec 2013 03:41:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/hasgeek/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recruiterbox</title>
+      <link>https://kracekumar.github.io/tags/recruiterbox/</link>
+      <pubDate>Tue, 31 Dec 2013 03:41:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/recruiterbox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>introduction</title>
+      <link>https://kracekumar.github.io/tags/introduction/</link>
+      <pubDate>Thu, 26 Dec 2013 04:38:41 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/introduction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>deployment</title>
+      <link>https://kracekumar.github.io/tags/deployment/</link>
+      <pubDate>Wed, 25 Dec 2013 18:08:34 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/deployment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nginx</title>
+      <link>https://kracekumar.github.io/tags/nginx/</link>
+      <pubDate>Wed, 25 Dec 2013 18:08:34 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/nginx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>uwsgi</title>
+      <link>https://kracekumar.github.io/tags/uwsgi/</link>
+      <pubDate>Wed, 25 Dec 2013 18:08:34 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/uwsgi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ipynb2viewer</title>
+      <link>https://kracekumar.github.io/tags/ipynb2viewer/</link>
+      <pubDate>Sun, 22 Dec 2013 11:50:16 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/ipynb2viewer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nbviewer</title>
+      <link>https://kracekumar.github.io/tags/nbviewer/</link>
+      <pubDate>Sun, 22 Dec 2013 11:50:16 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/nbviewer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://kracekumar.github.io/tags/docker/</link>
+      <pubDate>Mon, 16 Dec 2013 16:38:44 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu</title>
+      <link>https://kracekumar.github.io/tags/ubuntu/</link>
+      <pubDate>Mon, 16 Dec 2013 16:38:44 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>easy_install</title>
+      <link>https://kracekumar.github.io/tags/easy_install/</link>
+      <pubDate>Fri, 22 Nov 2013 17:02:21 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/easy_install/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>setuptools</title>
+      <link>https://kracekumar.github.io/tags/setuptools/</link>
+      <pubDate>Fri, 22 Nov 2013 17:02:21 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/setuptools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming</title>
+      <link>https://kracekumar.github.io/tags/programming/</link>
+      <pubDate>Sat, 16 Nov 2013 05:50:33 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>writing</title>
+      <link>https://kracekumar.github.io/tags/writing/</link>
+      <pubDate>Sat, 16 Nov 2013 05:50:33 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/writing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>random</title>
+      <link>https://kracekumar.github.io/tags/random/</link>
+      <pubDate>Thu, 24 Oct 2013 20:59:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/random/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>palindrome</title>
+      <link>https://kracekumar.github.io/tags/palindrome/</link>
+      <pubDate>Sat, 12 Oct 2013 17:01:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/palindrome/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>codesimplicity</title>
+      <link>https://kracekumar.github.io/tags/codesimplicity/</link>
+      <pubDate>Thu, 10 Oct 2013 18:00:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/codesimplicity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>opensource</title>
+      <link>https://kracekumar.github.io/tags/opensource/</link>
+      <pubDate>Thu, 10 Oct 2013 18:00:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/opensource/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>coverage</title>
+      <link>https://kracekumar.github.io/tags/coverage/</link>
+      <pubDate>Fri, 13 Sep 2013 17:50:32 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/coverage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>unit testing</title>
+      <link>https://kracekumar.github.io/tags/unit-testing/</link>
+      <pubDate>Fri, 13 Sep 2013 17:50:32 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/unit-testing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>college</title>
+      <link>https://kracekumar.github.io/tags/college/</link>
+      <pubDate>Tue, 20 Aug 2013 18:06:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/college/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>teaching</title>
+      <link>https://kracekumar.github.io/tags/teaching/</link>
+      <pubDate>Tue, 20 Aug 2013 18:06:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/teaching/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tip</title>
+      <link>https://kracekumar.github.io/tags/tip/</link>
+      <pubDate>Tue, 20 Aug 2013 18:06:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/tip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>training</title>
+      <link>https://kracekumar.github.io/tags/training/</link>
+      <pubDate>Tue, 20 Aug 2013 18:06:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/training/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>csv</title>
+      <link>https://kracekumar.github.io/tags/csv/</link>
+      <pubDate>Tue, 20 Aug 2013 05:31:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/csv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>httpie</title>
+      <link>https://kracekumar.github.io/tags/httpie/</link>
+      <pubDate>Sat, 27 Jul 2013 21:35:32 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/httpie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>trace</title>
+      <link>https://kracekumar.github.io/tags/trace/</link>
+      <pubDate>Sat, 27 Jul 2013 21:35:32 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/trace/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lua</title>
+      <link>https://kracekumar.github.io/tags/lua/</link>
+      <pubDate>Fri, 19 Jul 2013 08:01:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/lua/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>luasocket</title>
+      <link>https://kracekumar.github.io/tags/luasocket/</link>
+      <pubDate>Fri, 19 Jul 2013 08:01:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/luasocket/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tanglish</title>
+      <link>https://kracekumar.github.io/tags/tanglish/</link>
+      <pubDate>Thu, 18 Jul 2013 18:26:20 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/tanglish/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>why-this-kolaveri-di</title>
+      <link>https://kracekumar.github.io/tags/why-this-kolaveri-di/</link>
+      <pubDate>Thu, 18 Jul 2013 18:26:20 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/why-this-kolaveri-di/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>https</title>
+      <link>https://kracekumar.github.io/tags/https/</link>
+      <pubDate>Tue, 02 Jul 2013 16:50:39 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/https/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ssl</title>
+      <link>https://kracekumar.github.io/tags/ssl/</link>
+      <pubDate>Tue, 02 Jul 2013 16:50:39 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/ssl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cp</title>
+      <link>https://kracekumar.github.io/tags/cp/</link>
+      <pubDate>Sun, 23 Jun 2013 17:20:35 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/cp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gevent</title>
+      <link>https://kracekumar.github.io/tags/gevent/</link>
+      <pubDate>Sun, 23 Jun 2013 17:20:35 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/gevent/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go-lang</title>
+      <link>https://kracekumar.github.io/tags/go-lang/</link>
+      <pubDate>Sun, 23 Jun 2013 17:20:35 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/go-lang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rsync</title>
+      <link>https://kracekumar.github.io/tags/rsync/</link>
+      <pubDate>Sun, 23 Jun 2013 17:20:35 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/rsync/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>consumercourt</title>
+      <link>https://kracekumar.github.io/tags/consumercourt/</link>
+      <pubDate>Sat, 22 Jun 2013 08:11:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/consumercourt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reliance</title>
+      <link>https://kracekumar.github.io/tags/reliance/</link>
+      <pubDate>Sat, 22 Jun 2013 08:11:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/reliance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>command line</title>
+      <link>https://kracekumar.github.io/tags/command-line/</link>
+      <pubDate>Fri, 14 Jun 2013 17:48:41 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/command-line/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://kracekumar.github.io/tags/linux/</link>
+      <pubDate>Fri, 14 Jun 2013 17:48:41 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lyrics</title>
+      <link>https://kracekumar.github.io/tags/lyrics/</link>
+      <pubDate>Tue, 11 Jun 2013 04:40:52 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/lyrics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>quora</title>
+      <link>https://kracekumar.github.io/tags/quora/</link>
+      <pubDate>Thu, 30 May 2013 19:24:13 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/quora/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ux</title>
+      <link>https://kracekumar.github.io/tags/ux/</link>
+      <pubDate>Thu, 30 May 2013 19:24:13 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/ux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mcleodganj</title>
+      <link>https://kracekumar.github.io/tags/mcleodganj/</link>
+      <pubDate>Mon, 06 May 2013 20:47:19 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/mcleodganj/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>facepalm</title>
+      <link>https://kracekumar.github.io/tags/facepalm/</link>
+      <pubDate>Fri, 12 Apr 2013 21:12:08 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/facepalm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iframe</title>
+      <link>https://kracekumar.github.io/tags/iframe/</link>
+      <pubDate>Fri, 12 Apr 2013 21:12:08 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/iframe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://kracekumar.github.io/tags/javascript/</link>
+      <pubDate>Fri, 12 Apr 2013 21:12:08 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>coding</title>
+      <link>https://kracekumar.github.io/tags/coding/</link>
+      <pubDate>Sat, 30 Mar 2013 20:04:57 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>experiment</title>
+      <link>https://kracekumar.github.io/tags/experiment/</link>
+      <pubDate>Sat, 30 Mar 2013 20:04:57 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/experiment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Auvaiyar</title>
+      <link>https://kracekumar.github.io/tags/auvaiyar/</link>
+      <pubDate>Tue, 26 Mar 2013 13:33:09 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/auvaiyar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>money</title>
+      <link>https://kracekumar.github.io/tags/money/</link>
+      <pubDate>Mon, 25 Mar 2013 20:41:28 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/money/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>empythoned</title>
+      <link>https://kracekumar.github.io/tags/empythoned/</link>
+      <pubDate>Sun, 24 Mar 2013 19:24:08 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/empythoned/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>emscripten</title>
+      <link>https://kracekumar.github.io/tags/emscripten/</link>
+      <pubDate>Sun, 24 Mar 2013 19:24:08 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/emscripten/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>parallel-assignment</title>
+      <link>https://kracekumar.github.io/tags/parallel-assignment/</link>
+      <pubDate>Sat, 16 Mar 2013 15:31:21 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/parallel-assignment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>variable</title>
+      <link>https://kracekumar.github.io/tags/variable/</link>
+      <pubDate>Sat, 16 Mar 2013 15:31:21 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/variable/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>privoxy</title>
+      <link>https://kracekumar.github.io/tags/privoxy/</link>
+      <pubDate>Thu, 31 Jan 2013 18:21:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/privoxy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chrome</title>
+      <link>https://kracekumar.github.io/tags/chrome/</link>
+      <pubDate>Mon, 26 Nov 2012 18:33:11 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/chrome/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chromium</title>
+      <link>https://kracekumar.github.io/tags/chromium/</link>
+      <pubDate>Mon, 26 Nov 2012 18:33:11 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/chromium/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>firefox</title>
+      <link>https://kracekumar.github.io/tags/firefox/</link>
+      <pubDate>Mon, 26 Nov 2012 18:33:11 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/firefox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pypy</title>
+      <link>https://kracekumar.github.io/tags/pypy/</link>
+      <pubDate>Sun, 25 Nov 2012 20:11:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/pypy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>apt-get</title>
+      <link>https://kracekumar.github.io/tags/apt-get/</link>
+      <pubDate>Sun, 25 Nov 2012 19:36:19 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/apt-get/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>macbook</title>
+      <link>https://kracekumar.github.io/tags/macbook/</link>
+      <pubDate>Wed, 21 Nov 2012 18:43:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/macbook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>osx</title>
+      <link>https://kracekumar.github.io/tags/osx/</link>
+      <pubDate>Wed, 21 Nov 2012 18:43:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/osx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>android-hate</title>
+      <link>https://kracekumar.github.io/tags/android-hate/</link>
+      <pubDate>Sun, 11 Nov 2012 17:40:36 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/android-hate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rant</title>
+      <link>https://kracekumar.github.io/tags/rant/</link>
+      <pubDate>Sun, 11 Nov 2012 17:40:36 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/rant/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>microframework</title>
+      <link>https://kracekumar.github.io/tags/microframework/</link>
+      <pubDate>Sun, 11 Nov 2012 17:14:24 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/microframework/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hackathon</title>
+      <link>https://kracekumar.github.io/tags/hackathon/</link>
+      <pubDate>Sun, 11 Nov 2012 17:00:40 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/hackathon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python-likes</title>
+      <link>https://kracekumar.github.io/tags/python-likes/</link>
+      <pubDate>Fri, 19 Oct 2012 17:22:18 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/python-likes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kracekumar</title>
+      <link>https://kracekumar.github.io/tags/kracekumar/</link>
+      <pubDate>Wed, 04 Jul 2012 15:32:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/kracekumar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>in operator</title>
+      <link>https://kracekumar.github.io/tags/in-operator/</link>
+      <pubDate>Sun, 06 May 2012 13:06:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/in-operator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GNU/Linux</title>
+      <link>https://kracekumar.github.io/tags/gnu/linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/tags/gnu/linux/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>microframework on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/microframework/</link>
+    <description>Recent content in microframework on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Nov 2012 17:14:24 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/microframework/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Microframeworks produces micro level progress in project</title>
+      <link>https://kracekumar.github.io/post/35493348288/microframeworks-produces-micro-level-progress-in/</link>
+      <pubDate>Sun, 11 Nov 2012 17:14:24 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/35493348288/microframeworks-produces-micro-level-progress-in/</guid>
+      <description>I created my first web app in PHP 5.2 with * no frameworks *, then learned drupal, tried codeigniter, joomla. Then I learned Rails for HappySchool project and learned Django since I am python lover. Tried Pylons and settled with Flask and experimenting brubeck.
+Flask is microframework built around werkzeug datastructures.
+Advantages Vs Disadvantages  Learn in depth working of HTTP vs Time consuming Opportunity to create library vs Time consuming Less batteries available vs More development time  It is highly loosely coupled which is good to replace the parts with best tools if available.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>heapq on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/heapq/</link>
+    <description>Recent content in heapq on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 07 Mar 2014 18:24:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/heapq/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Find n largest and smallest number in an iterable</title>
+      <link>https://kracekumar.github.io/post/78863855937/find-n-largest-and-smallest-number-in-an-iterable/</link>
+      <pubDate>Fri, 07 Mar 2014 18:24:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/78863855937/find-n-largest-and-smallest-number-in-an-iterable/</guid>
+      <description>Python has sorted function which sorts iterable in ascending or descending order.
+# Sort descending In [95]: sorted([1, 2, 3, 4], reverse=True) Out[95]: [4, 3, 2, 1] # Sort ascending In [96]: sorted([1, 2, 3, 4], reverse=False) Out[96]: [1, 2, 3, 4]  sorted(iterable, reverse=True)[:n] will yield first n largest numbers. There is an alternate way.
+Python has heapq which implements heap datastructure. heapq has function nlargest and nsmallest which take arguments n number of elements, iterable like list, dict, tuple, generator and optional argument key.</description>
+    </item>
+    
+  </channel>
+</rss>

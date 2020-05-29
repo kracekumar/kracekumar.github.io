@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Python parallel assignment - Technical Ramblings</title>
+  <meta name="description" content="Python supports parallel assignment like
+&gt;&gt;&gt; lang, version = &quot;python&quot;, 2.7 &gt;&gt;&gt; print lang, version python 2.7  values are assigned to each variable without any issues.
+&gt;&gt;&gt; x, y, z = 1, 2, x &#43; y Traceback (most recent call last): File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt; NameError: name &#39;x&#39; is not defined  First python tries to evaluate x &#43; y expression. Since x, y is defined in same line, python is unable to access the variable x and y, so NameError is raised."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Technical Ramblings",
+    
+    "url": "https:\/\/kracekumar.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/kracekumar.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/post\/45502206532\/python-parallel-assignment\/",
+          "name": "Python parallel assignment"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "Python parallel assignment",
+  "description" : "Python supports parallel assignment like\n\u0026gt;\u0026gt;\u0026gt; lang, version = \u0026quot;python\u0026quot;, 2.7 \u0026gt;\u0026gt;\u0026gt; print lang, version python 2.7  values are assigned to each variable without any issues.\n\u0026gt;\u0026gt;\u0026gt; x, y, z = 1, 2, x \u002b y Traceback (most recent call last): File \u0026quot;\u0026lt;stdin\u0026gt;\u0026quot;, line 1, in \u0026lt;module\u0026gt; NameError: name \u0027x\u0027 is not defined  First python tries to evaluate x \u002b y expression. Since x, y is defined in same line, python is unable to access the variable x and y, so NameError is raised.",
+  "inLanguage" : "en",
+  "wordCount":  138 ,
+  "datePublished" : "2013-03-16T15:31:21",
+  "dateModified" : "2013-03-16T15:31:21",
+  "image" : "https:\/\/kracekumar.github.io\/",
+  "keywords" : [ "python, variable, parallel-assignment" ],
+  "mainEntityOfPage" : "https:\/\/kracekumar.github.io\/post\/45502206532\/python-parallel-assignment\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/kracekumar.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/kracekumar.github.io\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Python parallel assignment" />
+<meta property="og:description" content="Python supports parallel assignment like
+&gt;&gt;&gt; lang, version = &quot;python&quot;, 2.7 &gt;&gt;&gt; print lang, version python 2.7  values are assigned to each variable without any issues.
+&gt;&gt;&gt; x, y, z = 1, 2, x &#43; y Traceback (most recent call last): File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt; NameError: name &#39;x&#39; is not defined  First python tries to evaluate x &#43; y expression. Since x, y is defined in same line, python is unable to access the variable x and y, so NameError is raised.">
+<meta property="og:url" content="https://kracekumar.github.io/post/45502206532/python-parallel-assignment/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Technical Ramblings" />
+
+  <meta name="twitter:title" content="Python parallel assignment" />
+  <meta name="twitter:description" content="Python supports parallel assignment like
+&gt;&gt;&gt; lang, version = &quot;python&quot;, 2.7 &gt;&gt;&gt; print lang, version python 2.7  values are assigned to each variable without any issues. …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.71.1" />
+  <link rel="alternate" href="https://kracekumar.github.io/index.xml" type="application/rss+xml" title="Technical Ramblings"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kracekumar.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://kracekumar.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://kracekumar.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://kracekumar.github.io/">Technical Ramblings</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Python parallel assignment</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on March 16, 2013
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;138&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Python supports parallel assignment like</p>
+<pre><code>&gt;&gt;&gt; lang, version = &quot;python&quot;, 2.7
+&gt;&gt;&gt; print lang, version
+python 2.7
+</code></pre>
+<p>values are assigned to each variable without any issues.</p>
+<pre><code>&gt;&gt;&gt; x, y, z = 1, 2, x + y
+Traceback (most recent call last):
+File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+NameError: name 'x' is not defined
+</code></pre>
+<p>First python tries to evaluate <code>x + y</code> expression. Since <code>x, y</code> is defined in same line, python is unable to access the variable <code>x</code> and <code>y</code>, so <code>NameError</code> is raised.</p>
+<pre><code>&gt;&gt;&gt; x, y = 1, 2
+&gt;&gt;&gt; z, a = x + y, 65
+&gt;&gt;&gt; print x, a
+1 65
+</code></pre>
+<p>In above code <code>x, y</code> is referenced before so <code>x + y</code> is evaluated and the value is assigned to <code>z</code>.</p>
+<p><strong>So don’t assign the values in same line and use it in expression</strong></p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://kracekumar.github.io//tags/python/">python</a>&nbsp;
+            
+              <a href="https://kracekumar.github.io//tags/variable/">variable</a>&nbsp;
+            
+              <a href="https://kracekumar.github.io//tags/parallel-assignment/">parallel-assignment</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/618264170735009792/parameterize-python-tests/">Parameterize Python Tests</a></li>
+                
+                    <li><a href="/post/612817685627191296/dont-touch-your-face-neural-network-will-warn/">“Don’t touch your face” - Neural Network will warn you</a></li>
+                
+                    <li><a href="/post/190478935610/capture-all-browser-https-calls-to-load-a-web/">Capture all browser HTTP[s] calls to load a web page</a></li>
+                
+                    <li><a href="/post/170492996890/how-long-do-python-postgres-tools-take-to-load/">How long do Python Postgres tools take to load data?</a></li>
+                
+                    <li><a href="/post/168364964555/debugging-python-multiprocessing-program-with/">Debugging Python multiprocessing program with strace</a></li>
+                
+              </ul>
+
+          
+                  
+       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://kracekumar.github.io/post/41956153813/setting-up-privoxy-proxy-server-for-browsing/" data-toggle="tooltip" data-placement="top" title="Setting up privoxy proxy server for browsing">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://kracekumar.github.io/post/46183195282/evaluate-python-code-using-client-side-javascript/" data-toggle="tooltip" data-placement="top" title="Evaluate python code using client side javascript  ">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://kracekumar.github.io/">Technical Ramblings</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.71.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://kracekumar.github.io/js/main.js"></script>
+<script src="https://kracekumar.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://kracekumar.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

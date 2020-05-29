@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>RC Week 1010 - Technical Ramblings</title>
+  <meta name="description" content="This week has mostly been calm and cold in New York.
+EDHT Distributed Hash Table implementation in Erlang is slowly coming along. The project now supports multi-node communication.
+The project uses bitcask which riak uses. Erlang’s Key/Value store data is local to the single process. Building Key/Value store from the ground up requires reinventing wheel and time consuming. The leveraging existing library made sense. Bitcask takes care of persisting the data to the disk and can access data without race conditions so far."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Technical Ramblings",
+    
+    "url": "https:\/\/kracekumar.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/kracekumar.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/post\/154363774320\/rc-week-1010\/",
+          "name": "R c week 1010"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "RC Week 1010",
+  "description" : "This week has mostly been calm and cold in New York.\nEDHT Distributed Hash Table implementation in Erlang is slowly coming along. The project now supports multi-node communication.\nThe project uses bitcask which riak uses. Erlang’s Key\/Value store data is local to the single process. Building Key\/Value store from the ground up requires reinventing wheel and time consuming. The leveraging existing library made sense. Bitcask takes care of persisting the data to the disk and can access data without race conditions so far.",
+  "inLanguage" : "en",
+  "wordCount":  423 ,
+  "datePublished" : "2016-12-12T05:18:55",
+  "dateModified" : "2016-12-12T05:18:55",
+  "image" : "https:\/\/kracekumar.github.io\/",
+  "keywords" : [ "recursecenter" ],
+  "mainEntityOfPage" : "https:\/\/kracekumar.github.io\/post\/154363774320\/rc-week-1010\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/kracekumar.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/kracekumar.github.io\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="RC Week 1010" />
+<meta property="og:description" content="This week has mostly been calm and cold in New York.
+EDHT Distributed Hash Table implementation in Erlang is slowly coming along. The project now supports multi-node communication.
+The project uses bitcask which riak uses. Erlang’s Key/Value store data is local to the single process. Building Key/Value store from the ground up requires reinventing wheel and time consuming. The leveraging existing library made sense. Bitcask takes care of persisting the data to the disk and can access data without race conditions so far.">
+<meta property="og:url" content="https://kracekumar.github.io/post/154363774320/rc-week-1010/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Technical Ramblings" />
+
+  <meta name="twitter:title" content="RC Week 1010" />
+  <meta name="twitter:description" content="This week has mostly been calm and cold in New York.
+EDHT Distributed Hash Table implementation in Erlang is slowly coming along. The project now supports multi-node communication.
+The project uses …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.71.1" />
+  <link rel="alternate" href="https://kracekumar.github.io/index.xml" type="application/rss+xml" title="Technical Ramblings"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kracekumar.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://kracekumar.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://kracekumar.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://kracekumar.github.io/">Technical Ramblings</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>RC Week 1010</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on December 12, 2016
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;423&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>This week has mostly been calm and cold in New York.</p>
+<h3 id="edht">EDHT</h3>
+<p><a href="http://github.com/kracekumar/edht" target="_blank">Distributed Hash Table</a> implementation in Erlang is slowly coming along. The project now supports multi-node communication.</p>
+<p>The project uses <a href="https://github.com/basho/bitcask/" target="_blank">bitcask</a> which <a href="https://github.com/basho/riak" target="_blank">riak</a> uses. Erlang’s Key/Value store data is local to the single process. Building Key/Value store from the ground up requires reinventing wheel and time consuming. The leveraging existing library made sense. Bitcask takes care of persisting the data to the disk and can access data without race conditions so far.</p>
+<p><a href="https://en.wikipedia.org/wiki/Consistent_hashing" target="_blank">Consistent hashing</a> is the key part of building distributed hash table. With partitioning and replication, the data is available when one or multiple nodes isn’t available. <a href="http://michaelnielsen.org/blog/consistent-hashing/" target="_blank">Michael Nielsen’s post</a> on consistent hashing with Python implementation was helpful in understanding key concepts. The post doesn’t talk about replication. <a href="https://github.com/carlosgaldino/concha/" target="_blank">Concha</a> library in Erlang implements consistent hashing and has nice API.</p>
+<p>The read/write data partitioning and replication is next step!</p>
+<p>My curiosity towards Erlang concurrency’s is growing day by day.</p>
+<h3 id="htop">Htop</h3>
+<p><a href="http://hisham.hm/htop/" target="_blank">Htop</a> is my go-to tool for process memory debugging and process information. I prefer to use it on <code>GNU/Linux</code> and <code>OSX</code>. <a href="https://peteris.rocks/blog/htop/" target="_blank">I read the post by Pieter - htop explained</a>. The post explain how htop works, how Linux handles processes, where and how the running process information is stored. This post is useful for anyone interested in systems.</p>
+<h3 id="times-square">Times Square</h3>
+<p>On Saturday - 10th Dec 2016, I visited <a href="https://en.wikipedia.org/wiki/Times_Square" target="_blank">Times Square</a> at 2:03 AM. I took a subway train from Nostrand Avenue to 50th Street at 1:15 AM. The train was half full at Nostrand Avenue. Few people got into every station in Brooklyn. Few were sleeping in the train stretching the legs in the adjacent seats. Some homeless folks (subway is their home) were resting in the public station seating and besides turnstiles. MTA groundsmen were cleaning the station, collecting the garbage and working in underground construction. The majority of passengers in the car were seniors. There was a crowd in every Manhattan station till 50th Street. The crowd was mostly youth. At 50th street, there was a little place to stand in the car. It was -1 degree Celsius at Times Square. Times Square was colorful with gigantic screens. All the screen was playing ads, movie trailers, and other commercials. Maximum of fifteen people was around <a href="https://en.wikipedia.org/wiki/George_M._Cohan" target="_blank">George M Cohan’s</a> statue. I walked down few streets and reached back home by 3:30 AM in the subway.</p>
+<p>There was snow showers in Brooklyn on Sunday. Hope it snows heavily in next few days :-). Next week is the last week of Fall'02 batch.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://kracekumar.github.io//tags/recursecenter/">recursecenter</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/157858156340/rc-checklist-for-indian-applicants/">RC checklist for Indian Applicants</a></li>
+                
+                    <li><a href="/post/155718711280/rc-return-statement/">RC Return Statement</a></li>
+                
+                    <li><a href="/post/154669792910/rc-week-1011/">RC Week 1011</a></li>
+                
+                    <li><a href="/post/154068164505/rc-week-1001/">RC week 1001</a></li>
+                
+                    <li><a href="/post/153759852775/rc-week-1000/">RC week 1000</a></li>
+                
+              </ul>
+
+          
+                  
+       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://kracekumar.github.io/post/154068164505/rc-week-1001/" data-toggle="tooltip" data-placement="top" title="RC week 1001">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://kracekumar.github.io/post/154669792910/rc-week-1011/" data-toggle="tooltip" data-placement="top" title="RC Week 1011">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://kracekumar.github.io/">Technical Ramblings</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.71.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://kracekumar.github.io/js/main.js"></script>
+<script src="https://kracekumar.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://kracekumar.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

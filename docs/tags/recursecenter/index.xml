@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>recursecenter on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/recursecenter/</link>
+    <description>Recent content in recursecenter on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Mar 2017 10:51:23 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/recursecenter/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>RC checklist for Indian Applicants</title>
+      <link>https://kracekumar.github.io/post/157858156340/rc-checklist-for-indian-applicants/</link>
+      <pubDate>Wed, 01 Mar 2017 10:51:23 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/157858156340/rc-checklist-for-indian-applicants/</guid>
+      <description>One Sunny Sunday morning one can get up and question their self-existence, or one can ask every few days or few months what am I doing at the current job? The answer will push you to a place you have never been.
+One can meticulously plan for extravagant programming tour or programmer’s pilgrimage for three months. Yes, that what my outlook of RC is! RC is a different place from a usual workplace, meetups, college or any educational institute.</description>
+    </item>
+    
+    <item>
+      <title>RC Return Statement</title>
+      <link>https://kracekumar.github.io/post/155718711280/rc-return-statement/</link>
+      <pubDate>Wed, 11 Jan 2017 14:31:45 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/155718711280/rc-return-statement/</guid>
+      <description>The Recurse Center is a free, three-month self-directed program for people who want to get better at programming. I attended fall batch 2 in 2016 from September to December. If you aren’t aware of Recurse Centre, take a couple of minutes to go through recurse.com and read the rest of the piece.
+Every day we open a significant amount of doors to get to desired places. Some doors are unique but look dull and plain, but the incredible universe behind the door hides excitement, adventures, gems, friends, and insights.</description>
+    </item>
+    
+    <item>
+      <title>RC Week 1011</title>
+      <link>https://kracekumar.github.io/post/154669792910/rc-week-1011/</link>
+      <pubDate>Mon, 19 Dec 2016 08:21:35 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/154669792910/rc-week-1011/</guid>
+      <description>EDHT I continued to work on the project and added the few features.
+ Data replication - One of the main features of DHT is replicate the data across a subset of nodes in the cluster. Remember not all nodes! Depending on the number of copies to store, say N, the data is stored in N - 1 nodes starting from the primary node in the anti-clockwise direction. Routing - Every node in the cluster has equal responsibility, and there is no master.</description>
+    </item>
+    
+    <item>
+      <title>RC Week 1010</title>
+      <link>https://kracekumar.github.io/post/154363774320/rc-week-1010/</link>
+      <pubDate>Mon, 12 Dec 2016 05:18:55 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/154363774320/rc-week-1010/</guid>
+      <description>This week has mostly been calm and cold in New York.
+EDHT Distributed Hash Table implementation in Erlang is slowly coming along. The project now supports multi-node communication.
+The project uses bitcask which riak uses. Erlang’s Key/Value store data is local to the single process. Building Key/Value store from the ground up requires reinventing wheel and time consuming. The leveraging existing library made sense. Bitcask takes care of persisting the data to the disk and can access data without race conditions so far.</description>
+    </item>
+    
+    <item>
+      <title>RC week 1001</title>
+      <link>https://kracekumar.github.io/post/154068164505/rc-week-1001/</link>
+      <pubDate>Mon, 05 Dec 2016 07:34:14 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/154068164505/rc-week-1001/</guid>
+      <description>This week I spent most of the time on working with Zulip, Erlang and EDHT.
+Zulip This week, we (Stan, Jennifer and I) continued efforts on implementing message reaction. We made decent progress and had a good create reaction frontend. During the journey, we discovered an interesting bug. Debugging the bug on production minified JS with the debugger was fun. We are close to completing the completing the initial version. It’s still a few days away from closure.</description>
+    </item>
+    
+    <item>
+      <title>RC week 1000</title>
+      <link>https://kracekumar.github.io/post/153759852775/rc-week-1000/</link>
+      <pubDate>Mon, 28 Nov 2016 03:49:59 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/153759852775/rc-week-1000/</guid>
+      <description>This week has been quiet, bikeshedding, holiday week and unproductive week so far in RC.
+Zulip Zulip is a Python-based open source group chat. RC uses zulip for the internal chat. Unlike GitHub, zulip doesn’t support inline emoji reaction for messages. I am collaborating with Arpith and Stan Zheng to add the missing feature. The first time I came across the limitation of Django’s values method. If you’re considering setting up a group chat for your community or company, try out zulip!</description>
+    </item>
+    
+    <item>
+      <title>RC Week 0111</title>
+      <link>https://kracekumar.github.io/post/153465926785/rc-week-0111/</link>
+      <pubDate>Mon, 21 Nov 2016 08:09:16 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/153465926785/rc-week-0111/</guid>
+      <description>This week most of the time I spent learning Distributed Hash Tables and Erlang. That means I didn’t write a significant amount of code for the project.
+I am reading DynamoDB paper which is Distributed Hash Table and Distributed Key/Value store. Some implementation like etcd and consul provides Distributed Key/Value store but replicates all data across nodes. So those aren’t Distributed Hash Table. I am reading the one sections at a time.</description>
+    </item>
+    
+    <item>
+      <title>Side Project Feasibility</title>
+      <link>https://kracekumar.github.io/post/153252087240/side-project-feasibility/</link>
+      <pubDate>Wed, 16 Nov 2016 08:27:53 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/153252087240/side-project-feasibility/</guid>
+      <description>It’s common for developers to work on side projects. The reason why developers work on a side project is a long list of imaginable and unimaginable reasons. My main reason to work on a side project is to learn how things work or to build a utility program for use.
+One of my recent projects is to monitor the internet traffic and aggregate the traffic based on the domain name - bandwidth monitor.</description>
+    </item>
+    
+    <item>
+      <title>RC Week 0110</title>
+      <link>https://kracekumar.github.io/post/153157531640/rc-week-0110/</link>
+      <pubDate>Mon, 14 Nov 2016 04:17:29 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/153157531640/rc-week-0110/</guid>
+      <description>This week, I reached the first milestone of the project - imon which I worked on for past couple of weeks.
+imon is a command-line utility to record all network traffic and classify the data according to the domain name.
+Here is a high-level presentation of the project.I am looking for code review on the project and happy to answer any questions.
+I wrote a blog post about my experience with Rust.</description>
+    </item>
+    
+    <item>
+      <title>My Experience With Rust</title>
+      <link>https://kracekumar.github.io/post/153116176705/my-experience-with-rust/</link>
+      <pubDate>Sun, 13 Nov 2016 07:25:37 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/153116176705/my-experience-with-rust/</guid>
+      <description>When I was about to leave to RC in few weeks, wrote an E-mail to Puneeth asking for Do&#39;s and Don&#39;ts at RC. One of the line in the mail said,
+ Since you are a Python guy, don’t write any Python code while you are there. Do something completely different.
+ I contemplated which language to choose. Other than Python, I knew a decent amount of Go-lang and Javascript. I previously attempted to learn rust but never dived deep into it.</description>
+    </item>
+    
+    <item>
+      <title>RC week 0101</title>
+      <link>https://kracekumar.github.io/post/152847253135/rc-week-0101/</link>
+      <pubDate>Mon, 07 Nov 2016 06:53:52 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/152847253135/rc-week-0101/</guid>
+      <description>Time flies faster than you can perceive.
+ The first half of twelve weeks experimental journey ends this week.
+This week was the last week for Fall 01, 2016 batch and my batch is due in next six weeks. I wish everyone in Fall 01, 2016 batch Good luck for their future endeavors. I made few friends, helped few people in their project; few helped me in my projects and a lot of unnoticed learnings.</description>
+    </item>
+    
+    <item>
+      <title>RC Week 0100</title>
+      <link>https://kracekumar.github.io/post/152543733085/rc-week-0100/</link>
+      <pubDate>Mon, 31 Oct 2016 05:31:05 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/152543733085/rc-week-0100/</guid>
+      <description>I had a decent progress with my rust HTTP traffic monitor. I read a lot about the different type of packets like Ethernet Packet, IPv4 Packet, TCP Packet, UDP Packet, DNS Packets. I wrote a parser for Physical Layer packet, TCP Packet, UDP Packet, DNS Packet. The parser helped me understand a lot about rust functions, data types like array, vectors, string and string literal. I am not enjoying the relationship with rust lifetimes.</description>
+    </item>
+    
+    <item>
+      <title>RC week 0011</title>
+      <link>https://kracekumar.github.io/post/152280595435/rc-week-0011/</link>
+      <pubDate>Tue, 25 Oct 2016 04:40:21 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/152280595435/rc-week-0011/</guid>
+      <description>This week commenced with the second project at RC in rust. I am building a command line utility to monitor internet bandwidth consumption categorized by websites. I had a general idea of how to go about it and drew rough sketches.
+As a lot of people suggested me, I am fighting battles with rust compiler in a life time and borrowing. I hit my first road block with pcap library and here is the issue.</description>
+    </item>
+    
+    <item>
+      <title>RC Week 0010</title>
+      <link>https://kracekumar.github.io/post/151921371645/rc-week-0010/</link>
+      <pubDate>Mon, 17 Oct 2016 06:04:45 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/151921371645/rc-week-0010/</guid>
+      <description>This week has been a mixed ride with the torrent client. I completed the two pending features seeding and UDP tracker. The torrent client has a major issue with downloading larger torrent file like ubuntu iso file. The client starts the downloads from a set of peers and slowly halts at sock.recv after exchanging a handful of packets. At this juncture CPU spikes to 100% when sock.recv blocks. Initially, the code relied on asyncio only features, now the code uses curio library.</description>
+    </item>
+    
+    <item>
+      <title>RC week 0001</title>
+      <link>https://kracekumar.github.io/post/151547342115/rc-week-0001/</link>
+      <pubDate>Sun, 09 Oct 2016 05:09:09 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/151547342115/rc-week-0001/</guid>
+      <description>This week, I made considerable progress on the BitTorrent client which I started a week back. The client is in a usable state to download the data from the swarm. The source code is available on GitHub. The project uses Python 3.5 async/await and asyncio. I presented the torrent client in RC Thursday five minute presentation evening slot. Here is the link to the slides.
+ Here is quick video demo recorded with asciinema.</description>
+    </item>
+    
+    <item>
+      <title>RC week 0000</title>
+      <link>https://kracekumar.github.io/post/151276229490/rc-week-0000/</link>
+      <pubDate>Mon, 03 Oct 2016 05:27:30 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/151276229490/rc-week-0000/</guid>
+      <description>The long awaited Recurse Center debut day, 26th Sep 2016 kick started with a welcome note by Nicholas Bergson-Shilcock and David Albert ; decorated by other events and activities to get to know the batchmates; the culture of RC and ended with closing note by Sonali Sridhar.
+
+ At the end of the day, I had decided to build a BitTorrent client as a first project. I was at the crossroad to choose Python or Rust or Go for the project.</description>
+    </item>
+    
+    <item>
+      <title>None</title>
+      <link>https://kracekumar.github.io/post/151005099060/im-attending-recurse-center-fall02-2016-batch/</link>
+      <pubDate>Tue, 27 Sep 2016 11:38:33 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/151005099060/im-attending-recurse-center-fall02-2016-batch/</guid>
+      <description>I’m attending Recurse Center fall&#39;02, 2016 batch. I’m excited (yes, without emoticons) to be in RC and New York. RC is different from schools, boot camps, universities for various reasons. The two reason I like the most is “Never Graduate” and “self-directed learning.”
+A lot to learn from peers, experiments, and discussions. Next, 12 weeks will be intense and what can a programmer ask for more than time to solve problems and understand how things for.</description>
+    </item>
+    
+  </channel>
+</rss>

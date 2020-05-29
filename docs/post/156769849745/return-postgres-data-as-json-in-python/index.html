@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Return Postgres data as JSON in Python - Technical Ramblings</title>
+  <meta name="description" content="Postgres supports JSON and JSONB for a couple of years now. The support for JSON-functions landed in version 9.2. These functions let Postgres server to return JSON serialized data. This is a handy feature. Consider a case; Python client fetches 20 records from Postgres. The client converts the data returned by the server to tuple/dict/proxy. The application or web server converts tuple again back to JSON and sends to the client."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Technical Ramblings",
+    
+    "url": "https:\/\/kracekumar.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/kracekumar.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/post\/156769849745\/return-postgres-data-as-json-in-python\/",
+          "name": "Return postgres data as j s o n in python"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "Return Postgres data as JSON in Python",
+  "description" : "Postgres supports JSON and JSONB for a couple of years now. The support for JSON-functions landed in version 9.2. These functions let Postgres server to return JSON serialized data. This is a handy feature. Consider a case; Python client fetches 20 records from Postgres. The client converts the data returned by the server to tuple\/dict\/proxy. The application or web server converts tuple again back to JSON and sends to the client.",
+  "inLanguage" : "en",
+  "wordCount":  388 ,
+  "datePublished" : "2017-02-03T20:47:13",
+  "dateModified" : "2017-02-03T20:47:13",
+  "image" : "https:\/\/kracekumar.github.io\/",
+  "keywords" : [ "python, postgres" ],
+  "mainEntityOfPage" : "https:\/\/kracekumar.github.io\/post\/156769849745\/return-postgres-data-as-json-in-python\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/kracekumar.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/kracekumar.github.io\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Return Postgres data as JSON in Python" />
+<meta property="og:description" content="Postgres supports JSON and JSONB for a couple of years now. The support for JSON-functions landed in version 9.2. These functions let Postgres server to return JSON serialized data. This is a handy feature. Consider a case; Python client fetches 20 records from Postgres. The client converts the data returned by the server to tuple/dict/proxy. The application or web server converts tuple again back to JSON and sends to the client.">
+<meta property="og:url" content="https://kracekumar.github.io/post/156769849745/return-postgres-data-as-json-in-python/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Technical Ramblings" />
+
+  <meta name="twitter:title" content="Return Postgres data as JSON in Python" />
+  <meta name="twitter:description" content="Postgres supports JSON and JSONB for a couple of years now. The support for JSON-functions landed in version 9.2. These functions let Postgres server to return JSON serialized data. This is a handy …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.71.1" />
+  <link rel="alternate" href="https://kracekumar.github.io/index.xml" type="application/rss+xml" title="Technical Ramblings"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kracekumar.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://kracekumar.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://kracekumar.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://kracekumar.github.io/">Technical Ramblings</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Return Postgres data as JSON in Python</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on February 3, 2017
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;388&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Postgres supports <code>JSON</code> and <code>JSONB</code> for a couple of years now. The support for JSON-functions landed in version 9.2. These functions let Postgres server to return JSON serialized data. This is a handy feature. Consider a case; Python client fetches 20 records from Postgres. The client converts the data returned by the server to tuple/dict/proxy. The application or web server converts tuple again back to JSON and sends to the client. The mentioned case is common in a web application. Not all API’s fit in the mentioned. But there is a use case.</p>
+<h3 id="postgres-example">Postgres Example</h3>
+<p>Consider two tables, <code>author</code> and <code>book</code> with the following schema.</p>
+<div class="gist"><a href="https://gist.github.com/kracekumar/322a2fd5ea09ee952e8a7720fd386184" target="_blank">https://gist.github.com/kracekumar/322a2fd5ea09ee952e8a7720fd386184</a></div>
+<p>Postgres function <code>row_to_json</code> convert a particular row to JSON data. Here is a list of authors in the table.</p>
+<div class="gist"><a href="https://gist.github.com/kracekumar/3f4bcdd16d080b5a36436370823e0495" target="_blank">https://gist.github.com/kracekumar/3f4bcdd16d080b5a36436370823e0495</a></div>
+<p>This is simple, let me show a query with an inner join. The <code>book table</code> contains a foreign key to <code>author table</code>. While returning list of books, including author name in the result is useful.</p>
+<div class="gist"><a href="https://gist.github.com/kracekumar/eb9f1009743ccb47df2b3a5f078a4444" target="_blank">https://gist.github.com/kracekumar/eb9f1009743ccb47df2b3a5f078a4444</a></div>
+<p>As you can see the query construction is verbose. The query has an extra select statement compared to a normal query. The idea is simple. First, do an inner join, then select the desired columns, and finally convert to JSON using row_to_json. <code>row_to_json</code> is available since version <code>9.2</code>. The same functionality can be achieved using other function like <code>json_build_object</code> in 9.4. You can read more about it in the <a href="https://www.postgresql.org/docs/9.4/static/functions-json.html" target="_blank">docs</a>.</p>
+<h3 id="python-example">Python Example</h3>
+<p>Postgres drivers <code>pyscopg2</code> and <code>pg8000</code> handles JSON response, but the result is parsed and returned as a tuple/dictionary. What that means, if you execute raw SQL the returned JSON data is converted to Python dictionary using <code>json.loads</code>. Here is the function that facilitates the conversion in <a href="https://github.com/psycopg/psycopg2/blob/51aa166d5219bf6bcda1f68f33399c930113a1f1/lib/_json.py#L109" target="_blank">pyscopg2</a> and <a href="https://github.com/mfenniak/pg8000/blob/4712bd870fec11b10b961a12b54ef7ccb0f70790/pg8000/core.py#L1433" target="_blank">pg8000</a>.</p>
+<div class="gist"><a href="https://gist.github.com/kracekumar/2d1d0b468cafa5197f5e21734047c46d" target="_blank">https://gist.github.com/kracekumar/2d1d0b468cafa5197f5e21734047c46d</a></div>
+<p>The psycopg2 converts returned JSON data to list of tuples with a dictionary.</p>
+<p>One way to circumvent the problem is to cast the result as text. The Python drivers don’t parse the text. So the JSON format is preserved.</p>
+<div class="gist"><a href="https://gist.github.com/kracekumar/b8a832cd036b54075a2715acf2086d62" target="_blank">https://gist.github.com/kracekumar/b8a832cd036b54075a2715acf2086d62</a></div>
+<p>Carefully view the printed results. The printed result is a list of tuple with a string.</p>
+<p>For SQLAlchemy folks here is how you do it</p>
+<div class="gist"><a href="https://gist.github.com/kracekumar/287178bcb26462a1b34ead4de10f0529" target="_blank">https://gist.github.com/kracekumar/287178bcb26462a1b34ead4de10f0529</a></div>
+<p>Another way to run SQL statement is to use <a href="http://docs.sqlalchemy.org/en/latest/core/sqlelement.html?highlight=text#sqlalchemy.sql.expression.text" target="_blank"><code>text</code> function</a>.</p>
+<p>The other workaround is to unregister the JSON converter. These two lines should do</p>
+<pre><code>import psycopg2.extensions as ext
+ext.string_types.pop(ext.JSON.values[0], None)
+</code></pre>
+<p>Here is a relevant issue in <a href="https://github.com/psycopg/psycopg2/issues/172" target="_blank">Pyscopg2</a>.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://kracekumar.github.io//tags/python/">python</a>&nbsp;
+            
+              <a href="https://kracekumar.github.io//tags/postgres/">postgres</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/618264170735009792/parameterize-python-tests/">Parameterize Python Tests</a></li>
+                
+                    <li><a href="/post/612817685627191296/dont-touch-your-face-neural-network-will-warn/">“Don’t touch your face” - Neural Network will warn you</a></li>
+                
+                    <li><a href="/post/190478935610/capture-all-browser-https-calls-to-load-a-web/">Capture all browser HTTP[s] calls to load a web page</a></li>
+                
+                    <li><a href="/post/170492996890/how-long-do-python-postgres-tools-take-to-load/">How long do Python Postgres tools take to load data?</a></li>
+                
+                    <li><a href="/post/168364964555/debugging-python-multiprocessing-program-with/">Debugging Python multiprocessing program with strace</a></li>
+                
+              </ul>
+
+          
+                  
+       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://kracekumar.github.io/post/156493415835/rfcs-we-love/" data-toggle="tooltip" data-placement="top" title="RFCS We Love">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://kracekumar.github.io/post/157858156340/rc-checklist-for-indian-applicants/" data-toggle="tooltip" data-placement="top" title="RC checklist for Indian Applicants">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://kracekumar.github.io/">Technical Ramblings</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.71.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://kracekumar.github.io/js/main.js"></script>
+<script src="https://kracekumar.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://kracekumar.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

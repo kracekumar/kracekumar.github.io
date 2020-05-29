@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>learning on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/learning/</link>
+    <description>Recent content in learning on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 06 Apr 2014 20:30:30 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to learn Python ?</title>
+      <link>https://kracekumar.github.io/post/81918059722/how-to-learn-python/</link>
+      <pubDate>Sun, 06 Apr 2014 20:30:30 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/81918059722/how-to-learn-python/</guid>
+      <description>Over period of time few people have asked me in meetups, online I want to learn python. Suggest me few ways to learn. Everyone who asked me had differentbackground and different intentions. Before answering the question I try to collectmore information about their interest and their previous approaches. Some learnt basicsfrom codecademy, some attended beginners session in Bangpypers meetup. In this postI will cover general questions asked and my suggested approach.</description>
+    </item>
+    
+  </channel>
+</rss>

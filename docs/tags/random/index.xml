@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>random on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/random/</link>
+    <description>Recent content in random on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 Oct 2013 20:59:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/random/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>taking rest</title>
+      <link>https://kracekumar.github.io/post/64983193790/taking-rest/</link>
+      <pubDate>Thu, 24 Oct 2013 20:59:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/64983193790/taking-rest/</guid>
+      <description>On my way back to home from work I was thinking, I should take rest. In my world rest always meant working on some non work codebase, reading a book, watching a movie. But I don’t want to do any of these. Then I thought I would just listen to songs, quickly remembered that will not work out because I will start coding.
+Finally I started to ask myself, is it possible for any human being to sit idle and take rest.</description>
+    </item>
+    
+  </channel>
+</rss>

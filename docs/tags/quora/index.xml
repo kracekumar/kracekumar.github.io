@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>quora on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/quora/</link>
+    <description>Recent content in quora on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 30 May 2013 19:24:13 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/quora/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Quora : I hate you for this</title>
+      <link>https://kracekumar.github.io/post/51741593651/quora-i-hate-you-for-this/</link>
+      <pubDate>Thu, 30 May 2013 19:24:13 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/51741593651/quora-i-hate-you-for-this/</guid>
+      <description>I have been using quora for almost two years. I have connected my Facebook, twitter, wordpress, tumblr accounts.
+Unless you are logged into quora you cannot read the post, on the surface this is true. If you are web geek you know you can look into the source code and read the page content and by pass.
+The Problem
+Now I am logged into facebook in tab 1, tab 2 is loading quora url, after few seconds dialog box appears and I am automatically logged into quora account.</description>
+    </item>
+    
+  </channel>
+</rss>

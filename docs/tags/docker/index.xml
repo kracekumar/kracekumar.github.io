@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/docker/</link>
+    <description>Recent content in docker on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 Dec 2013 16:38:44 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Autogenerate Dockerfile from ubuntu image</title>
+      <link>https://kracekumar.github.io/post/70198562577/autogenerate-dockerfile-from-ubuntu-image/</link>
+      <pubDate>Mon, 16 Dec 2013 16:38:44 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/70198562577/autogenerate-dockerfile-from-ubuntu-image/</guid>
+      <description>I was learning docker to use in one of my projects. I kept installing packages, finally created required Ubuntu image. Suddenly thought it would be cool if I can generate Dockerfile like pip freeze &amp;gt; requirements.txt.
+sudo docker run ubuntu dpkg --get-selections | awk &#39;{print $1}&#39; &amp;gt; base.list &amp;amp;amp;&amp;amp;amp; sudo docker run pyextra dpkg --get-selections | awk &#39;{print $1}&#39;&amp;gt; pyextra.list &amp;amp;amp;&amp;amp;amp; sort base.list pyextra.list | uniq -u &amp;gt; op.list &amp;amp;amp;&amp;amp;amp; python -c &amp;quot;f = open(&#39;Dockerfile&#39;, &#39;w&#39;);f.</description>
+    </item>
+    
+  </channel>
+</rss>

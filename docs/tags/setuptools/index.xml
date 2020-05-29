@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>setuptools on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/setuptools/</link>
+    <description>Recent content in setuptools on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 22 Nov 2013 17:02:21 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/setuptools/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>easy_install broken in os x mavericks  </title>
+      <link>https://kracekumar.github.io/post/67761708966/easyinstall-broken-in-os-x-mavericks/</link>
+      <pubDate>Fri, 22 Nov 2013 17:02:21 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/67761708966/easyinstall-broken-in-os-x-mavericks/</guid>
+      <description>I hardly use easy_install. Nowadays all the python requirements are installed via pip.
+IPython is my primary python console. After installing mavericks, I installed IPython and fired IPython console. Following warning message appeared
+➜ ~ ipython /Library/Python/2.7/site-packages/IPython/utils/rlineimpl.py:94: RuntimeWarning: ****************************************************************************** libedit detected - readline will not be well behaved, including but not limited to: * crashes on tab completion * incorrect history navigation * corrupting long-lines * failure to wrap or indent lines properly It is highly recommended that you install readline, which is easy_installable: easy_install readline Note that `pip install readline` generally DOES NOT WORK, because it installs to site-packages, which come *after* lib-dynload in sys.</description>
+    </item>
+    
+  </channel>
+</rss>

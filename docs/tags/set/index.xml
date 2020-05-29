@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>set on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/set/</link>
+    <description>Recent content in set on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 09 Jan 2015 19:50:06 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/set/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Check for custom objects in Python set.</title>
+      <link>https://kracekumar.github.io/post/107618031945/check-for-custom-objects-in-python-set/</link>
+      <pubDate>Fri, 09 Jan 2015 19:50:06 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/107618031945/check-for-custom-objects-in-python-set/</guid>
+      <description>Python set data structure is commonly used for removing duplicate entriesand make lookup faster (O(1)). Any hashable object can be stored in set.For example, list and dict can’t be stored.
+User defined objects can be stored. Here is how it looks.
+class Person(object): def __init__(self, name, age): self.name, self.age = name, age In [25]: s = set() In [26]: s.add(Person(&#39;kracekumar&#39;, 25)) In [27]: s Out[27]: set([&amp;lt;__main__.Person at 0x1033c5e10&amp;gt;]) In [29]: Person(&#39;kracekumar&#39;, 25) in s Out[29]: False  Implement equality check Even though Person object with same value is present but check failed.</description>
+    </item>
+    
+  </channel>
+</rss>

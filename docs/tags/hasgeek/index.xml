@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hasgeek on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/hasgeek/</link>
+    <description>Recent content in hasgeek on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 31 Dec 2013 03:41:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/hasgeek/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>On leaving HasGeek</title>
+      <link>https://kracekumar.github.io/post/71708603301/on-leaving-hasgeek/</link>
+      <pubDate>Tue, 31 Dec 2013 03:41:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/71708603301/on-leaving-hasgeek/</guid>
+      <description>Today (31-12-2013) is my last working day at HasGeek. It was in July 2012, I joined HasGeek. It was fabulous journey for past 18 months, meeting lot of new people, being part of events, writing lot of code. I was part of large, medium, small conferences like Fifth elephant (2012, 2013), Cartonama (2012), JSFoo(2012, 2013), Droidcon (2012, 2013), Metarefresh (2013), various hacknight and geekup.
+I will be joning Aplopio Technology Inc, flagship product recruiterbox on 16 January, 2014.</description>
+    </item>
+    
+    <item>
+      <title>How I got into HasGeek Crew</title>
+      <link>https://kracekumar.github.io/post/26494437210/how-i-got-into-hasgeek-crew/</link>
+      <pubDate>Wed, 04 Jul 2012 15:32:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/26494437210/how-i-got-into-hasgeek-crew/</guid>
+      <description>Background about me I am kracekumar, graduated from Amrita school of Engineering, Coimbatore in B.Tech IT (2007-2011). I am working with IBM India Pvt Ltd, Bangalore as Associate System Engineer from 14th July, 2011 til 16th July, 2012.(C# developer but never wrote single line of code in c# in IBM).
+I am GNU/Linux user for 3 years and developed application in PHP, Rails, Flask(all are hobby projects).
+Scene I was not happy with job at IBM and I had training bond for one year(14th July, 2011 to 13th July 2012), decided to resign from my job once bond period is over whether I have new job offer or not.</description>
+    </item>
+    
+  </channel>
+</rss>

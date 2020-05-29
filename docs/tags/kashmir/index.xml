@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>kashmir on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/kashmir/</link>
+    <description>Recent content in kashmir on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 Feb 2020 20:13:15 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/kashmir/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1000 more whitelist sites in Kashmir, yet no Internet</title>
+      <link>https://kracekumar.github.io/post/190951734050/1000-more-whitelist-sites-in-kashmir-yet-no/</link>
+      <pubDate>Fri, 21 Feb 2020 20:13:15 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/190951734050/1000-more-whitelist-sites-in-kashmir-yet-no/</guid>
+      <description>Kashmir is under lockdown for more than
+200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200,200,200,200,200,200,200,200,200,200, 200 days.
+Last Friday(14th Feb, 2020), Government released a documentwith list of allowed whitelist sites at 2G speed. The text file with URLs extracted from the PDF - https://gitlab.com/snippets/1943725
+In case you’re not interested in tech details, analysis, or short of time, look at the summary section at the bottom.</description>
+    </item>
+    
+    <item>
+      <title>153 sites allowed in Kashmir but no internet</title>
+      <link>https://kracekumar.github.io/post/190341665270/153-sites-allowed-in-kashmir-but-no-internet/</link>
+      <pubDate>Sun, 19 Jan 2020 11:22:57 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/190341665270/153-sites-allowed-in-kashmir-but-no-internet/</guid>
+      <description>Kashmir is locked down without the internet for more than 167 days as of 19th Jan 2020 since 5th Aug 2019. The wire recently published an article wherein the Government of India whitelisted 153 websites access in Kashmir. Below is the list extracted from the document
+ . The internet shutdown is becoming common in recent days during protests.
+Anyone with little knowledge to create a web application or work can say, every web application will make network calls to other sites to load JavaScript, Style sheets, Maps, Videos, Images, etc.</description>
+    </item>
+    
+  </channel>
+</rss>

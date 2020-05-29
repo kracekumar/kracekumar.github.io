@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bittorrent on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/bittorrent/</link>
+    <description>Recent content in bittorrent on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 09 Oct 2016 05:09:09 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/bittorrent/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>RC week 0001</title>
+      <link>https://kracekumar.github.io/post/151547342115/rc-week-0001/</link>
+      <pubDate>Sun, 09 Oct 2016 05:09:09 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/151547342115/rc-week-0001/</guid>
+      <description>This week, I made considerable progress on the BitTorrent client which I started a week back. The client is in a usable state to download the data from the swarm. The source code is available on GitHub. The project uses Python 3.5 async/await and asyncio. I presented the torrent client in RC Thursday five minute presentation evening slot. Here is the link to the slides.
+ Here is quick video demo recorded with asciinema.</description>
+    </item>
+    
+    <item>
+      <title>RC week 0000</title>
+      <link>https://kracekumar.github.io/post/151276229490/rc-week-0000/</link>
+      <pubDate>Mon, 03 Oct 2016 05:27:30 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/151276229490/rc-week-0000/</guid>
+      <description>The long awaited Recurse Center debut day, 26th Sep 2016 kick started with a welcome note by Nicholas Bergson-Shilcock and David Albert ; decorated by other events and activities to get to know the batchmates; the culture of RC and ended with closing note by Sonali Sridhar.
+
+ At the end of the day, I had decided to build a BitTorrent client as a first project. I was at the crossroad to choose Python or Rust or Go for the project.</description>
+    </item>
+    
+  </channel>
+</rss>

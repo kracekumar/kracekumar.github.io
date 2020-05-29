@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>chromium on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/chromium/</link>
+    <description>Recent content in chromium on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 26 Nov 2012 18:33:11 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/chromium/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Stable Browser vs Fastest Browser</title>
+      <link>https://kracekumar.github.io/post/36602101124/stable-browser-vs-fastest-browser/</link>
+      <pubDate>Mon, 26 Nov 2012 18:33:11 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/36602101124/stable-browser-vs-fastest-browser/</guid>
+      <description>Firefox Vs Chrome Vs Chromium Chrome &amp;amp; Firefox are my current favourite browser. I was previously using chromium but stopped using because of this bug.
+Since then I switch between chrome and firefox. Chrome is fastest, better UI &amp;amp; UX. Firefox is stable.
+Today I faced issue with my flash player in chrome(Ubuntu 64 bit OS). All the youtube video starts playing at 2x - 3x speed. After few mins video plays in normal speed.</description>
+    </item>
+    
+  </channel>
+</rss>

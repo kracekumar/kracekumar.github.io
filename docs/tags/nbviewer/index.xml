@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nbviewer on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/nbviewer/</link>
+    <description>Recent content in nbviewer on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 22 Dec 2013 11:50:16 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/nbviewer/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ipynb2viewer - Afternoon hack</title>
+      <link>https://kracekumar.github.io/post/70778191617/ipynb2viewer-afternoon-hack/</link>
+      <pubDate>Sun, 22 Dec 2013 11:50:16 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/70778191617/ipynb2viewer-afternoon-hack/</guid>
+      <description>ipython nbconvert has lot of handy options to convert ipynb to markdown, html etc… But I wanted to upload ipynb to gist.github.com and create a link in nbviewer.ipython.org. Started with curl and soon realized, it is getting messy. So wrote a small python program ipynb2viewer, Source code.
+Install  pip install ipynb2viewer  Usage Upload all ipynb files in the given path to gist.github.com and return nbviewer urls.
+ ipynb2viewer all &amp;lt;path&amp;gt;  Upload mentioned file to gist.</description>
+    </item>
+    
+  </channel>
+</rss>

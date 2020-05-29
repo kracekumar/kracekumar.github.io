@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>http request examples for luasocket - Technical Ramblings</title>
+  <meta name="description" content="I was looking for http library in lua and landed in luasocket.http page. It isn’t well documented, sent few GET, POST, PUT requests and figured few bits. This blog post aims in bridging the gap(code examples).
+In this example, I will use httpbin as target site. The complete code is available as gist.
+The following code should be executed like a standalone lua file(lua lua_httpbin.lua) and while executing the code in interpreter please make local variables http, ltn12, base_url as global variables."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Technical Ramblings",
+    
+    "url": "https:\/\/kracekumar.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/kracekumar.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/post\/55856724724\/http-request-examples-for-luasocket\/",
+          "name": "Http request examples for luasocket"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "http request examples for luasocket",
+  "description" : "I was looking for http library in lua and landed in luasocket.http page. It isn’t well documented, sent few GET, POST, PUT requests and figured few bits. This blog post aims in bridging the gap(code examples).\nIn this example, I will use httpbin as target site. The complete code is available as gist.\nThe following code should be executed like a standalone lua file(lua lua_httpbin.lua) and while executing the code in interpreter please make local variables http, ltn12, base_url as global variables.",
+  "inLanguage" : "en",
+  "wordCount":  743 ,
+  "datePublished" : "2013-07-19T08:01:00",
+  "dateModified" : "2013-07-19T08:01:00",
+  "image" : "https:\/\/kracekumar.github.io\/",
+  "keywords" : [ "lua, http, luasocket" ],
+  "mainEntityOfPage" : "https:\/\/kracekumar.github.io\/post\/55856724724\/http-request-examples-for-luasocket\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/kracekumar.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/kracekumar.github.io\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="http request examples for luasocket" />
+<meta property="og:description" content="I was looking for http library in lua and landed in luasocket.http page. It isn’t well documented, sent few GET, POST, PUT requests and figured few bits. This blog post aims in bridging the gap(code examples).
+In this example, I will use httpbin as target site. The complete code is available as gist.
+The following code should be executed like a standalone lua file(lua lua_httpbin.lua) and while executing the code in interpreter please make local variables http, ltn12, base_url as global variables.">
+<meta property="og:url" content="https://kracekumar.github.io/post/55856724724/http-request-examples-for-luasocket/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Technical Ramblings" />
+
+  <meta name="twitter:title" content="http request examples for luasocket" />
+  <meta name="twitter:description" content="I was looking for http library in lua and landed in luasocket.http page. It isn’t well documented, sent few GET, POST, PUT requests and figured few bits. This blog post aims in bridging the gap(code …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.71.1" />
+  <link rel="alternate" href="https://kracekumar.github.io/index.xml" type="application/rss+xml" title="Technical Ramblings"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kracekumar.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://kracekumar.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://kracekumar.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://kracekumar.github.io/">Technical Ramblings</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>http request examples for luasocket</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on July 19, 2013
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;743&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>I was looking for <code>http</code> library in lua and landed in <a href="http://w3.impa.br/~diego/software/luasocket/http.html" target="_blank">luasocket.http page</a>. It isn’t well documented, sent few <code>GET, POST, PUT</code> requests and figured few bits. This blog post aims in bridging the gap(code examples).</p>
+<p>In this example, I will use <a href="https://httpbin.org" target="_blank">httpbin</a> as target site. The complete code is available as <a href="https://gist.github.com/kracekumar/6037243" target="_blank">gist</a>.</p>
+<p>The following code should be executed like a standalone lua file(<code>lua lua_httpbin.lua</code>) and while executing the code in interpreter please make local variables <code>http, ltn12, base_url</code> as global variables.</p>
+<pre><code>local http = require("socket.http")
+local ltn12 = require("ltn12")
+
+local base_url = "https://httpbin.org/"
+
+--Helper for priniting nested table
+function deep_print(tbl)
+    for i, v in pairs(tbl) do
+        if type(v) == "table" then 
+            deep_print(v)
+        else 
+            print(i, v) 
+        end
+    end
+end
+
+function http_request( args )
+--http.request(url [, body])
+--http.request{
+--  url = string,
+--  [sink = LTN12 sink,]
+--  [method = string,]
+--  [headers = header-table,]
+--  [source = LTN12 source],
+--  [step = LTN12 pump step,]
+--  [proxy = string,]
+--  [redirect = boolean,]
+--  [create = function]
+--}
+--
+--
+    local resp, r = {}, {}
+    if args.endpoint then
+        local params = ""
+        if args.method == nil or args.method == "GET" then
+            -- prepare query parameters like <a href="http://xyz.com" target="_blank">http://xyz.com</a>?q=23&amp;a=2
+            if args.params then
+                for i, v in pairs(args.params) do
+                    params = params .. i .. "=" .. v .. "&amp;"
+                end
+            end
+        end
+        params = string.sub(params, 1, -2)
+        local url = ""
+        if params then url = base_url .. args.endpoint .. "?" .. params else url = base_url .. args.endpoint end
+        client, code, headers, status = http.request{url=url, sink=ltn12.sink.table(resp),
+                                                method=args.method or "GET", headers=args.headers, source=args.source,
+                                                step=args.step,     proxy=args.proxy, redirect=args.redirect, create=args.create }
+        r['code'], r['headers'], r['status'], r['response'] = code, headers, status, resp
+    else
+        error("endpoint is missing")
+    end
+    return r
+end
+</code></pre>
+<p><code>http_request</code> takes table as an argument which is almost similar to <code>http.request</code> function with an extra parameter <code>params</code> which will be helpful for passing parameters to <code>GET</code> request.</p>
+<p><code>http_request{endpoint=endpoint, params={age=23, name=&quot;kracekumar&quot;}}</code> rather than <code>http_request{endpoint=endpoint .. &quot;?age=23&amp;amp;name=kracekumar&quot;}</code>.</p>
+<p>Remaining piece of code</p>
+<pre><code>function main()
+    -- Normal GET request
+    endpoint = &quot;/user-agent&quot;
+    print(endpoint)
+    deep_print(http_request{endpoint=endpoint})
+    -- GET request with parameters
+    endpoint = &quot;/get&quot;
+    print(endpoint)
+    deep_print(http_request{endpoint=endpoint, params={age=23, name    =&quot;kracekumar&quot;}})
+    -- POST request with form
+    endpoint = &quot;/post&quot;
+    print(endpoint)
+    local req_body = &quot;a=2&quot;
+    local headers = {
+    [&quot;Content-Type&quot;] = &quot;application/x-www-form-urlencoded&quot;;
+    [&quot;Content-Length&quot;] = #req_body;
+    }
+    deep_print(http_request{endpoint=endpoint, method=&quot;POST&quot;, source=ltn12.source.string(req_body), headers=headers})
+    -- PATCH Method
+    endpoint = &quot;/patch&quot;
+    print(endpoint)
+    deep_print(http_request{endpoint=endpoint, method=&quot;PATCH&quot;})
+    -- PUT Method
+    endpoint = &quot;/put&quot;
+    print(endpoint)
+    deep_print(http_request{endpoint=endpoint, method=&quot;PUT&quot;, source    =ltn12.source.string(&quot;a=23&quot;)})
+    -- Delete method
+    endpoint = &quot;/delete&quot;
+    print(endpoint)
+    deep_print(http_request{endpoint=endpoint, method=&quot;DELETE&quot;,     source=ltn12.source.string(&quot;a=23&quot;)})
+
+end
+
+main()
+</code></pre>
+<p><em>output</em></p>
+<pre><code># First lua is directory name 
+➜  lua  lua lua_httpbin.lua
+/user-agent
+status    HTTP/1.1 200 OK
+code    200
+connection  Close
+content-type    application/json
+date    Fri, 19 Jul 2013 07:32:14 GMT
+content-length  37
+access-control-allow-origin *
+server  gunicorn/0.17.4
+1   {
+  &quot;user-agent&quot;: &quot;LuaSocket 2.0.2&quot;
+}
+/get
+status  HTTP/1.1 200 OK
+code    200
+connection  Close
+content-type    application/json
+date    Fri, 19 Jul 2013 07:32:15 GMT
+content-length  258
+access-control-allow-origin *
+server  gunicorn/0.17.4
+1   {
+  &quot;headers&quot;: {
+    &quot;Host&quot;: &quot;httpbin.org&quot;,
+    &quot;Connection&quot;: &quot;close&quot;,
+    &quot;User-Agent&quot;: &quot;LuaSocket 2.0.2&quot;
+  },
+  &quot;url&quot;: &quot;http://httpbin.org/get?age=23&amp;amp;name=kracekumar&quot;,
+  &quot;args&quot;: {
+    &quot;age&quot;: &quot;23&quot;,
+    &quot;name&quot;: &quot;kracekumar&quot;
+  },
+  &quot;origin&quot;: &quot;106.51.166.47&quot;
+}
+/post
+status    HTTP/1.1 200 OK
+code    200
+connection  Close
+content-type    application/json
+date    Fri, 19 Jul 2013 07:41:54 GMT
+content-length  350
+access-control-allow-origin *
+server  gunicorn/0.17.4
+1   {
+    &quot;json&quot;: null,
+    &quot;origin&quot;: &quot;106.51.166.47&quot;,
+    &quot;form&quot;: {
+        &quot;a&quot;: &quot;2&quot;
+    },
+    &quot;url&quot;: &quot;http://httpbin.org/post&quot;,
+    &quot;args&quot;: {},
+    &quot;headers&quot;: {
+    &quot;Connection&quot;: &quot;close&quot;,
+    &quot;Host&quot;: &quot;httpbin.org&quot;,
+    &quot;User-Agent&quot;: &quot;LuaSocket 2.0.2&quot;,
+    &quot;Content-Type&quot;: &quot;application/x-www-form-urlencoded&quot;,
+    &quot;Content-Length&quot;: &quot;3&quot;
+    },
+&quot;files&quot;: {},
+&quot;data&quot;: &quot;&quot;
+}
+/patch
+status  HTTP/1.1 200 OK
+code    200
+connection  Close
+content-type    application/json
+date    Fri, 19 Jul 2013 07:32:17 GMT
+content-length  251
+access-control-allow-origin *
+server  gunicorn/0.17.4
+1   {
+  &quot;files&quot;: {},
+  &quot;headers&quot;: {
+    &quot;Host&quot;: &quot;httpbin.org&quot;,
+    &quot;Connection&quot;: &quot;close&quot;,
+    &quot;User-Agent&quot;: &quot;LuaSocket 2.0.2&quot;
+  },
+  &quot;args&quot;: {},
+  &quot;json&quot;: null,
+  &quot;form&quot;: {},
+  &quot;origin&quot;: &quot;106.51.166.47&quot;,
+  &quot;url&quot;: &quot;http://httpbin.org/patch&quot;,
+  &quot;data&quot;: &quot;&quot;
+}
+/put
+status  HTTP/1.1 200 OK
+code    200
+connection  Close
+content-type    application/json
+date    Fri, 19 Jul 2013 07:32:18 GMT
+content-length  276
+access-control-allow-origin *
+server  gunicorn/0.17.4
+1   {
+  &quot;json&quot;: null,
+  &quot;origin&quot;: &quot;106.51.166.47&quot;,
+  &quot;form&quot;: {},
+  &quot;url&quot;: &quot;http://httpbin.org/put&quot;,
+  &quot;args&quot;: {},
+  &quot;headers&quot;: {
+    &quot;Connection&quot;: &quot;close&quot;,
+    &quot;Host&quot;: &quot;httpbin.org&quot;,
+    &quot;User-Agent&quot;: &quot;LuaSocket 2.0.2&quot;,
+    &quot;Content-Length&quot;: &quot;0&quot;
+  },
+  &quot;files&quot;: {},
+  &quot;data&quot;: &quot;&quot;
+}
+/delete
+status  HTTP/1.1 200 OK
+code    200
+connection  Close
+content-type    application/json
+date    Fri, 19 Jul 2013 07:32:19 GMT
+content-length  223
+access-control-allow-origin *
+server  gunicorn/0.17.4
+1   {
+  &quot;args&quot;: {},
+  &quot;json&quot;: null,
+  &quot;headers&quot;: {
+    &quot;Connection&quot;: &quot;close&quot;,
+    &quot;User-Agent&quot;: &quot;LuaSocket 2.0.2&quot;,
+    &quot;Host&quot;: &quot;httpbin.org&quot;
+  },
+  &quot;origin&quot;: &quot;106.51.166.47&quot;,
+  &quot;data&quot;: &quot;&quot;,
+  &quot;url&quot;: &quot;http://httpbin.org/delete&quot;
+}
+</code></pre>
+<p><em>My 2p</em></p>
+<ol>
+<li>When sending <code>GET</code> request don’t send paramters in request body.</li>
+<li>When sending <code>POST</code> request set custom header for form.</li>
+</ol>
+<p>My experience of <code>luasocket.http</code> produces solid reason to create a new library with helper functions like <a href="http://python-requests.org" target="_blank">requests</a>.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://kracekumar.github.io//tags/lua/">lua</a>&nbsp;
+            
+              <a href="https://kracekumar.github.io//tags/http/">http</a>&nbsp;
+            
+              <a href="https://kracekumar.github.io//tags/luasocket/">luasocket</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/53685731325/cp-command-implementation-and-benchmark-in-python/">cp command implementation and benchmark in python, go, lua</a></li>
+                
+              </ul>
+
+          
+                  
+       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://kracekumar.github.io/post/55796363713/why-this-kolaveri-di-song-words-language/" data-toggle="tooltip" data-placement="top" title="Why This Kolaveri Di song words language ">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://kracekumar.github.io/post/56633639978/funny-experience-of-using-trace-module-to-trace/" data-toggle="tooltip" data-placement="top" title="Funny experience of using trace module to trace function call">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://kracekumar.github.io/">Technical Ramblings</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.71.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://kracekumar.github.io/js/main.js"></script>
+<script src="https://kracekumar.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://kracekumar.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

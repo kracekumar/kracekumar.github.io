@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>csv on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/csv/</link>
+    <description>Recent content in csv on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 20 Aug 2013 05:31:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/csv/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>avoid accessing wrong column in csv</title>
+      <link>https://kracekumar.github.io/post/58766042678/avoid-accessing-wrong-column-in-csv/</link>
+      <pubDate>Tue, 20 Aug 2013 05:31:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/58766042678/avoid-accessing-wrong-column-in-csv/</guid>
+      <description>Avoid accessing wrong column in csv
+I was parsing few csv files. All were from same provider. Format isDate, Name, Email, Company, City etc in one file. I made an assumption all the downloaded files are in the same format. For my surprise few files had same format and others din’t.
+with open(filename, &#39;rb&#39;) as f: reader = csv.reader(f) reader.next() # first row contains column names for row in reader: name, email, company = row[1], row[2], row[3] #save to db  In the above code the fundamental mistake is fixing the position of the columns in csv file.</description>
+    </item>
+    
+  </channel>
+</rss>

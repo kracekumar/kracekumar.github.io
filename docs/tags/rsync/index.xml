@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rsync on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/rsync/</link>
+    <description>Recent content in rsync on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Jun 2013 17:20:35 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/rsync/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>cp command implementation and benchmark in python, go, lua</title>
+      <link>https://kracekumar.github.io/post/53685731325/cp-command-implementation-and-benchmark-in-python/</link>
+      <pubDate>Sun, 23 Jun 2013 17:20:35 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/53685731325/cp-command-implementation-and-benchmark-in-python/</guid>
+      <description>I was wondering how much will be the speed difference between cp command, rsync and implementation in python, go, lua and so wrote this code.
+Background
+ python has two versions one with gevent and without gevent. Both the version uses shutil for copying files and directory tree. go uses https://github.com/opesun/copyrecur for copying recursively. lua uses lfs - LuaFileSystem module. lfs has support for creating directory but not for files, in order to copy the files low level file opening and writing to file technique is used.</description>
+    </item>
+    
+  </channel>
+</rss>

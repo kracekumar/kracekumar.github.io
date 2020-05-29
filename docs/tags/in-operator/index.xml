@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>in operator on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/in-operator/</link>
+    <description>Recent content in in operator on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 06 May 2012 13:06:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/in-operator/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>python `in` operator use cases</title>
+      <link>https://kracekumar.github.io/post/22512660850/python-in-operator-use-cases/</link>
+      <pubDate>Sun, 06 May 2012 13:06:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/22512660850/python-in-operator-use-cases/</guid>
+      <description>Python *in* operator is membership test operator.*Examples:*List—-
+ In [1]: python_webframeworks = [&#39;flask&#39;, &#39;django&#39;, &#39;pylons&#39;, &#39;pyramid&#39;, &#39;brubeck&#39;] In [2]: &#39;flask&#39; in python_webframeworks Out[2]: True In [3]: &#39;web.py&#39; in python_webframeworks Out[3]: False  in operator iterates over the list of elements and returns True or False.
+What about nested list?
+ In [4]: webframeworks = [[&#39;flask&#39;, &#39;django&#39;, &#39;pyramid&#39;],[&#39;rails&#39;, &#39;sintara&#39;],[&#39;zend&#39;, &#39;symfony&#39;]] In [5]: &#39;flask&#39; in webframeworks Out[5]: False  in isnt handy for nested list, unless it is overriden.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>luasocket on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/luasocket/</link>
+    <description>Recent content in luasocket on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 19 Jul 2013 08:01:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/luasocket/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>http request examples for luasocket</title>
+      <link>https://kracekumar.github.io/post/55856724724/http-request-examples-for-luasocket/</link>
+      <pubDate>Fri, 19 Jul 2013 08:01:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/55856724724/http-request-examples-for-luasocket/</guid>
+      <description>I was looking for http library in lua and landed in luasocket.http page. It isn’t well documented, sent few GET, POST, PUT requests and figured few bits. This blog post aims in bridging the gap(code examples).
+In this example, I will use httpbin as target site. The complete code is available as gist.
+The following code should be executed like a standalone lua file(lua lua_httpbin.lua) and while executing the code in interpreter please make local variables http, ltn12, base_url as global variables.</description>
+    </item>
+    
+  </channel>
+</rss>

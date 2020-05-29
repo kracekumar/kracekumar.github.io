@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>empythoned on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/empythoned/</link>
+    <description>Recent content in empythoned on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 24 Mar 2013 19:24:08 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/empythoned/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Evaluate python code using client side javascript  </title>
+      <link>https://kracekumar.github.io/post/46183195282/evaluate-python-code-using-client-side-javascript/</link>
+      <pubDate>Sun, 24 Mar 2013 19:24:08 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/46183195282/evaluate-python-code-using-client-side-javascript/</guid>
+      <description>Now Python code can be evaluated using Client side Javascript with the help of empythoned project. empythoned uses emscripten which convert LLVM bitcode to javascript.
+What is empythoned? Empythoned is project which has converted CPython to javascript. I have created a demo project to test how to use empythoned, have a look.</description>
+    </item>
+    
+  </channel>
+</rss>

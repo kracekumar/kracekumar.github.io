@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>command line on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/command-line/</link>
+    <description>Recent content in command line on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 14 Jun 2013 17:48:41 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/command-line/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>progress bar for cp command</title>
+      <link>https://kracekumar.github.io/post/52958861147/progress-bar-for-cp-command/</link>
+      <pubDate>Fri, 14 Jun 2013 17:48:41 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/52958861147/progress-bar-for-cp-command/</guid>
+      <description>I want cp command to display the progress of copy. I found three options
+ Use tools like gcp, pv. Answer from askubuntu. Use rsync. alias cp=&#39;rsync --progress -ah&#39; Use this shell script.  </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Updating model instance attribute in django - Technical Ramblings</title>
+  <meta name="description" content="It is very common to update single attribute of a model instance (say update first name in user profile) and save it to db.
+In [18]: u = User.objects.get(id=1) In [19]: u.first_name = u&quot;kracekumar&quot; In [20]: u.save()  Very straight forward approach. How does django send the sql query to database ?
+In [22]: from django.db import connection In [22]: connection.queries Out[22]: [... {u&#39;sql&#39;: u&#39;UPDATE &quot;auth_user&quot; SET &quot;password&quot; = \&#39;pbkdf2_sha256$12000$vsHWOlo1ZhZg$DrC46wq&#43;a2jEtEzxmUEw4vQw8oV/rxEK7zVi30QLGF4=\&#39;, &quot;last_login&quot; = \&#39;2014-02-01 06:55:44."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Technical Ramblings",
+    
+    "url": "https:\/\/kracekumar.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/kracekumar.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/post\/75983294047\/updating-model-instance-attribute-in-django\/",
+          "name": "Updating model instance attribute in django"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "Updating model instance attribute in django",
+  "description" : "It is very common to update single attribute of a model instance (say update first name in user profile) and save it to db.\nIn [18]: u = User.objects.get(id=1) In [19]: u.first_name = u\u0026quot;kracekumar\u0026quot; In [20]: u.save()  Very straight forward approach. How does django send the sql query to database ?\nIn [22]: from django.db import connection In [22]: connection.queries Out[22]: [... {u\u0027sql\u0027: u\u0027UPDATE \u0026quot;auth_user\u0026quot; SET \u0026quot;password\u0026quot; = \\\u0027pbkdf2_sha256$12000$vsHWOlo1ZhZg$DrC46wq\u002ba2jEtEzxmUEw4vQw8oV\/rxEK7zVi30QLGF4=\\\u0027, \u0026quot;last_login\u0026quot; = \\\u00272014-02-01 06:55:44.",
+  "inLanguage" : "en",
+  "wordCount":  200 ,
+  "datePublished" : "2014-02-08T09:01:00",
+  "dateModified" : "2014-02-08T09:01:00",
+  "image" : "https:\/\/kracekumar.github.io\/",
+  "keywords" : [ "python, django" ],
+  "mainEntityOfPage" : "https:\/\/kracekumar.github.io\/post\/75983294047\/updating-model-instance-attribute-in-django\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/kracekumar.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/kracekumar.github.io\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Updating model instance attribute in django" />
+<meta property="og:description" content="It is very common to update single attribute of a model instance (say update first name in user profile) and save it to db.
+In [18]: u = User.objects.get(id=1) In [19]: u.first_name = u&quot;kracekumar&quot; In [20]: u.save()  Very straight forward approach. How does django send the sql query to database ?
+In [22]: from django.db import connection In [22]: connection.queries Out[22]: [... {u&#39;sql&#39;: u&#39;UPDATE &quot;auth_user&quot; SET &quot;password&quot; = \&#39;pbkdf2_sha256$12000$vsHWOlo1ZhZg$DrC46wq&#43;a2jEtEzxmUEw4vQw8oV/rxEK7zVi30QLGF4=\&#39;, &quot;last_login&quot; = \&#39;2014-02-01 06:55:44.">
+<meta property="og:url" content="https://kracekumar.github.io/post/75983294047/updating-model-instance-attribute-in-django/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Technical Ramblings" />
+
+  <meta name="twitter:title" content="Updating model instance attribute in django" />
+  <meta name="twitter:description" content="It is very common to update single attribute of a model instance (say update first name in user profile) and save it to db.
+In [18]: u = User.objects.get(id=1) In [19]: u.first_name = …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.71.1" />
+  <link rel="alternate" href="https://kracekumar.github.io/index.xml" type="application/rss+xml" title="Technical Ramblings"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kracekumar.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://kracekumar.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://kracekumar.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://kracekumar.github.io/">Technical Ramblings</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Updating model instance attribute in django</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on February 8, 2014
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;200&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>It is very common to update single attribute of a model instance (say update <code>first name</code> in user profile) and save it to db.</p>
+<pre><code>In [18]: u = User.objects.get(id=1)
+
+In [19]: u.first_name = u&quot;kracekumar&quot;
+
+In [20]: u.save()
+</code></pre>
+<p>Very straight forward approach. How does django send the sql query to database ?</p>
+<pre><code>In [22]: from django.db import connection
+
+In [22]: connection.queries
+Out[22]: 
+[... 
+{u'sql': u'UPDATE &quot;auth_user&quot; SET &quot;password&quot; = \'pbkdf2_sha256$12000$vsHWOlo1ZhZg$DrC46wq+a2jEtEzxmUEw4vQw8oV/rxEK7zVi30QLGF4=\', &quot;last_login&quot; = \'2014-02-01 06:55:44.741284+00:00\', &quot;is_superuser&quot; = true, &quot;username&quot; = \'kracekumar\', &quot;first_name&quot; = \'kracekumar\', &quot;last_name&quot; = \'\', &quot;email&quot; = \'me@kracekumar.com\', &quot;is_staff&quot; = true, &quot;is_active&quot; = true, &quot;date_joined&quot; = \'2014-01-30 18:41:18.174353+00:00\' WHERE &quot;auth_user&quot;.&quot;id&quot; = 1 ', u'time': u'0.001'}]
+</code></pre>
+<p>Not happy. Honestly it should be <code>UPDATE auth_user SET first_name = 'kracekumar' WHERE id = 1</code>. Django should ideally update modified fields.</p>
+<p>Right way to do is</p>
+<pre><code>In [23]: User.objects.filter(id=u.id).update(first_name=&quot;kracekumar&quot;)
+Out[23]: 1
+
+In [24]: connection.queries
+Out[24]:
+[...
+{u'sql': u'UPDATE &quot;auth_user&quot; SET &quot;first_name&quot; = \'kracekumar\' WHERE &quot;auth_user&quot;.&quot;id&quot; = 1 ', u'time': u'0.001'}]
+</code></pre>
+<p>Yay! Though both queries took same amount of time, latter is better.</p>
+<h3 id="edit-there-is-one-more-cleaner-way-to-do-it">Edit: There is one more cleaner way to do it.</h3>
+<pre><code>In [60]: u.save(update_fields=['first_name'])
+
+In [61]: connection.queries
+Out[61]: 
+[...
+{u'sql': u'UPDATE &quot;auth_user&quot; SET &quot;first_name&quot; = \'kracekumar\'  WHERE &quot;auth_user&quot;.&quot;id&quot; = 1 ',
+u'time': u'0.001'}]
+</code></pre>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://kracekumar.github.io//tags/python/">python</a>&nbsp;
+            
+              <a href="https://kracekumar.github.io//tags/django/">django</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/618264170735009792/parameterize-python-tests/">Parameterize Python Tests</a></li>
+                
+                    <li><a href="/post/612817685627191296/dont-touch-your-face-neural-network-will-warn/">“Don’t touch your face” - Neural Network will warn you</a></li>
+                
+                    <li><a href="/post/190478935610/capture-all-browser-https-calls-to-load-a-web/">Capture all browser HTTP[s] calls to load a web page</a></li>
+                
+                    <li><a href="/post/170492996890/how-long-do-python-postgres-tools-take-to-load/">How long do Python Postgres tools take to load data?</a></li>
+                
+                    <li><a href="/post/168364964555/debugging-python-multiprocessing-program-with/">Debugging Python multiprocessing program with strace</a></li>
+                
+              </ul>
+
+          
+                  
+       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://kracekumar.github.io/post/75177239638/how-not-to-insult-developer-while-hiring/" data-toggle="tooltip" data-placement="top" title="how not to insult developer while hiring">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://kracekumar.github.io/post/76145181921/two-scoops-of-django/" data-toggle="tooltip" data-placement="top" title="Two scoops of django">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://kracekumar.github.io/">Technical Ramblings</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.71.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://kracekumar.github.io/js/main.js"></script>
+<script src="https://kracekumar.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://kracekumar.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

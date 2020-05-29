@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Parameterize Python Tests - Technical Ramblings</title>
+  <meta name="description" content="Introduction A single test case follows a pattern. Setup the data, invoke the function or method with the arguments and assert the return data or the state changes. A function will have a minimum of one or more test cases for various success and failure cases.
+Here is an example implementation of wc command for a single file that returns number of words, lines, and characters for an ASCII text file."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Technical Ramblings",
+    
+    "url": "https:\/\/kracekumar.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/kracekumar.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/post\/618264170735009792\/parameterize-python-tests\/",
+          "name": "Parameterize python tests"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "Parameterize Python Tests",
+  "description" : "Introduction A single test case follows a pattern. Setup the data, invoke the function or method with the arguments and assert the return data or the state changes. A function will have a minimum of one or more test cases for various success and failure cases.\nHere is an example implementation of wc command for a single file that returns number of words, lines, and characters for an ASCII text file.",
+  "inLanguage" : "en",
+  "wordCount":  1433 ,
+  "datePublished" : "2020-05-16T09:51:00",
+  "dateModified" : "2020-05-16T09:51:00",
+  "image" : "https:\/\/kracekumar.github.io\/",
+  "keywords" : [ "python, testing, pytest" ],
+  "mainEntityOfPage" : "https:\/\/kracekumar.github.io\/post\/618264170735009792\/parameterize-python-tests\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/kracekumar.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/kracekumar.github.io\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Parameterize Python Tests" />
+<meta property="og:description" content="Introduction A single test case follows a pattern. Setup the data, invoke the function or method with the arguments and assert the return data or the state changes. A function will have a minimum of one or more test cases for various success and failure cases.
+Here is an example implementation of wc command for a single file that returns number of words, lines, and characters for an ASCII text file.">
+<meta property="og:url" content="https://kracekumar.github.io/post/618264170735009792/parameterize-python-tests/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Technical Ramblings" />
+
+  <meta name="twitter:title" content="Parameterize Python Tests" />
+  <meta name="twitter:description" content="Introduction A single test case follows a pattern. Setup the data, invoke the function or method with the arguments and assert the return data or the state changes. A function will have a minimum of …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.71.1" />
+  <link rel="alternate" href="https://kracekumar.github.io/index.xml" type="application/rss+xml" title="Technical Ramblings"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kracekumar.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://kracekumar.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://kracekumar.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://kracekumar.github.io/">Technical Ramblings</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Parameterize Python Tests</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on May 16, 2020
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1433&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <h3 id="introduction">Introduction</h3>
+<p>A single test case follows a pattern. Setup the data, invoke the function or method with the arguments and assert the return data or the state changes. A function will have a minimum of one or more test cases for various success and failure cases.</p>
+<p>Here is an example implementation of <code>wc</code> command for a single file that returns <code>number of words, lines, and characters</code> for an ASCII text file.</p>
+<pre><code>def wc_single(path, words=False, chars=False, lines=False):
+    &quot;&quot;&quot;Implement GNU/Linux `wc` command
+       behavior for a single file.
+    &quot;&quot;&quot;
+    res = {}
+    try:
+        with open(path, 'r') as fp:
+            # Consider, the file is a small file.
+            content = fp.read()
+
+            if words:
+                lines = content.split('\n')
+                res['words'] = sum([1
+                                    for line in lines
+                                    for word in line.split(' ')
+                                    if len(word.strip()) &gt;= 1])
+
+            if chars:
+                res['chars'] = len(content)
+
+            if lines:
+                res['lines'] = len(content.strip().split('\n'))
+
+            return res
+    except FileNotFoundError as exc:
+        print(f'No such file {path}')
+        return res
+</code></pre>
+<p>For the scope of the blog post, consider the implementation as sufficient and not complete. I’m aware; for example, the code would return the number of lines as 1 for the empty file. For simplicity, consider the following six test cases for <code>wc_single</code> function.</p>
+<ol>
+<li>A test case with the file missing.</li>
+<li>A test case with a file containing some data, with <code>words, chars, lines</code> set to <code>True.</code></li>
+<li>A test case with a file containing some data, with <code>words</code> alone set to <code>True.</code></li>
+<li>A test case with a file containing some data, with <code>lines</code> alone set to <code>True.</code></li>
+<li>A test case with a file containing some data, with <code>chars</code> alone set to <code>True.</code></li>
+<li>A test case with a file containing some data, with <code>words, chars, lines</code> alone set to <code>True.</code></li>
+</ol>
+<p>I’m skipping the combinatorics values for two of the three arguments to be <code>True</code> for simplicity.</p>
+<h3 id="test-code">Test Code</h3>
+<p>The <code>file.txt</code> content (don’t worry about the comma after <code>knows</code>)</p>
+<pre><code>Welcome to the new normal.
+No one knows, what is new normal.
+
+
+Hang on!
+</code></pre>
+<p><code>wc</code> output for <code>file.txt</code></p>
+<pre><code>$wc file.txt
+5      14      72 file.txt
+</code></pre>
+<p>Here is the implementation of the six test cases.</p>
+<pre><code>class TestWCSingleWithoutParameterized(unittest.TestCase):
+    def test_with_missing_file(self):
+        with patch(&quot;sys.stdout&quot;, new=StringIO()) as output:
+            path = 'missing.txt'
+            res = wc_single(path)
+
+            assert f'No such file {path}' in output.getvalue().strip()
+
+    def test_for_all_three(self):
+        res = wc_single('file.txt', words=True, chars=True, lines=True)
+
+        assert res == {'words': 14, 'lines': 5, 'chars': 72}
+
+    def test_for_words(self):
+        res = wc_single('file.txt', words=True)
+
+        assert res == {'words': 14}
+
+    def test_for_chars(self):
+        res = wc_single('file.txt', chars=True)
+
+        assert res == {'chars': 72}
+
+    def test_for_lines(self):
+        res = wc_single('file.txt', lines=True)
+
+        assert res == {'lines': 5}
+
+    def test_default(self):
+        res = wc_single('file.txt')
+
+        assert res == {}
+</code></pre>
+<p>The test case follows the pattern, setup the data, invoke the function with arguments, and asserts the return or printed value. Most of the testing code is a copy-paste code from the previous test case.</p>
+<h3 id="parameterize">Parameterize</h3>
+<p>It’s possible to reduce all six methods into a single test method with <a href="https://github.com/wolever/parameterized" target="_blank">parameterized libray</a>. Rather than having six methods, a decorator can inject the <em>data for tests, expected value</em> after the test. Here is how the code after parameterization.</p>
+<pre><code>def get_params():
+    &quot;&quot;&quot;Return a list of parameters for each test case.&quot;&quot;&quot;
+    missing_file = 'missing.txt'
+    test_file = 'file.txt'
+    return [('missing_file',
+            {'path': missing_file},
+            f'No such file {missing_file}',
+            True),
+
+            ('all_three',
+            {'path': test_file, 'words': True, 'lines': True, 'chars': True},
+             {'words': 14, 'lines': 5, 'chars': 72},
+             False),
+
+            ('only_words',
+            {'path': test_file, 'words': True},
+            {'words': 14},
+            False),
+
+            ('only_chars',
+            {'path': test_file, 'chars': True},
+            {'chars': 72}, False),
+
+            ('only_lines',
+            {'path': test_file, 'lines': True},
+            {'lines': 5},
+            False),
+
+            ('default',
+            {'path': test_file},
+            {},
+            False)
+    ]
+
+class TestWCSingleWithParameterized(unittest.TestCase):
+    @parameterized.expand(get_params())
+    def test_wc_single(self, _, kwargs, expected, stdout):
+        with patch(&quot;sys.stdout&quot;, new=StringIO()) as output:
+            res = wc_single(**kwargs)
+
+            if stdout:
+                assert expected in output.getvalue().strip()
+            else:
+                assert expected == res
+</code></pre>
+<p>The pytest runner output</p>
+<pre><code> pytest -s -v wc.py::TestWCSingleWithParameterized
+============================================================================================================ test session starts =============================================================================================================
+platform darwin -- Python 3.6.9, pytest-5.4.1, py-1.8.1, pluggy-0.13.1 -- /usr/local/Caskroom/miniconda/base/envs/hotbox/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/user/code/snippets
+plugins: kubetest-0.6.4, cov-2.8.1
+plugins: kubetest-0.6.4, cov-2.8.1
+collected 6 items
+
+wc.py::TestWCSingleWithParameterized::test_wc_single_0_missing_file PASSED
+wc.py::TestWCSingleWithParameterized::test_wc_single_1_all_three PASSED
+wc.py::TestWCSingleWithParameterized::test_wc_single_2_only_words PASSED
+wc.py::TestWCSingleWithParameterized::test_wc_single_3_only_chars PASSED
+wc.py::TestWCSingleWithParameterized::test_wc_single_4_only_lines PASSED
+wc.py::TestWCSingleWithParameterized::test_wc_single_5_default PASSED
+</code></pre>
+<h3 id="what-did--parameterizedexpand--do">What did <code>@parameterized.expand</code> do?</h3>
+<p>The decorator collected all the arguments to pass the test method, <code>test_wc_single.</code> When pytest runner ran the test class, the decorator injected a new function name following default rule, <code>&lt;func_name&gt;_&lt;param_number&gt;_&lt;first_argument_to_pass&gt;</code>. Then each item in the list returned by <code>get_params</code> to the test case, <code>test_wc_single.</code></p>
+<h3 id="what-did--get_params--return">What did <code>get_params</code> return?</h3>
+<p><code>get_params</code> returns a list(iterable). Each item in the list is a bunch of parameters for <em>each test case</em>.</p>
+<p><code>('missing_file', {'path': missing_file}, f'No such file {missing_file}', True)</code></p>
+<p>Each item in the list is a tuple containing the parameters for a test case. Let’s take the first tuple as an example.</p>
+<p>First item in the tuple is a function suffix used while printing the function name(<code>'missing_file'</code>). The second value in the tuple is a dictionary containing the arguments to call the <em>wc_single</em> function(<code>{'path': missing_file}</code>). Each test case passes a different number of arguments to the <code>wc_single.</code> Hence the second item in the first and second tuple has different keys in the dictionary. The third item in the tuple is the <em>expected</em> value to assert after calling the testing function(<code>f'No such file {missing_file}'</code>). The fourth item in the tuple determines what to assert after the function call, the return value, or stdout(<code>True</code>).</p>
+<p>The principle is decorator will expand and pass each item in the iterable to the test method. Then how to receive the parameter and structure the code is up to the programmer.</p>
+<h3 id="can-i-change-the-function-name-printed">Can I change the function name printed?</h3>
+<p>Yes, the <code>parameterized.expand</code> accepts a function as a value to the argument <code>name_func</code>, which can change each function name.</p>
+<p>Here is the custom name function which suffixes the first argument for each test in the function name</p>
+<pre><code>def custom_name_func(testcase_func, param_num, param):
+    return f&quot;{testcase_func.__name__}_{parameterized.to_safe_name(param.args[0])}&quot;
+
+class TestWCSingleWithParameterized(unittest.TestCase):
+    @parameterized.expand(get_params(),
+                          name_func=custom_name_func)
+    def test_wc_single(self, _, kwargs, expected, stdout):
+        with patch(&quot;sys.stdout&quot;, new=StringIO()) as output:
+            res = wc_single(**kwargs)
+
+            if stdout:
+                assert expected in output.getvalue().strip()
+            else:
+                assert expected == res
+</code></pre>
+<p>Test runner output</p>
+<pre><code>$pytest -s -v wc.py::TestWCSingleWithParameterized
+...
+wc.py::TestWCSingleWithParameterized::test_wc_single_all_three PASSED
+wc.py::TestWCSingleWithParameterized::test_wc_single_default PASSED
+wc.py::TestWCSingleWithParameterized::test_wc_single_missing_file PASSED
+wc.py::TestWCSingleWithParameterized::test_wc_single_only_chars PASSED
+wc.py::TestWCSingleWithParameterized::test_wc_single_only_lines PASSED
+wc.py::TestWCSingleWithParameterized::test_wc_single_only_words PASSED
+</code></pre>
+<h3 id="is-it-possible-to-run-a-single-test-after-parameterization">Is it possible to run a single test after parameterization?</h3>
+<p>Yes. You should give the full generated name and rather than <em>actual method name in the code</em>.</p>
+<pre><code>$pytest -s -v &quot;wc.py::TestWCSingleWithParameterized::test_wc_single_all_three&quot;
+...
+wc.py::TestWCSingleWithParameterized::test_wc_single_all_three PASSED
+</code></pre>
+<p>Not like these</p>
+<pre><code>$pytest -s -v wc.py::TestWCSingleWithParameterized::test_wc_single
+...
+=========================================================================================================== no tests ran in 0.24s ============================================================================================================
+ERROR: not found: /Users/user/code/snippets/wc.py::TestWCSingleWithParameterized::test_wc_single
+(no name '/Users/user/code/snippets/wc.py::TestWCSingleWithParameterized::test_wc_single' in any of [&lt;UnitTestCase TestWCSingleWithParameterized&gt;])
+$pytest -s -v &quot;wc.py::TestWCSingleWithParameterized::test_wc_single_*&quot;
+...
+=========================================================================================================== no tests ran in 0.22s ============================================================================================================
+ERROR: not found: /Users/user/code/snippets/wc.py::TestWCSingleWithParameterized::test_wc_single_*
+(no name '/Users/user/code/snippets/wc.py::TestWCSingleWithParameterized::test_wc_single_*' in any of [&lt;UnitTestCase TestWCSingleWithParameterized&gt;])
+</code></pre>
+<h3 id="does-test-failure-give-enough-information-to-debug">Does test failure give enough information to debug?</h3>
+<p>Yes, Here is an example of a test failure.</p>
+<pre><code>$pytest -s -v wc.py
+...
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;wc.TestWCSingleWithParameterized testMethod=test_wc_single_only_lines&gt;, _ = 'only_lines', kwargs = {'lines': True, 'path': 'file.txt'}, expected = {'lines': 6}, stdout = False
+
+    @parameterized.expand(get_params(), name_func=custom_name_func)
+    def test_wc_single(self, _, kwargs, expected, stdout):
+        with patch(&quot;sys.stdout&quot;, new=StringIO()) as output:
+            res = wc_single(**kwargs)
+
+            if stdout:
+                assert expected in output.getvalue().strip()
+            else:
+&gt;               assert expected == res
+E               AssertionError: assert {'lines': 6} == {'lines': 5}
+E                 Differing items:
+E                 {'lines': 6} != {'lines': 5}
+E                 Full diff:
+E                 - {'lines': 5}
+E                 ?           ^
+E                 + {'lines': 6}
+E                 ?           ^
+
+wc.py:96: AssertionError
+</code></pre>
+<h3 id="pytest-parametrize">Pytest parametrize</h3>
+<p><a href="https://docs.pytest.org/en/latest/parametrize.html" target="_blank">pytest</a> supports parametrizing test functions and not subclass methods of <code>unittest.TestCase</code>. <a href="https://github.com/wolever/parameterized" target="_blank">parameterize</a> library support all Python testing framework. You can mix and play with test functions, test classes, test methods. And pytest <em>only supports UK spelling</em> <code>paramterize</code> whereas <em>parameterize library supports American spelling <code>parameterize</code></em>. Pytest refused to support both the spellings.</p>
+<p><a href="https://www.youtube.com/watch?v=2R1HELARjUk" target="_blank">In recent PyCon 2020, there was a talk about pytest parametrize</a>. It’s crisp and provides a sufficient quick introduction to parametrization.</p>
+<h3 id="why-parameterize-tests">Why parameterize tests?</h3>
+<ol>
+<li>It follows DRY(Do not Repeat Yourself) principle.</li>
+<li>Changing and managing the tests are easier.</li>
+<li>In a lesser number of lines, you can test the code. At work, for a small sub-module, the unit tests took 660 LoC. After parameterization, tests cover only 440 LoC.</li>
+</ol>
+<p>Happy parameterization!</p>
+<h3 id="important-links-from-the-post">Important links from the post:</h3>
+<ol>
+<li>Parameterized - <a href="https://github.com/wolever/parameterized" target="_blank"><a href="https://github.com/wolever/parameterized">https://github.com/wolever/parameterized</a></a></li>
+<li>Pytest Parametrize - <a href="https://docs.pytest.org/en/latest/parametrize.html" target="_blank"><a href="https://docs.pytest.org/en/latest/parametrize.html">https://docs.pytest.org/en/latest/parametrize.html</a></a></li>
+<li>PyCon 2020 Talk on Pytest Parametrize - <a href="https://www.youtube.com/watch?v=2R1HELARjUk" target="_blank"><a href="https://www.youtube.com/watch?v=2R1HELARjUk">https://www.youtube.com/watch?v=2R1HELARjUk</a></a></li>
+<li>Complete code - <a href="https://gitlab.com/snippets/1977169" target="_blank"><a href="https://gitlab.com/snippets/1977169">https://gitlab.com/snippets/1977169</a></a></li>
+</ol>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://kracekumar.github.io//tags/python/">python</a>&nbsp;
+            
+              <a href="https://kracekumar.github.io//tags/testing/">testing</a>&nbsp;
+            
+              <a href="https://kracekumar.github.io//tags/pytest/">pytest</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/612817685627191296/dont-touch-your-face-neural-network-will-warn/">“Don’t touch your face” - Neural Network will warn you</a></li>
+                
+                    <li><a href="/post/190478935610/capture-all-browser-https-calls-to-load-a-web/">Capture all browser HTTP[s] calls to load a web page</a></li>
+                
+                    <li><a href="/post/170492996890/how-long-do-python-postgres-tools-take-to-load/">How long do Python Postgres tools take to load data?</a></li>
+                
+                    <li><a href="/post/168364964555/debugging-python-multiprocessing-program-with/">Debugging Python multiprocessing program with strace</a></li>
+                
+                    <li><a href="/post/160521154075/book-review-software-architecture-with-python/">Book Review: Software Architecture with Python</a></li>
+                
+              </ul>
+
+          
+                  
+       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://kracekumar.github.io/post/615946721097285632/incomplete-data-is-useless-covid-19-india-data/" data-toggle="tooltip" data-placement="top" title="Incomplete data is useless - COVID-19 India data">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://kracekumar.github.io/">Technical Ramblings</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.71.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://kracekumar.github.io/js/main.js"></script>
+<script src="https://kracekumar.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://kracekumar.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

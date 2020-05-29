@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hiring on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/hiring/</link>
+    <description>Recent content in hiring on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 31 Jan 2014 20:28:18 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/hiring/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>how not to insult developer while hiring</title>
+      <link>https://kracekumar.github.io/post/75177239638/how-not-to-insult-developer-while-hiring/</link>
+      <pubDate>Fri, 31 Jan 2014 20:28:18 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/75177239638/how-not-to-insult-developer-while-hiring/</guid>
+      <description>In December I was looking for new job. I came across one and applied. After couple of rounds of interview, co founder informed me we will get back to you, but never happened. This sounds normal but it is not.
+Interview First round of interview started with online pair programming with one of the co-founder X. After that I went to their office, met product manager, co founder X had discussion for an hour.</description>
+    </item>
+    
+    <item>
+      <title>How I got into HasGeek Crew</title>
+      <link>https://kracekumar.github.io/post/26494437210/how-i-got-into-hasgeek-crew/</link>
+      <pubDate>Wed, 04 Jul 2012 15:32:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/26494437210/how-i-got-into-hasgeek-crew/</guid>
+      <description>Background about me I am kracekumar, graduated from Amrita school of Engineering, Coimbatore in B.Tech IT (2007-2011). I am working with IBM India Pvt Ltd, Bangalore as Associate System Engineer from 14th July, 2011 til 16th July, 2012.(C# developer but never wrote single line of code in c# in IBM).
+I am GNU/Linux user for 3 years and developed application in PHP, Rails, Flask(all are hobby projects).
+Scene I was not happy with job at IBM and I had training bond for one year(14th July, 2011 to 13th July 2012), decided to resign from my job once bond period is over whether I have new job offer or not.</description>
+    </item>
+    
+  </channel>
+</rss>

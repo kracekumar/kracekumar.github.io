@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>exception on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/exception/</link>
+    <description>Recent content in exception on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 24 Jul 2016 14:37:20 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/exception/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HTTP Exception as control flow</title>
+      <link>https://kracekumar.github.io/post/147895372680/http-exception-as-control-flow/</link>
+      <pubDate>Sun, 24 Jul 2016 14:37:20 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/147895372680/http-exception-as-control-flow/</guid>
+      <description>As per Wikipedia , Exception handling is the process of responding to the occurrence, during computation, of exceptions – anomalous or exceptional conditions requiring special processing – often changing the flow of program execution.
+In Python errors like SyntaxError, ZeroDivisionError are exceptions.Exception paves the way to alter the normal execution path.
+While working with API, a web request goes through the following process,authentication, authorization, input validation, business logic and finally, the response is given out.</description>
+    </item>
+    
+  </channel>
+</rss>

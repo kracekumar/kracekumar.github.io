@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>performance on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/performance/</link>
+    <description>Recent content in performance on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 04 Feb 2018 13:15:49 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/performance/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How long do Python Postgres tools take to load data?</title>
+      <link>https://kracekumar.github.io/post/170492996890/how-long-do-python-postgres-tools-take-to-load/</link>
+      <pubDate>Sun, 04 Feb 2018 13:15:49 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/170492996890/how-long-do-python-postgres-tools-take-to-load/</guid>
+      <description>Data is crucial for all applications. While fetching a significant amount of data from database multiple times, faster data load times improve performance.
+The post considers tools like SQLAlchemy statement, SQLAlchemy ORM, Pscopg2, psql for measuring latency. And to measure the python tool timing, jupyter notebook’s timeit is used. Psql is for the lowest time taken reference.
+Table Structure annotation=&amp;gt; \d data; Table &amp;quot;public.data&amp;quot; Column | Type | Modifiers --------+-----------+--------------------------------------------------- id | integer | not null default nextval(&#39;data_id_seq&#39;::regclass) value | integer | label | integer | x | integer[] | y | integer[] | Indexes: &amp;quot;data_pkey&amp;quot; PRIMARY KEY, btree (id) &amp;quot;ix_data_label&amp;quot; btree (label) annotation=&amp;gt; select count(*) from data; count --------- 1050475 (1 row)  SQLAlchemy ORM Declaration class Data(Base): __tablename__ = &#39;data&#39; id = Column(Integer, primary_key=True) value = Column(Integer) # 0 =&amp;gt; Training, 1 =&amp;gt; test label = Column(Integer, default=0, index=True) x = Column(postgresql.</description>
+    </item>
+    
+  </channel>
+</rss>

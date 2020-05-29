@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>RC week 0000 - Technical Ramblings</title>
+  <meta name="description" content="The long awaited Recurse Center debut day, 26th Sep 2016 kick started with a welcome note by Nicholas Bergson-Shilcock and David Albert ; decorated by other events and activities to get to know the batchmates; the culture of RC and ended with closing note by Sonali Sridhar.
+
+ At the end of the day, I had decided to build a BitTorrent client as a first project. I was at the crossroad to choose Python or Rust or Go for the project."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Technical Ramblings",
+    
+    "url": "https:\/\/kracekumar.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/kracekumar.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/post\/151276229490\/rc-week-0000\/",
+          "name": "R c week 0000"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "RC week 0000",
+  "description" : "The long awaited Recurse Center debut day, 26th Sep 2016 kick started with a welcome note by Nicholas Bergson-Shilcock and David Albert ; decorated by other events and activities to get to know the batchmates; the culture of RC and ended with closing note by Sonali Sridhar.\n\n At the end of the day, I had decided to build a BitTorrent client as a first project. I was at the crossroad to choose Python or Rust or Go for the project.",
+  "inLanguage" : "en",
+  "wordCount":  683 ,
+  "datePublished" : "2016-10-03T05:27:30",
+  "dateModified" : "2016-10-03T05:27:30",
+  "image" : "https:\/\/kracekumar.github.io\/",
+  "keywords" : [ "recursecenter, bittorrent, python" ],
+  "mainEntityOfPage" : "https:\/\/kracekumar.github.io\/post\/151276229490\/rc-week-0000\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/kracekumar.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/kracekumar.github.io\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="RC week 0000" />
+<meta property="og:description" content="The long awaited Recurse Center debut day, 26th Sep 2016 kick started with a welcome note by Nicholas Bergson-Shilcock and David Albert ; decorated by other events and activities to get to know the batchmates; the culture of RC and ended with closing note by Sonali Sridhar.
+
+ At the end of the day, I had decided to build a BitTorrent client as a first project. I was at the crossroad to choose Python or Rust or Go for the project.">
+<meta property="og:url" content="https://kracekumar.github.io/post/151276229490/rc-week-0000/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Technical Ramblings" />
+
+  <meta name="twitter:title" content="RC week 0000" />
+  <meta name="twitter:description" content="The long awaited Recurse Center debut day, 26th Sep 2016 kick started with a welcome note by Nicholas Bergson-Shilcock and David Albert ; decorated by other events and activities to get to know the …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.71.1" />
+  <link rel="alternate" href="https://kracekumar.github.io/index.xml" type="application/rss+xml" title="Technical Ramblings"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kracekumar.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://kracekumar.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://kracekumar.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://kracekumar.github.io/">Technical Ramblings</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>RC week 0000</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on October 3, 2016
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;683&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <img height="500" src="https://lh3.googleusercontent.com/zGakGJDUqDyLltKki0mYpbTrHQXd8v4SQOdYOjzttNaiTf5eFXUlZPJUhA_c96Bfbx7cm5Kp6p-NVWL0SVD4TVazdIFyJgWaTmxMBwTZdxh4TduWNQF7BJlW8lUzCA8dZYeCzFOo7AXuq6LzgKKDpi1w38JYo8S5Oj1S-d1Z9xjND6POOJJfU4adAnppFPrMBQL5yJICjge_mR5HQvPmSPzweEoIfz45Bts3by5BVcsdJoEVXTqPLWHf3jSTvUGy5TDqKevYljh2EGvJL5p1tXOy2E-3zsvpYemmIWvgfQ4wfJ0O3q5NU-S9IyGniugWXZ49NfQg3igBKWUCLLW_4Uf1OKP2hLAq6AkpUrV_4CucX95aDVEm-7Dub36SeoQs4-v8NnPPx_2hdTRAncNJi7SkxjsdQZHz6-0fpB1SGIYCpL3aRusWMZx3PYK9LAMcbGZU_DGjVGcW5QKBr01EY_FgXiRjB7aXIuEW-LlxCdcnuh20gCXVzA7ZrBghuAyl-nZAmn3v_Fed1JRwEUVNO8fam2FzeKqMT5dEPARk518HvTn-YiAMZv0qKj3eeh4FrF_kiFugZgIMW1DskJvn1xF584pDDCuTCdiHTV_s6M5y-8eh=s800" width="500"/>
+<p>The long awaited <a href="https://recurse.com" target="_blank">Recurse Center</a> debut day, 26th Sep 2016 kick started with a welcome note by Nicholas Bergson-Shilcock and David Albert ; decorated by other events and activities to get to know the batchmates; the culture of RC and ended with closing note by Sonali Sridhar.</p>
+<p><a href="https://commons.wikimedia.org/wiki/File%3ABittorrent_new_logo.svg" target="_blank" title="By BitTorrent, Inc. ([1]) [Public domain], via Wikimedia Commons"></a></p>
+<figure class="tmblr-full" data-orig-height="147" data-orig-src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Bittorrent_new_logo.svg/512px-Bittorrent_new_logo.svg.png" data-orig-width="512"><img alt="Bittorrent new logo" data-orig-height="147" data-orig-src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Bittorrent_new_logo.svg/512px-Bittorrent_new_logo.svg.png" data-orig-width="512" src="https://66.media.tumblr.com/7d9b4ba6cb8fcdfbfada9339208e6201/tumblr_inline_pk0028lKwW1qc390z_540.png" width="512"/></figure>
+<p>At the end of the day, I had decided to build a BitTorrent client as a first project. I was at the crossroad to choose Python or Rust or Go for the project. After a quick chat with batch mate, I decided to write the BitTorrent client in Python. I neither knew Rust well nor wrote a BitTorrent client in the past. Fighting two battles at the same time is hard.</p>
+<p>My experience with network application is limited. I have maintained Web Socket server and fixed bugs at a previous job. The BitTorrent client is my first major network application.</p>
+<p>As a first step towards building the client, I started reading <a href="https://www.wikiwand.com/en/BitTorrent" target="_blank">Wikipedia documentation</a> and <a href="http://www.bittorrent.org/beps/bep_0003.html" target="_blank">official proposal</a>. RC alum shared valuable resources, <a href="http://wiki.theory.org/BitTorrentSpecification" target="_blank">unofficial proposal</a> and <a href="http://www.kristenwidman.com/blog/33/how-to-write-a-bittorrent-client-part-1/" target="_blank">blog post</a> from an alum. I continued to read Wikipedia article grasped the higher level working of the BitTorrent working. In one afternoon, few batchmates got together and started to discuss the protocol; strategy recommended to download the data; security; jargon and authentication. We drew higher level steps in the life cycle of the download in a whiteboard. It was an enlightening session and helped me crystal the understanding.</p>
+<figure class="tmblr-full" data-orig-height="532" data-orig-src="https://lh3.googleusercontent.com/n2mB_QW2rQkxYvKt_My1RPTNtzAmnzTl5hggvKqnG5iLD8qRDereNyPUFKAGGRLALTSrIy2MXmod=w1265-h532-no" data-orig-width="1265"><img data-orig-height="532" data-orig-src="https://lh3.googleusercontent.com/n2mB_QW2rQkxYvKt_My1RPTNtzAmnzTl5hggvKqnG5iLD8qRDereNyPUFKAGGRLALTSrIy2MXmod=w1265-h532-no" data-orig-width="1265" src="https://66.media.tumblr.com/e6d168a9b8b32efbc6324e5b8d47a269/tumblr_inline_pk0029wiWn1qc390z_540.png" width="500"/></figure>
+<p>Resisting from coding was hard. I started to program the client by parsing torrent in <a href="https://www.wikiwand.com/en/Bencode" target="_blank">bencode</a> format. The significant portion of the data in the file is in binary format. Next step in the procedure is to gather how communication between tracker - server which stores information about connected and clients. The blog post suggested to capture all the packets during a torrent session. First I underestimated the value of the advice. Later while reading the spec and scribbling code, I found the value. Both Wireshark and tcpdump were helpful. I like tcpdump because of ease of use, lightweight and command line interface, but viewing captured packets is hard on the command line. The Wireshark infers data from the packet and renders in a useful format with a lot of switches like order by protocol, view the unencrypted packets, etc… Then I implemented communication layer for trackers using HTTP and not UDP. For example, the piratebay trackers completely use UDP.</p>
+<p>The next piece is to build components which communicate with other seeders - clients who have complete or partial data. This part was time-consuming for me various reasons.</p>
+<ul>
+<li>All the communication happens in binary data from the client. Having used JSON a lot and human readable format debugging binary data takes away a lot of time.</li>
+<li>Understanding the message exchange format between clients and peer was tricky and different message encoding format. The client message carries data, type of data and length of data. This approach is entirely different coming from web application background where readability and usability are given importance.</li>
+</ul>
+<p>Before starting to implement the crux of the client, <code>asyncio</code> clicked my mind and found reference <a href="https://github.com/eliasson/pieces" target="_blank">implementation</a>. The project is highly resourceful for me to build the torrent client. As of now, my client can parse the torrent file, contact the tracker to seeders information, contact peers, respond to a message and request a piece of data. All the above step constitute to 80% in the first milestone of a BitTorrent client. Yes, I can hear you murmuring 80-20 rule!</p>
+<p>I’m on the verge of finishing the client and will release the source code in next few days. I’d suggest you to write a BitTorrent client if you haven’t.</p>
+<p>OTH, RC’s address is 455, BroadWay, New York. The <code>Broadway</code> appealed to me and when I visited, the place was a multi laned road. Out of curiosity when I read more, it was revealing to know <a href="https://www.wikiwand.com/en/Broadway_(Manhattan)" target="_blank">broadway</a> is literal translation of Dutch words <a href="https://en.wiktionary.org/wiki/breed#Dutch" target="_blank">bret</a>, <a href="https://en.wiktionary.org/wiki/weg#Dutch" target="_blank">weg</a> and is one the oldest road stretching 53 km long through The New York City boroughs of Manhattan and the Bronx, New YorkThe county of Westchester, New York.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://kracekumar.github.io//tags/recursecenter/">recursecenter</a>&nbsp;
+            
+              <a href="https://kracekumar.github.io//tags/bittorrent/">bittorrent</a>&nbsp;
+            
+              <a href="https://kracekumar.github.io//tags/python/">python</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/618264170735009792/parameterize-python-tests/">Parameterize Python Tests</a></li>
+                
+                    <li><a href="/post/612817685627191296/dont-touch-your-face-neural-network-will-warn/">“Don’t touch your face” - Neural Network will warn you</a></li>
+                
+                    <li><a href="/post/190478935610/capture-all-browser-https-calls-to-load-a-web/">Capture all browser HTTP[s] calls to load a web page</a></li>
+                
+                    <li><a href="/post/170492996890/how-long-do-python-postgres-tools-take-to-load/">How long do Python Postgres tools take to load data?</a></li>
+                
+                    <li><a href="/post/168364964555/debugging-python-multiprocessing-program-with/">Debugging Python multiprocessing program with strace</a></li>
+                
+              </ul>
+
+          
+                  
+       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://kracekumar.github.io/post/151005099060/im-attending-recurse-center-fall02-2016-batch/" data-toggle="tooltip" data-placement="top" title="None">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://kracekumar.github.io/post/151547342115/rc-week-0001/" data-toggle="tooltip" data-placement="top" title="RC week 0001">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://kracekumar.github.io/">Technical Ramblings</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.71.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://kracekumar.github.io/js/main.js"></script>
+<script src="https://kracekumar.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://kracekumar.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Notes from Root Conf Day 1 - 2017 - Technical Ramblings</title>
+  <meta name="description" content="Root Conf is a conference on DevOps and Cloud Infrastructure. 2017 edition’s theme is service reliability. Following is my notes from Day 1.
+  State of the open source monitoring landscape
+ The speaker of the session is the co-founder of Icinga monitoring system. I missed first ten minutes of the talk.-The talk is a comparison of all available OSS options for monitoring, visualization. Auto-discovery is hard. As per 2015 monitoring tool usage survey, Nagios is widely used."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Technical Ramblings",
+    
+    "url": "https:\/\/kracekumar.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/kracekumar.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/post\/160561774060\/notes-from-root-conf-day-1-2017\/",
+          "name": "Notes from root conf day 1 2017"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "Notes from Root Conf Day 1 - 2017",
+  "description" : "Root Conf is a conference on DevOps and Cloud Infrastructure. 2017 edition’s theme is service reliability. Following is my notes from Day 1.\n  State of the open source monitoring landscape\n The speaker of the session is the co-founder of Icinga monitoring system. I missed first ten minutes of the talk.-The talk is a comparison of all available OSS options for monitoring, visualization. Auto-discovery is hard. As per 2015 monitoring tool usage survey, Nagios is widely used.",
+  "inLanguage" : "en",
+  "wordCount":  1167 ,
+  "datePublished" : "2017-05-11T21:11:23",
+  "dateModified" : "2017-05-11T21:11:23",
+  "image" : "https:\/\/kracekumar.github.io\/",
+  "keywords" : [ "devops, notes, conference" ],
+  "mainEntityOfPage" : "https:\/\/kracekumar.github.io\/post\/160561774060\/notes-from-root-conf-day-1-2017\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/kracekumar.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/kracekumar.github.io\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Notes from Root Conf Day 1 - 2017" />
+<meta property="og:description" content="Root Conf is a conference on DevOps and Cloud Infrastructure. 2017 edition’s theme is service reliability. Following is my notes from Day 1.
+  State of the open source monitoring landscape
+ The speaker of the session is the co-founder of Icinga monitoring system. I missed first ten minutes of the talk.-The talk is a comparison of all available OSS options for monitoring, visualization. Auto-discovery is hard. As per 2015 monitoring tool usage survey, Nagios is widely used.">
+<meta property="og:url" content="https://kracekumar.github.io/post/160561774060/notes-from-root-conf-day-1-2017/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Technical Ramblings" />
+
+  <meta name="twitter:title" content="Notes from Root Conf Day 1 - 2017" />
+  <meta name="twitter:description" content="Root Conf is a conference on DevOps and Cloud Infrastructure. 2017 edition’s theme is service reliability. Following is my notes from Day 1.
+  State of the open source monitoring landscape
+ The …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.71.1" />
+  <link rel="alternate" href="https://kracekumar.github.io/index.xml" type="application/rss+xml" title="Technical Ramblings"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kracekumar.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://kracekumar.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://kracekumar.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://kracekumar.github.io/">Technical Ramblings</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Notes from Root Conf Day 1 - 2017</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on May 11, 2017
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1167&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p><a href="https://rootconf.in/2017/" target="_blank">Root Conf</a> is a conference on DevOps and Cloud Infrastructure. 2017 edition’s theme is service reliability. Following is my notes from Day 1.</p>
+<ol>
+<li>
+<p><a href="https://rootconf.talkfunnel.com/2017/63-state-of-the-open-source-monitoring-landscape" target="_blank">State of the open source monitoring landscape</a></p>
+<ul>
+<li>The speaker of the session is the co-founder of Icinga monitoring system. I missed first ten minutes of the talk.-The talk is a comparison of all available OSS options for monitoring, visualization.</li>
+<li>Auto-discovery is hard.</li>
+<li>As per 2015 monitoring tool usage survey, Nagios is widely used.</li>
+<li><a href="https://en.wikipedia.org/wiki/Nagios" target="_blank">Nagios</a> is reliable and stable.</li>
+<li><a href="https://en.wikipedia.org/wiki/Icinga" target="_blank">Icinga 2</a> is a fork of Nagios, rewrite in c++. It’s modern, web 2.0 with APIs, extensions and multiple backends.</li>
+<li><a href="https://github.com/sensu/sensu" target="_blank">Sensu</a> has limited features on OSS side and a lot of features on enterprise version. OSS version isn’t useful much.</li>
+<li><a href="https://en.wikipedia.org/wiki/Zabbix" target="_blank">Zabbix</a> is full featured, out of box monitoring system written in C. It provides logging and graphing features. Scaling is hard since all writes are written to single Postgres DB.</li>
+<li><a href="http://riemann.io/" target="_blank">Riemann</a> is stream processor and written in Clojure. The DSL stream processing language needs knowledge of Clojure. The system is stateless.</li>
+<li><a href="https://www.opennms.org/en" target="_blank">OpenNMS</a> is a network monitoring tool written in Java and good for auto discovery. Using plugins for a non-Java environment is slow.</li>
+<li><a href="http://graphiteapp.org/" target="_blank">Graphite</a> is flexible, a popular monitoring tool for time series database.</li>
+<li><a href="https://github.com/prometheus/prometheus" target="_blank">Prometheus</a> is flexible rule-based alerting and time series database metrics.</li>
+<li><a href="https://www.elastic.co/products/x-pack/monitoring" target="_blank">Elastic</a> comes with Elastic search, log stash, and kibana. It’s picking up a lot of traction. Elastic Stack is extensible using X-PACK feature.</li>
+<li><a href="https://grafana.com/" target="_blank">Grafana</a> is best for visualizing time series database. Easy to get started and combine multiple backends. - - Grafana annotations easy to use and tag the events.</li>
+<li>There is no one tool which fits everyone’s case. You have to start somewhere. So pick up a monitoring tool, see if it works for you else try the next one til you settle down.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://rootconf.talkfunnel.com/2017/17-deployment-strategies-with-kubernetes" target="_blank">Deployment strategies with Kubernetes</a></p>
+<ul>
+<li>This was talk with a live demo.</li>
+<li>Canary deployment: Route a small amount of traffic to a new host to test functioning.</li>
+<li>If new hosts don’t act normal roll back the deployment.</li>
+<li><a href="https://www.martinfowler.com/bliki/BlueGreenDeployment.html" target="_blank">Blue Green Deployment</a> is a procedure to minimize the downtime of the deployment. The idea is to have two set of machines with identical configuration but one with the latest code, rev 2 and other with rev 1. Once the machines with latest code act correctly, spin down the machines with rev 1 code.</li>
+<li>Then a demo of <code>kubectl</code> with adding a new host to the cluster and roll back.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://rootconf.talkfunnel.com/2017/7-a-little-bot-for-big-cause" target="_blank">A little bot for big cause</a></p>
+<ul>
+<li>The talk is on a story on developing, push to GitHub, merge and release. And shit hits the fan. Now, what to do?</li>
+<li>The problem is developer didn’t get the code reviewed.</li>
+<li>How can automation help here?</li>
+<li>Enforcing standard like I unreviewed merge is reverted using GitHub API, Slack Bot, Hubot.</li>
+<li>As soon as developer opens a PR, <a href="https://github.com/moengage/alice" target="_blank">alice</a>, the bot adds a comment to the PR with the checklist. When the code is merged, bot verifies the checklist, if items are unchecked, the bot reverts the merge.</li>
+<li>The bot can do more work. DM the bot in the slack to issue commands and bot can interact with Jenkins to roll back the deployed code.</li>
+<li>The bot can receive commands via slack personal message.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://rootconf.talkfunnel.com/2017/18-necessary-tooling-and-monitoring-for-performance-c" target="_blank">Necessary tooling and monitoring for performance critical applications</a></p>
+<ul>
+<li>The talk is about collecting metrics for German E-commerce company Otto.</li>
+<li>The company receives two orders/sec, million visitors per day.On an average, it takes eight clicks/pages to complete an order.</li>
+<li>Monitor database, response time, throughput, requests/second, and measure state of the system</li>
+<li>Metrics everywhere! We talk about metrics to decide and diagnose the problem.</li>
+<li><a href="http://metrics-clojure.readthedocs.io/en/latest/" target="_blank">Metrics</a> is a Clojure library to measure and record the data to the external system.</li>
+<li>The library offers various features like Counter, gauges, meters, timers, histogram percentile.</li>
+<li>Rather than extracting data from the log file, measure details from the code and write to the data store.</li>
+<li>Third party libraries are available for visualization.</li>
+<li>The demo used d3.js application for annotation and visualization. In-house solution.</li>
+<li>While measuring the metrics, measure from all possible places and store separately. If the web application makes a call to the recommendation engine, collect the metrics from the web application and recommendation for a single task and push to the data store.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://rootconf.talkfunnel.com/2017/51-what-should-be-pid-1-in-a-container" target="_blank">What should be PID 1 in a container?</a></p>
+<ul>
+<li>In older version of Docker, Docker doesn’t reap child process correctly. As a result, for every request, docker spawns a new application and never terminated. This is called <a href="https://rootconf.talkfunnel.com/2017/51-what-should-be-pid-1-in-a-container" target="_blank">PID 1 zombie problem</a>.</li>
+<li>This will eat all available PIDs in the container.</li>
+<li>Use <code>Sysctl-a | grep pid_max</code> to find maximum available PIDs in the container.</li>
+<li>In the bare metal machine, PID 1 is <code>systemd</code> or any init program.</li>
+<li>If the first process in the container is bash, then is PID 1 zombie process doesn’t occur.</li>
+<li>Using bash is to handle all signal handlers is messy.</li>
+<li>Yelp came up with <a href="https://github.com/Yelp/dumb-init" target="_blank">Yelp/dumb-init</a>. Now, <code>dumb-init</code> is PID 1 and no more zombie processes.</li>
+<li>Docker-1.13, introduced the flag, <code>--init</code>.</li>
+<li>Another solution uses <code>system</code> as PID 1</li>
+<li>Docker allows running <code>system</code> without privilege mode.</li>
+<li>Running system as PID 1 has other useful features like managing logs.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://rootconf.talkfunnel.com/2017/9-razor-sharp-provisioning-for-baremetal-servers" target="_blank">‘Razor’ sharp provision for bare metal servers</a></p>
+<ul>
+<li>I attended only first half of the talk, fifteen minutes.</li>
+<li>When you buy physical rack space in a data server how will you install the OS? You’re in Bangalore and server is in Amsterdam.</li>
+<li>First OS installation on bare metal is hard.</li>
+<li>There comes Network boot!</li>
+<li><a href="http://www.syslinux.org/wiki/index.php?title=PXELINUX" target="_blank">PXELinux</a> is a syslinux derivative to boot OS from NIC card.</li>
+<li>Once the machine comes up, DHCP request is broadcasted, and DHCP server responds.</li>
+<li><a href="https://cobbler.github.io/" target="_blank">Cobbler</a> helps in managing all services running the network.</li>
+<li>DHCP server, TFTP server, and config are required to complete the installation.</li>
+<li>Microkernel in placed in TFTP server.</li>
+<li><a href="https://puppet.com/blog/introducing-razor-a-next-generation-provisioning-solution" target="_blank">Razor</a> is a tool to automate provisioning bare metal installation.</li>
+<li>Razor philosophy, consume the hardware resource like the virtual resource.</li>
+<li>Razor components - Nodes, Tags, Repository, policy, Brokers, Hooks</li>
+</ul>
+</li>
+<li>
+<p><a href="https://rootconf.talkfunnel.com/2017/77-freebsd-is-not-a-linux-distribution" target="_blank">FreeBSD is not a Linux distribution</a></p>
+<ul>
+<li>FreeBSD is a complete OS, not a distribution</li>
+<li>Who uses? NetFlix, WhatsApp, Yahoo!, NetApp and more</li>
+<li>Great tools, mature release model, excellent documentation, friendly license.</li>
+<li>Now a lot of forks NetBSD, FreeBSD, OpenBSD and few more</li>
+<li>Good file system. UFS, and ZFS. UFS high performance and reliable. - If you don’t want to lose data use ZFS!</li>
+<li>Jails - GNU/Linux copied this and called containers!</li>
+<li>No GCC only llvm/clang.</li>
+<li>FreeBSD is forefront in developing next generation tools.</li>
+<li>Pluggable TCP stacks - BBR, RACK, CUBIC, NewReno</li>
+<li>Firewalls - Ipfw , PF</li>
+<li>Dummynet - live network emulation tool</li>
+<li>FreeBSD can run Linux binaries in userspace. It maps GNU/Linux system call with FreeBSD.</li>
+<li>It can run on 256 cores machine.</li>
+<li>Hard Ware - <a href="https://en.wikipedia.org/wiki/Non-uniform_memory_access" target="_blank">NUMA</a>, ARM64, Secure boot/UEFI</li>
+<li>Politics - Democratically elected core team</li>
+<li>Join the Mailing list and send patches, you will get a commit bit.</li>
+<li>Excellent mentor program - GSoC copied our idea.</li>
+<li>FreeBSD uses SVN and Git revision control.</li>
+<li>Took a dig at GPLV2 and not a business friendly license.</li>
+<li>Read out BSD license on the stage.</li>
+</ul>
+</li>
+</ol>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://kracekumar.github.io//tags/devops/">devops</a>&nbsp;
+            
+              <a href="https://kracekumar.github.io//tags/notes/">notes</a>&nbsp;
+            
+              <a href="https://kracekumar.github.io//tags/conference/">conference</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/160622791375/notes-from-root-conf-day-2-2017/">Notes from Root Conf Day 2 - 2017</a></li>
+                
+              </ul>
+
+          
+                  
+       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://kracekumar.github.io/post/160523067765/book-review-the-culture-map/" data-toggle="tooltip" data-placement="top" title="Book Review: The Culture Map">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://kracekumar.github.io/post/160622791375/notes-from-root-conf-day-2-2017/" data-toggle="tooltip" data-placement="top" title="Notes from Root Conf Day 2 - 2017">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://kracekumar.github.io/">Technical Ramblings</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.71.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://kracekumar.github.io/js/main.js"></script>
+<script src="https://kracekumar.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://kracekumar.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

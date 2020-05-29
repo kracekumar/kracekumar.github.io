@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>any on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/any/</link>
+    <description>Recent content in any on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 22 Mar 2014 08:34:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/any/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Stop iteration when condition is meet while iterating</title>
+      <link>https://kracekumar.github.io/post/80342472437/stop-iteration-when-condition-is-meet-while/</link>
+      <pubDate>Sat, 22 Mar 2014 08:34:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/80342472437/stop-iteration-when-condition-is-meet-while/</guid>
+      <description>We are writing a small utility function called is_valid_mime_type. The function takes a mime_typeas an argument and checks if the mime type is one of the allowed types. Code looks like
+ALLOWED_MIME_TYPE = (&#39;application/json&#39;, &#39;text/plain&#39;, &#39;text/html&#39;) def is_valid_mimetype(mime_type): &amp;quot;&amp;quot;&amp;quot;Returns True or False. :param mime_type string or unicode: HTTP header mime type &amp;quot;&amp;quot;&amp;quot; for item in ALLOWED_MIME_TYPE: if mime_type.startswith(item): return True return False  Above code can refactored into single line using any.</description>
+    </item>
+    
+  </channel>
+</rss>

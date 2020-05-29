@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>introduction on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/introduction/</link>
+    <description>Recent content in introduction on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 26 Dec 2013 04:38:41 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/introduction/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>introduction to python</title>
+      <link>https://kracekumar.github.io/post/71171551647/introduction-to-python/</link>
+      <pubDate>Thu, 26 Dec 2013 04:38:41 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/71171551647/introduction-to-python/</guid>
+      <description>This is the material which I use for teaching python to beginners.
+tld;dr: Very minimal explanation more code.
+Python?
+ Interpreted language Multiparadigm  Introduction
+hasgeek@hasgeek-MacBook:~/codes/python/hacknight$ python Python 2.7.3 (default, Aug 1 2012, 05:14:39) [GCC 4.6.3] on linux2 Type &amp;quot;help&amp;quot;, &amp;quot;copyright&amp;quot;, &amp;quot;credits&amp;quot; or &amp;quot;license&amp;quot; for more information. &amp;gt;&amp;gt;&amp;gt; &amp;gt;&amp;gt;&amp;gt; print &amp;quot;Let&#39;s learn Python&amp;quot; Let&#39;s learn Python  Numbers
+&amp;gt;&amp;gt;&amp;gt; 23 + 43 66 &amp;gt;&amp;gt;&amp;gt; 23 - 45 -22 &amp;gt;&amp;gt;&amp;gt; 23 * 45 1035 &amp;gt;&amp;gt;&amp;gt; 23 ** 4 279841 &amp;gt;&amp;gt;&amp;gt; 23 / 4 5 &amp;gt;&amp;gt;&amp;gt; 23 / 4.</description>
+    </item>
+    
+  </channel>
+</rss>

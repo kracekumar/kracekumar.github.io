@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rfcs_we_love on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/rfcs_we_love/</link>
+    <description>Recent content in rfcs_we_love on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 28 Jan 2017 17:47:02 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/rfcs_we_love/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>RFCS We Love</title>
+      <link>https://kracekumar.github.io/post/156493415835/rfcs-we-love/</link>
+      <pubDate>Sat, 28 Jan 2017 17:47:02 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/156493415835/rfcs-we-love/</guid>
+      <description>A simple question can open a door for new exploration. While I was at RC, I tweeted “Is there any meetup group similar to papers we love for discussing RFCS?”. In an interval of nine minutes, Jaseem replied: “Let’s start one :)”
+Is there any meetup group similar to @papers_we_love for discussing RFCs?
+— kracekumar (@kracetheking) November 30, 2016  Above discussion on Twitter, lead to a new focus group RFCS We Love in Bangalore by Nemo, Jaseem, Avinash and Kracekumar.</description>
+    </item>
+    
+  </channel>
+</rss>

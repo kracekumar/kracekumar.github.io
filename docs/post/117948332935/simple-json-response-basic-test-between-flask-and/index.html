@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Simple Json Response basic test between Flask and Django - Technical Ramblings</title>
+  <meta name="description" content="Django and Flask are two well known Python web frameworks. There are lot of benchmarks claim Flask is 2xfaster for simple JSON Response, one such is Techempower. After lookinginto the source, it struckme Django can do better!
+I will compare Flask and Django for simple json response. The machine used is Macbook pro, Intel Core i5-4258U CPU @ 2.40GHz,with 8 GB Memory on OS X 10.10.3. gunicorn==19.3.0 will be used for serving WSGI application."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Technical Ramblings",
+    
+    "url": "https:\/\/kracekumar.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/kracekumar.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/post\/117948332935\/simple-json-response-basic-test-between-flask-and\/",
+          "name": "Simple json response basic test between flask and django"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "Simple Json Response basic test between Flask and Django",
+  "description" : "Django and Flask are two well known Python web frameworks. There are lot of benchmarks claim Flask is 2xfaster for simple JSON Response, one such is Techempower. After lookinginto the source, it struckme Django can do better!\nI will compare Flask and Django for simple json response. The machine used is Macbook pro, Intel Core i5-4258U CPU @ 2.40GHz,with 8 GB Memory on OS X 10.10.3. gunicorn==19.3.0 will be used for serving WSGI application.",
+  "inLanguage" : "en",
+  "wordCount":  614 ,
+  "datePublished" : "2015-05-02T16:42:40",
+  "dateModified" : "2015-05-02T16:42:40",
+  "image" : "https:\/\/kracekumar.github.io\/",
+  "keywords" : [ "python, flask, django" ],
+  "mainEntityOfPage" : "https:\/\/kracekumar.github.io\/post\/117948332935\/simple-json-response-basic-test-between-flask-and\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/kracekumar.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/kracekumar.github.io\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Simple Json Response basic test between Flask and Django" />
+<meta property="og:description" content="Django and Flask are two well known Python web frameworks. There are lot of benchmarks claim Flask is 2xfaster for simple JSON Response, one such is Techempower. After lookinginto the source, it struckme Django can do better!
+I will compare Flask and Django for simple json response. The machine used is Macbook pro, Intel Core i5-4258U CPU @ 2.40GHz,with 8 GB Memory on OS X 10.10.3. gunicorn==19.3.0 will be used for serving WSGI application.">
+<meta property="og:url" content="https://kracekumar.github.io/post/117948332935/simple-json-response-basic-test-between-flask-and/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Technical Ramblings" />
+
+  <meta name="twitter:title" content="Simple Json Response basic test between Flask and Django" />
+  <meta name="twitter:description" content="Django and Flask are two well known Python web frameworks. There are lot of benchmarks claim Flask is 2xfaster for simple JSON Response, one such is Techempower. After lookinginto the source, it …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.71.1" />
+  <link rel="alternate" href="https://kracekumar.github.io/index.xml" type="application/rss+xml" title="Technical Ramblings"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kracekumar.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://kracekumar.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://kracekumar.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://kracekumar.github.io/">Technical Ramblings</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Simple Json Response basic test between Flask and Django</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on May 2, 2015
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;614&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Django and Flask are two well known Python web frameworks. There are lot of benchmarks claim Flask is 2xfaster for simple JSON Response, one such is <a href="https://www.techempower.com/benchmarks/" target="_blank">Techempower</a>. After lookinginto the <a href="https://github.com/TechEmpower/FrameworkBenchmarks/tree/master/frameworks/Python/django" target="_blank">source</a>, it struckme Django can do better!</p>
+<p>I will compare Flask and Django for simple json response. The machine used is Macbook pro, <code>Intel Core i5-4258U CPU @ 2.40GHz</code>,with <code>8 GB</code> Memory on <code>OS X 10.10.3</code>. <code>gunicorn==19.3.0</code> will be used for serving WSGI application.</p>
+<pre><code>#flask simple app
+from flask import Flask, jsonify
+
+app = Flask(__name__)
+
+@app.route('/index')
+def index():
+    return jsonify({'hello': 'world'})
+
+if __name__ == &quot;__main__&quot;:
+    app.run()
+</code></pre>
+<p>Start the flask app, <code>gunicorn -w 2 -b 127.0.0.1:5000 flask_app:app</code>.</p>
+<p><code>apachebench</code> will be used for benchmarking, you can use any tool for this.</p>
+<pre><code>ab -n 1000 -c 2 http://localhost:5000/index
+...
+Server Software:        gunicorn/19.3.0
+Server Hostname:        localhost
+Server Port:            5000
+
+Document Path:          /index
+Document Length:        22 bytes
+
+Concurrency Level:      2
+Time taken for tests:   0.622 seconds
+Complete requests:      1000
+Failed requests:        0
+Total transferred:      174000 bytes
+HTML transferred:       22000 bytes
+Requests per second:    1429.55 [#/sec] (mean)
+Time per request:       1.399 [ms] (mean)
+Time per request:       0.700 [ms] (mean, across all concurrent requests)
+Transfer rate:          242.91 [Kbytes/sec] received
+</code></pre>
+<p>Now let’s do same thing with Django 1.8 with default settings.</p>
+<pre><code>#hello/views.py
+from django.http import JsonResponse
+
+# Create your views here.
+def index(request):
+    return JsonResponse({'hello': 'world'})
+</code></pre>
+<p>Add <code>url('^index/$', index),</code> in <code>urls.py</code> and <code>hello</code> app in <code>settings.py</code>.Start the Django app, <code>gunicorn -w 2 -b 127.0.0.1:8000 django_app.wsgi</code>.</p>
+<pre><code>ab -n 1000 -c 2 http://localhost:8000/index/
+...
+Server Software:        gunicorn/19.3.0
+Server Hostname:        localhost
+Server Port:            8000
+
+Document Path:          /index/
+Document Length:        18 bytes
+
+Concurrency Level:      2
+Time taken for tests:   0.814 seconds
+Complete requests:      1000
+Failed requests:        0
+Total transferred:      179000 bytes
+HTML transferred:       18000 bytes
+Requests per second:    1228.25 [#/sec] (mean)
+Time per request:       1.628 [ms] (mean)
+Time per request:       0.814 [ms] (mean, across all concurrent requests)
+Transfer rate:          214.70 [Kbytes/sec] received
+</code></pre>
+<p>Time taken for 1000 requests by Django is <code>0.814s</code> and Flask is <code>0.622s</code>. Clearly flask is faster.</p>
+<p>Django is full fledged framework but Flask is micro framework. Django comes with lot of middlewares, contribmodels etc … Remove all those unused settings in <code>settings.py</code>.</p>
+<p>Comment all <code>middleware classes</code>. The <code>settings</code> snippet looks like</p>
+<pre><code>INSTALLED_APPS = (
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+
+    'hello',
+)
+
+MIDDLEWARE_CLASSES = (
+    # 'django.contrib.sessions.middleware.SessionMiddleware',
+    # 'django.middleware.common.CommonMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.contrib.auth.middleware.AuthenticationMiddleware',
+    # 'django.contrib.messages.middleware.MessageMiddleware',
+    # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+)
+</code></pre>
+<p>Restart the django app and run <code>ab -n 1000 -c 2 http://localhost:8000/index/</code>.</p>
+<pre><code>...
+Server Software:        gunicorn/19.3.0
+Server Hostname:        localhost
+Server Port:            8000
+
+Document Path:          /index/
+Document Length:        18 bytes
+
+Concurrency Level:      2
+Time taken for tests:   0.560 seconds
+Complete requests:      1000
+Failed requests:        0
+Total transferred:      150000 bytes
+HTML transferred:       18000 bytes
+Requests per second:    1784.37 [#/sec] (mean)
+Time per request:       1.121 [ms] (mean)
+Time per request:       0.560 [ms] (mean, across all concurrent requests)
+Transfer rate:          261.38 [Kbytes/sec] received
+</code></pre>
+<p>Now Django took only <code>0.560s</code> for 1000 requests compared to flask <code>0.622s</code>.</p>
+<p>Now remove Django admin from <code>urls.py</code>, and remove all <code>contrib</code> apps in <code>INSTALLED_APPS</code>.</p>
+<pre><code>INSTALLED_APPS = (
+#'django.contrib.admin',
+#'django.contrib.auth',
+#'django.contrib.contenttypes',
+#'django.contrib.sessions',
+#'django.contrib.messages',
+#'django.contrib.staticfiles',
+
+'hello',
+)
+</code></pre>
+<p>Restart the Django app and run the benchmark <code>ab -n 1000 -c 2 http://localhost:5000/index</code>.</p>
+<pre><code>...
+Server Software:        gunicorn/19.3.0
+Server Hostname:        localhost
+Server Port:            8000
+
+Document Path:          /index/
+Document Length:        18 bytes
+
+Concurrency Level:      2
+Time taken for tests:   0.553 seconds
+Complete requests:      1000
+Failed requests:        0
+Total transferred:      150000 bytes
+HTML transferred:       18000 bytes
+Requests per second:    1806.90 [#/sec] (mean)
+Time per request:       1.107 [ms] (mean)
+Time per request:       0.553 [ms] (mean, across all concurrent requests)
+Transfer rate:          264.68 [Kbytes/sec] received
+</code></pre>
+<p>That is much better. While developing API based application in Django tweak <code>settings.py</code> to getbetter performance out of Django. Source code for this benchmark can be found in <a href="https://github.com/kracekumar/flask_vs_django_bench" target="_blank">Github</a>.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://kracekumar.github.io//tags/python/">python</a>&nbsp;
+            
+              <a href="https://kracekumar.github.io//tags/flask/">flask</a>&nbsp;
+            
+              <a href="https://kracekumar.github.io//tags/django/">django</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/618264170735009792/parameterize-python-tests/">Parameterize Python Tests</a></li>
+                
+                    <li><a href="/post/612817685627191296/dont-touch-your-face-neural-network-will-warn/">“Don’t touch your face” - Neural Network will warn you</a></li>
+                
+                    <li><a href="/post/190478935610/capture-all-browser-https-calls-to-load-a-web/">Capture all browser HTTP[s] calls to load a web page</a></li>
+                
+                    <li><a href="/post/170492996890/how-long-do-python-postgres-tools-take-to-load/">How long do Python Postgres tools take to load data?</a></li>
+                
+                    <li><a href="/post/168364964555/debugging-python-multiprocessing-program-with/">Debugging Python multiprocessing program with strace</a></li>
+                
+              </ul>
+
+          
+                  
+       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://kracekumar.github.io/post/113057636135/django-print-exception-to-console/" data-toggle="tooltip" data-placement="top" title="django print exception to console">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://kracekumar.github.io/post/138492827565/testing-django-views/" data-toggle="tooltip" data-placement="top" title="Testing Django Views">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://kracekumar.github.io/">Technical Ramblings</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.71.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://kracekumar.github.io/js/main.js"></script>
+<script src="https://kracekumar.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://kracekumar.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

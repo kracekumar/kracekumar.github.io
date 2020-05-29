@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/python/</link>
+    <description>Recent content in python on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 16 May 2020 09:51:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Parameterize Python Tests</title>
+      <link>https://kracekumar.github.io/post/618264170735009792/parameterize-python-tests/</link>
+      <pubDate>Sat, 16 May 2020 09:51:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/618264170735009792/parameterize-python-tests/</guid>
+      <description>Introduction A single test case follows a pattern. Setup the data, invoke the function or method with the arguments and assert the return data or the state changes. A function will have a minimum of one or more test cases for various success and failure cases.
+Here is an example implementation of wc command for a single file that returns number of words, lines, and characters for an ASCII text file.</description>
+    </item>
+    
+    <item>
+      <title>“Don’t touch your face” - Neural Network will warn you</title>
+      <link>https://kracekumar.github.io/post/612817685627191296/dont-touch-your-face-neural-network-will-warn/</link>
+      <pubDate>Tue, 17 Mar 2020 07:01:22 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/612817685627191296/dont-touch-your-face-neural-network-will-warn/</guid>
+      <description>A few days back, Keras creator, Francois Chollet tweeted
+ A Keras/TF.js challenge: make a model that processes a webcam feed and detects when someone touches their face (triggering a loud beep).“ The very next day, I tried the Keras yolov3 model available in the Github. It was trained on the coco80 dataset and could detect person but not the face touch.
+  V1 Training The original Keras implementation lacked documentation to train fromscratch or transfer learning.</description>
+    </item>
+    
+    <item>
+      <title>Capture all browser HTTP[s] calls to load a web page</title>
+      <link>https://kracekumar.github.io/post/190478935610/capture-all-browser-https-calls-to-load-a-web/</link>
+      <pubDate>Sun, 26 Jan 2020 17:31:40 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/190478935610/capture-all-browser-https-calls-to-load-a-web/</guid>
+      <description>How does one find out what network calls, browser requests to load web pages?
+The simple method - download the HTML page, parse the page, find out all the network calls using web parsers like beautifulsoup.
+The shortcoming in the method, what about the network calls made by your browser before requesting the web page? For example, firefox makes a call to ocsp.digicert.com to obtain revocation status on digital certificates. The protocol is Online Certificate Status Protocol.</description>
+    </item>
+    
+    <item>
+      <title>How long do Python Postgres tools take to load data?</title>
+      <link>https://kracekumar.github.io/post/170492996890/how-long-do-python-postgres-tools-take-to-load/</link>
+      <pubDate>Sun, 04 Feb 2018 13:15:49 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/170492996890/how-long-do-python-postgres-tools-take-to-load/</guid>
+      <description>Data is crucial for all applications. While fetching a significant amount of data from database multiple times, faster data load times improve performance.
+The post considers tools like SQLAlchemy statement, SQLAlchemy ORM, Pscopg2, psql for measuring latency. And to measure the python tool timing, jupyter notebook’s timeit is used. Psql is for the lowest time taken reference.
+Table Structure annotation=&amp;gt; \d data; Table &amp;quot;public.data&amp;quot; Column | Type | Modifiers --------+-----------+--------------------------------------------------- id | integer | not null default nextval(&#39;data_id_seq&#39;::regclass) value | integer | label | integer | x | integer[] | y | integer[] | Indexes: &amp;quot;data_pkey&amp;quot; PRIMARY KEY, btree (id) &amp;quot;ix_data_label&amp;quot; btree (label) annotation=&amp;gt; select count(*) from data; count --------- 1050475 (1 row)  SQLAlchemy ORM Declaration class Data(Base): __tablename__ = &#39;data&#39; id = Column(Integer, primary_key=True) value = Column(Integer) # 0 =&amp;gt; Training, 1 =&amp;gt; test label = Column(Integer, default=0, index=True) x = Column(postgresql.</description>
+    </item>
+    
+    <item>
+      <title>Debugging Python multiprocessing program with strace</title>
+      <link>https://kracekumar.github.io/post/168364964555/debugging-python-multiprocessing-program-with/</link>
+      <pubDate>Sat, 09 Dec 2017 19:19:08 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/168364964555/debugging-python-multiprocessing-program-with/</guid>
+      <description>Debugging is a time consuming and brain draining process. It’s essential part of learning and writing maintainable code. Every person has their way of debugging, approaches and tools. Sometimes you can view the traceback, pull the code from memory, and find a quick fix. Some other times, you opt different tricks like the print statement, debugger, and rubber duck method.
+Debugging multi-processing bug in Python is hard because of various reasons.</description>
+    </item>
+    
+    <item>
+      <title>Book Review: Software Architecture with Python</title>
+      <link>https://kracekumar.github.io/post/160521154075/book-review-software-architecture-with-python/</link>
+      <pubDate>Wed, 10 May 2017 18:13:33 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/160521154075/book-review-software-architecture-with-python/</guid>
+      <description>The book Software Architecture with Python is by Anand B Pillai. The book explains various aspects of software architecture like testability, performance, scaling, concurrency and design patterns.
+The book has ten chapters. The first chapter speaks about different architect roles like solution architect, enterprise architect, technical architect what is the role of an architect and difference between design and architecture. The book covers two lesser spoken topics debugging and code security which I liked.</description>
+    </item>
+    
+    <item>
+      <title>Return Postgres data as JSON in Python</title>
+      <link>https://kracekumar.github.io/post/156769849745/return-postgres-data-as-json-in-python/</link>
+      <pubDate>Fri, 03 Feb 2017 20:47:13 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/156769849745/return-postgres-data-as-json-in-python/</guid>
+      <description>Postgres supports JSON and JSONB for a couple of years now. The support for JSON-functions landed in version 9.2. These functions let Postgres server to return JSON serialized data. This is a handy feature. Consider a case; Python client fetches 20 records from Postgres. The client converts the data returned by the server to tuple/dict/proxy. The application or web server converts tuple again back to JSON and sends to the client.</description>
+    </item>
+    
+    <item>
+      <title>Expose jupyter notebook over the network</title>
+      <link>https://kracekumar.github.io/post/156322146345/expose-jupyter-notebook-over-the-network/</link>
+      <pubDate>Tue, 24 Jan 2017 20:21:21 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/156322146345/expose-jupyter-notebook-over-the-network/</guid>
+      <description>What is the Jupyter notebook?
+ The Jupyter Notebook is a web application that allows you to create and share documents that contain live code, equations, visualisations and explanatory text.
+ The definition is from the official site. I use IPython/Jupyter shell all time. If you haven’t tried, spend 30 minutes and witness the power!
+At times, I want to share some code snippet with folks in the same building during work, workshop or training.</description>
+    </item>
+    
+    <item>
+      <title>RC Week 0010</title>
+      <link>https://kracekumar.github.io/post/151921371645/rc-week-0010/</link>
+      <pubDate>Mon, 17 Oct 2016 06:04:45 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/151921371645/rc-week-0010/</guid>
+      <description>This week has been a mixed ride with the torrent client. I completed the two pending features seeding and UDP tracker. The torrent client has a major issue with downloading larger torrent file like ubuntu iso file. The client starts the downloads from a set of peers and slowly halts at sock.recv after exchanging a handful of packets. At this juncture CPU spikes to 100% when sock.recv blocks. Initially, the code relied on asyncio only features, now the code uses curio library.</description>
+    </item>
+    
+    <item>
+      <title>RC week 0001</title>
+      <link>https://kracekumar.github.io/post/151547342115/rc-week-0001/</link>
+      <pubDate>Sun, 09 Oct 2016 05:09:09 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/151547342115/rc-week-0001/</guid>
+      <description>This week, I made considerable progress on the BitTorrent client which I started a week back. The client is in a usable state to download the data from the swarm. The source code is available on GitHub. The project uses Python 3.5 async/await and asyncio. I presented the torrent client in RC Thursday five minute presentation evening slot. Here is the link to the slides.
+ Here is quick video demo recorded with asciinema.</description>
+    </item>
+    
+    <item>
+      <title>RC week 0000</title>
+      <link>https://kracekumar.github.io/post/151276229490/rc-week-0000/</link>
+      <pubDate>Mon, 03 Oct 2016 05:27:30 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/151276229490/rc-week-0000/</guid>
+      <description>The long awaited Recurse Center debut day, 26th Sep 2016 kick started with a welcome note by Nicholas Bergson-Shilcock and David Albert ; decorated by other events and activities to get to know the batchmates; the culture of RC and ended with closing note by Sonali Sridhar.
+
+ At the end of the day, I had decided to build a BitTorrent client as a first project. I was at the crossroad to choose Python or Rust or Go for the project.</description>
+    </item>
+    
+    <item>
+      <title>HTTP Exception as control flow</title>
+      <link>https://kracekumar.github.io/post/147895372680/http-exception-as-control-flow/</link>
+      <pubDate>Sun, 24 Jul 2016 14:37:20 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/147895372680/http-exception-as-control-flow/</guid>
+      <description>As per Wikipedia , Exception handling is the process of responding to the occurrence, during computation, of exceptions – anomalous or exceptional conditions requiring special processing – often changing the flow of program execution.
+In Python errors like SyntaxError, ZeroDivisionError are exceptions.Exception paves the way to alter the normal execution path.
+While working with API, a web request goes through the following process,authentication, authorization, input validation, business logic and finally, the response is given out.</description>
+    </item>
+    
+    <item>
+      <title>State machine in DB model</title>
+      <link>https://kracekumar.github.io/post/147507497215/state-machine-in-db-model/</link>
+      <pubDate>Sat, 16 Jul 2016 20:25:06 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/147507497215/state-machine-in-db-model/</guid>
+      <description>A state machine is an abstract machine that can be in one of a finite number of states. The machine is in only one state at a time; the state it is in at any given time is called the current state.
+While using the database, individual records should be in allowed states. The database or application stores rules for the states. There are many ways to design the database schema to achieve this.</description>
+    </item>
+    
+    <item>
+      <title>Asyncio and uvloop</title>
+      <link>https://kracekumar.github.io/post/144058400775/asyncio-and-uvloop/</link>
+      <pubDate>Sun, 08 May 2016 20:18:48 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/144058400775/asyncio-and-uvloop/</guid>
+      <description>Today, I read an article about uvloop. I am aware of libuv and its behind nodejs. What caught me was “In fact, it is at least 2x faster than any other Python asynchronous framework.”. So I decided to give it a try with aiohttp.
+The test program was simple websocket code which receives a text message, doubles the content and echoes back. Here is the complete snippet with uvloop.
+I ran naive benchmark using thor and results favoured uvloop.</description>
+    </item>
+    
+    <item>
+      <title>Permissions in Django Admin</title>
+      <link>https://kracekumar.github.io/post/141377389440/permissions-in-django-admin/</link>
+      <pubDate>Sun, 20 Mar 2016 17:07:40 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/141377389440/permissions-in-django-admin/</guid>
+      <description>Admin dashboard is one of the Django’s useful feature. Admin dashboard allows super users to create, read, update, delete database objects. The super users have full control over the data. Staff user can login into admin dashboard but can’t access data. In few cases, staff users needs restricted access . Super user can access all data from various in built and third party apps. Here is a screenshot of Super user admin interface after login.</description>
+    </item>
+    
+    <item>
+      <title>Simple Json Response basic test between Flask and Django</title>
+      <link>https://kracekumar.github.io/post/117948332935/simple-json-response-basic-test-between-flask-and/</link>
+      <pubDate>Sat, 02 May 2015 16:42:40 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/117948332935/simple-json-response-basic-test-between-flask-and/</guid>
+      <description>Django and Flask are two well known Python web frameworks. There are lot of benchmarks claim Flask is 2xfaster for simple JSON Response, one such is Techempower. After lookinginto the source, it struckme Django can do better!
+I will compare Flask and Django for simple json response. The machine used is Macbook pro, Intel Core i5-4258U CPU @ 2.40GHz,with 8 GB Memory on OS X 10.10.3. gunicorn==19.3.0 will be used for serving WSGI application.</description>
+    </item>
+    
+    <item>
+      <title>django print exception to console</title>
+      <link>https://kracekumar.github.io/post/113057636135/django-print-exception-to-console/</link>
+      <pubDate>Sun, 08 Mar 2015 11:10:09 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/113057636135/django-print-exception-to-console/</guid>
+      <description>Django has very good debug toolbar for debugging SQL. While working with Single Page Application and API exceptions can’t be displayed in browser. Exception is sent to front end. What if the exception can be printed to console ?
+Django middleware gets called for every request/response. The small helper class looks like
+ Add the filename and class name to MIDDLEWARE_CLASSES in settings file like
+ This is how exceptions looks</description>
+    </item>
+    
+    <item>
+      <title>Check for custom objects in Python set.</title>
+      <link>https://kracekumar.github.io/post/107618031945/check-for-custom-objects-in-python-set/</link>
+      <pubDate>Fri, 09 Jan 2015 19:50:06 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/107618031945/check-for-custom-objects-in-python-set/</guid>
+      <description>Python set data structure is commonly used for removing duplicate entriesand make lookup faster (O(1)). Any hashable object can be stored in set.For example, list and dict can’t be stored.
+User defined objects can be stored. Here is how it looks.
+class Person(object): def __init__(self, name, age): self.name, self.age = name, age In [25]: s = set() In [26]: s.add(Person(&#39;kracekumar&#39;, 25)) In [27]: s Out[27]: set([&amp;lt;__main__.Person at 0x1033c5e10&amp;gt;]) In [29]: Person(&#39;kracekumar&#39;, 25) in s Out[29]: False  Implement equality check Even though Person object with same value is present but check failed.</description>
+    </item>
+    
+    <item>
+      <title>class as decorator</title>
+      <link>https://kracekumar.github.io/post/101540141725/class-as-decorator/</link>
+      <pubDate>Sun, 02 Nov 2014 01:17:42 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/101540141725/class-as-decorator/</guid>
+      <description>Decorator Decorator is a callable which can modify the function, method, class on runtime. Most ofthe decorators uses closure but it is possible to use class.
+Closure import functools def cache(f): storage = {} @functools.wraps(f) def inner(n): value = storage.get(n) if value: print(&amp;quot;Returning value from cache&amp;quot;) return value value = f(n) storage[n] = value return value return inner @cache def factorial(n): if n &amp;lt;= 1: return 1 return n * factorial(n - 1) &amp;gt;&amp;gt;&amp;gt;factorial(20) 2432902008176640000 &amp;gt;&amp;gt;&amp;gt;factorial(20) Returning from cache 2432902008176640000  cache is a function which takes function as an argument and returns a function.</description>
+    </item>
+    
+    <item>
+      <title>Fluent interface in python</title>
+      <link>https://kracekumar.github.io/post/100897281440/fluent-interface-in-python/</link>
+      <pubDate>Sat, 25 Oct 2014 09:32:01 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/100897281440/fluent-interface-in-python/</guid>
+      <description>Fluent Interface is an implementation of API which improves readability.
+Example Poem(&#39;The Road Not Taken&#39;).indent(4).suffix(&#39;Robert Frost&#39;).
+Fluent Interface is similar to method chaining. I was wondering how to implement this in Python.Returning self during method call seemed good idea .
+class Poem(object): def __init__(self, content): self.content = content def indent(self, spaces=4): self.content = &amp;quot; &amp;quot; * spaces + self.content return self def suffix(self, content): self.content += &amp;quot; - {}&amp;quot;.format(content) return self def __str__(self): return self.</description>
+    </item>
+    
+    <item>
+      <title>Python global keyword</title>
+      <link>https://kracekumar.github.io/post/100399630630/python-global-keyword/</link>
+      <pubDate>Sun, 19 Oct 2014 11:14:08 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/100399630630/python-global-keyword/</guid>
+      <description>Python’s global keyword allows to modify the variable which is out of current scope.
+In [13]: bar = 1 In [14]: def foo(): ....: global bar ....: bar = 2 ....: In [15]: bar Out[15]: 1 In [16]: foo() In [17]: bar Out[17]: 2  In the above example, bar was declared before foo function. global bar refers to the bar variablewhich is outside the foo scope. After foo invocation bar value was modified inside foo.</description>
+    </item>
+    
+    <item>
+      <title>python source fileencoding</title>
+      <link>https://kracekumar.github.io/post/86530203730/python-source-fileencoding/</link>
+      <pubDate>Thu, 22 May 2014 20:35:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/86530203730/python-source-fileencoding/</guid>
+      <description>Some of the python source file starts with -*- coding: utf-8 -*-. This particular linetells python interpreter all the content (byte string) is utf-8 encoded. Lets see how it affects the code.
+uni1.py:
+# -*- coding: utf-8 -*- print(&amp;quot;welcome&amp;quot;) print(&amp;quot;animé&amp;quot;)  output:
+➜ code$ python2 uni1.py welcome animé  Third line had a accented character and it wasn’t explictly stated as unicode. print function passed successfully.Since first line instructed interpreter all the sequences from here on will follow utf-8, so it worked.</description>
+    </item>
+    
+    <item>
+      <title>How to install externally hosted files using pip</title>
+      <link>https://kracekumar.github.io/post/85545169530/how-to-install-externally-hosted-files-using-pip/</link>
+      <pubDate>Mon, 12 May 2014 18:56:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/85545169530/how-to-install-externally-hosted-files-using-pip/</guid>
+      <description>As of writing (12, May 2014) latest version of pip is 1.5.1. pip doesn’tallow installing packages from non PyPI based url.It is possible to upload tar or zip or tar.gz file to PyPI or specifydownload url which points other sites(Example: pyPdf points to http://pybrary.net/pyPdf/pyPdf-1.13.tar.gz).pip considers externally hosted packages as insecure. Agreed.
+This is one of the reason why I kept using pip 1.4.1. Finally decided to fix this issue.Below is the sample error which pip throws.</description>
+    </item>
+    
+    <item>
+      <title>How to learn Python ?</title>
+      <link>https://kracekumar.github.io/post/81918059722/how-to-learn-python/</link>
+      <pubDate>Sun, 06 Apr 2014 20:30:30 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/81918059722/how-to-learn-python/</guid>
+      <description>Over period of time few people have asked me in meetups, online I want to learn python. Suggest me few ways to learn. Everyone who asked me had differentbackground and different intentions. Before answering the question I try to collectmore information about their interest and their previous approaches. Some learnt basicsfrom codecademy, some attended beginners session in Bangpypers meetup. In this postI will cover general questions asked and my suggested approach.</description>
+    </item>
+    
+    <item>
+      <title>Stop iteration when condition is meet while iterating</title>
+      <link>https://kracekumar.github.io/post/80342472437/stop-iteration-when-condition-is-meet-while/</link>
+      <pubDate>Sat, 22 Mar 2014 08:34:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/80342472437/stop-iteration-when-condition-is-meet-while/</guid>
+      <description>We are writing a small utility function called is_valid_mime_type. The function takes a mime_typeas an argument and checks if the mime type is one of the allowed types. Code looks like
+ALLOWED_MIME_TYPE = (&#39;application/json&#39;, &#39;text/plain&#39;, &#39;text/html&#39;) def is_valid_mimetype(mime_type): &amp;quot;&amp;quot;&amp;quot;Returns True or False. :param mime_type string or unicode: HTTP header mime type &amp;quot;&amp;quot;&amp;quot; for item in ALLOWED_MIME_TYPE: if mime_type.startswith(item): return True return False  Above code can refactored into single line using any.</description>
+    </item>
+    
+    <item>
+      <title>Find n largest and smallest number in an iterable</title>
+      <link>https://kracekumar.github.io/post/78863855937/find-n-largest-and-smallest-number-in-an-iterable/</link>
+      <pubDate>Fri, 07 Mar 2014 18:24:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/78863855937/find-n-largest-and-smallest-number-in-an-iterable/</guid>
+      <description>Python has sorted function which sorts iterable in ascending or descending order.
+# Sort descending In [95]: sorted([1, 2, 3, 4], reverse=True) Out[95]: [4, 3, 2, 1] # Sort ascending In [96]: sorted([1, 2, 3, 4], reverse=False) Out[96]: [1, 2, 3, 4]  sorted(iterable, reverse=True)[:n] will yield first n largest numbers. There is an alternate way.
+Python has heapq which implements heap datastructure. heapq has function nlargest and nsmallest which take arguments n number of elements, iterable like list, dict, tuple, generator and optional argument key.</description>
+    </item>
+    
+    <item>
+      <title>Counting elements with dictionary</title>
+      <link>https://kracekumar.github.io/post/77925927684/counting-elements-with-dictionary/</link>
+      <pubDate>Wed, 26 Feb 2014 19:07:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/77925927684/counting-elements-with-dictionary/</guid>
+      <description>Let’s say you want to find how many times each element is present in the list or tuple.
+Normal approach words = [&#39;a&#39;, &#39;the&#39;, &#39;an&#39;, &#39;a&#39;, &#39;an&#39;, &#39;the&#39;] d = {} for word in words: if word in d: d[word] += 1 else: d[word] = 1 print d {&#39;a&#39;: 2, &#39;the&#39;: 2, &#39;an&#39;: 2}  Better approach words = [&#39;a&#39;, &#39;the&#39;, &#39;an&#39;, &#39;a&#39;, &#39;an&#39;, &#39;the&#39;] d = {} for word in words: d[word] = d.</description>
+    </item>
+    
+    <item>
+      <title>Updating model instance attribute in django</title>
+      <link>https://kracekumar.github.io/post/75983294047/updating-model-instance-attribute-in-django/</link>
+      <pubDate>Sat, 08 Feb 2014 09:01:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/75983294047/updating-model-instance-attribute-in-django/</guid>
+      <description>It is very common to update single attribute of a model instance (say update first name in user profile) and save it to db.
+In [18]: u = User.objects.get(id=1) In [19]: u.first_name = u&amp;quot;kracekumar&amp;quot; In [20]: u.save()  Very straight forward approach. How does django send the sql query to database ?
+In [22]: from django.db import connection In [22]: connection.queries Out[22]: [... {u&#39;sql&#39;: u&#39;UPDATE &amp;quot;auth_user&amp;quot; SET &amp;quot;password&amp;quot; = \&#39;pbkdf2_sha256$12000$vsHWOlo1ZhZg$DrC46wq+a2jEtEzxmUEw4vQw8oV/rxEK7zVi30QLGF4=\&#39;, &amp;quot;last_login&amp;quot; = \&#39;2014-02-01 06:55:44.</description>
+    </item>
+    
+    <item>
+      <title>introduction to python</title>
+      <link>https://kracekumar.github.io/post/71171551647/introduction-to-python/</link>
+      <pubDate>Thu, 26 Dec 2013 04:38:41 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/71171551647/introduction-to-python/</guid>
+      <description>This is the material which I use for teaching python to beginners.
+tld;dr: Very minimal explanation more code.
+Python?
+ Interpreted language Multiparadigm  Introduction
+hasgeek@hasgeek-MacBook:~/codes/python/hacknight$ python Python 2.7.3 (default, Aug 1 2012, 05:14:39) [GCC 4.6.3] on linux2 Type &amp;quot;help&amp;quot;, &amp;quot;copyright&amp;quot;, &amp;quot;credits&amp;quot; or &amp;quot;license&amp;quot; for more information. &amp;gt;&amp;gt;&amp;gt; &amp;gt;&amp;gt;&amp;gt; print &amp;quot;Let&#39;s learn Python&amp;quot; Let&#39;s learn Python  Numbers
+&amp;gt;&amp;gt;&amp;gt; 23 + 43 66 &amp;gt;&amp;gt;&amp;gt; 23 - 45 -22 &amp;gt;&amp;gt;&amp;gt; 23 * 45 1035 &amp;gt;&amp;gt;&amp;gt; 23 ** 4 279841 &amp;gt;&amp;gt;&amp;gt; 23 / 4 5 &amp;gt;&amp;gt;&amp;gt; 23 / 4.</description>
+    </item>
+    
+    <item>
+      <title>Deploying full fledged flask app in production</title>
+      <link>https://kracekumar.github.io/post/71120049966/deploying-full-fledged-flask-app-in-production/</link>
+      <pubDate>Wed, 25 Dec 2013 18:08:34 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/71120049966/deploying-full-fledged-flask-app-in-production/</guid>
+      <description>This article will focus on deploying flask app starting from scratch like creating separate linux user, installating database, web server. Web server will be nginx, database will be postgres, python 2.7 middleware will be uwsgi, server ubuntu 13.10 x64. Flask app name is fido. Demo is carried out in Digital ocean.
+Step 1 - Installation Python header
+root@fido:~# apt-get install -y build-essential python-dev  Install uwsgi dependencies
+root@fido:~# apt-get install -y libxml2-dev libxslt1-dev  Nginx, uwsgi</description>
+    </item>
+    
+    <item>
+      <title>ipynb2viewer - Afternoon hack</title>
+      <link>https://kracekumar.github.io/post/70778191617/ipynb2viewer-afternoon-hack/</link>
+      <pubDate>Sun, 22 Dec 2013 11:50:16 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/70778191617/ipynb2viewer-afternoon-hack/</guid>
+      <description>ipython nbconvert has lot of handy options to convert ipynb to markdown, html etc… But I wanted to upload ipynb to gist.github.com and create a link in nbviewer.ipython.org. Started with curl and soon realized, it is getting messy. So wrote a small python program ipynb2viewer, Source code.
+Install  pip install ipynb2viewer  Usage Upload all ipynb files in the given path to gist.github.com and return nbviewer urls.
+ ipynb2viewer all &amp;lt;path&amp;gt;  Upload mentioned file to gist.</description>
+    </item>
+    
+    <item>
+      <title>easy_install broken in os x mavericks  </title>
+      <link>https://kracekumar.github.io/post/67761708966/easyinstall-broken-in-os-x-mavericks/</link>
+      <pubDate>Fri, 22 Nov 2013 17:02:21 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/67761708966/easyinstall-broken-in-os-x-mavericks/</guid>
+      <description>I hardly use easy_install. Nowadays all the python requirements are installed via pip.
+IPython is my primary python console. After installing mavericks, I installed IPython and fired IPython console. Following warning message appeared
+➜ ~ ipython /Library/Python/2.7/site-packages/IPython/utils/rlineimpl.py:94: RuntimeWarning: ****************************************************************************** libedit detected - readline will not be well behaved, including but not limited to: * crashes on tab completion * incorrect history navigation * corrupting long-lines * failure to wrap or indent lines properly It is highly recommended that you install readline, which is easy_installable: easy_install readline Note that `pip install readline` generally DOES NOT WORK, because it installs to site-packages, which come *after* lib-dynload in sys.</description>
+    </item>
+    
+    <item>
+      <title>Check Tamil word or sentence is palindrome</title>
+      <link>https://kracekumar.github.io/post/63834696015/check-tamil-word-or-sentence-is-palindrome/</link>
+      <pubDate>Sat, 12 Oct 2013 17:01:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/63834696015/check-tamil-word-or-sentence-is-palindrome/</guid>
+      <description>How to check given text is palindrome or not
+def sanitize(text): for char in [&amp;quot; &amp;quot;, &amp;quot;.&amp;quot;, &amp;quot;,&amp;quot;, &amp;quot;;&amp;quot;, &amp;quot;\n&amp;quot;]: text = text.replace(char, &amp;quot;&amp;quot;) return text def palindrome(word): # This approach is o(n), problem can be solved with o(n/2) # I am using this approach for brevity return word == word[::-1] palindrome(sanitize(&amp;quot;madam&amp;quot;)) # True palindrome(sanitize(u&amp;quot;விகடகவி&amp;quot;)) # False  Here is the hand made version for Tamil
+# Assign the variable meal the value 44.</description>
+    </item>
+    
+    <item>
+      <title>How Tamil Unicode works</title>
+      <link>https://kracekumar.github.io/post/63832712202/how-tamil-unicode-works/</link>
+      <pubDate>Sat, 12 Oct 2013 16:36:37 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/63832712202/how-tamil-unicode-works/</guid>
+      <description>Tamil has 247 characters. No panic. It is simple. 12 uyir eluthu(அ,ஆ..ஔ), 18 mei eluthu(க்,ங்..) , 216 uyirmei eluthu(12 * 18 க,ங ).1 ayutham(ஃ).
+I assume you know what is unicode. If not read The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets and then read wikipedia page. You will understand most of it. Back to the post.
+Every character or letter in unicode has value called code point.</description>
+    </item>
+    
+    <item>
+      <title>coverage.py to test web application coverage without writing tests</title>
+      <link>https://kracekumar.github.io/post/61125040813/coveragepy-to-test-web-application-coverage/</link>
+      <pubDate>Fri, 13 Sep 2013 17:50:32 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/61125040813/coveragepy-to-test-web-application-coverage/</guid>
+      <description>Tests are mandatory for packages, modules, web apps. If you are lazy to write unit tests but wanted to see the coverage for web app here is the short cut.
+Lets consider a Python web app uses Flask, runserver.py runs the development web server. Normally server is started by the command python runserver.py. Now use coverage run runserver.py.
+coverage python package will run the python program til program exits or user halts.</description>
+    </item>
+    
+    <item>
+      <title>Observations from handling python workshop in engineering colleges</title>
+      <link>https://kracekumar.github.io/post/58802831892/observations-from-handling-python-workshop-in/</link>
+      <pubDate>Tue, 20 Aug 2013 18:06:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/58802831892/observations-from-handling-python-workshop-in/</guid>
+      <description>Observations from handling python workshop in engineering colleges
+I handled 5 python workshop/sessions for novices from 8th march to 20th august, each one stretching from 1 hour to 2 days. It was worth the time.
+Students who participated in the workshop where from Computer Science, Electronics background of Under Graduate and Post Graduate level. Minimum strength was 60 and maximum was close to 100.
+ When handling the strength of 60 students in lab, remember every one have their own pace of picking up.</description>
+    </item>
+    
+    <item>
+      <title>avoid accessing wrong column in csv</title>
+      <link>https://kracekumar.github.io/post/58766042678/avoid-accessing-wrong-column-in-csv/</link>
+      <pubDate>Tue, 20 Aug 2013 05:31:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/58766042678/avoid-accessing-wrong-column-in-csv/</guid>
+      <description>Avoid accessing wrong column in csv
+I was parsing few csv files. All were from same provider. Format isDate, Name, Email, Company, City etc in one file. I made an assumption all the downloaded files are in the same format. For my surprise few files had same format and others din’t.
+with open(filename, &#39;rb&#39;) as f: reader = csv.reader(f) reader.next() # first row contains column names for row in reader: name, email, company = row[1], row[2], row[3] #save to db  In the above code the fundamental mistake is fixing the position of the columns in csv file.</description>
+    </item>
+    
+    <item>
+      <title>Funny experience of using trace module to trace function call</title>
+      <link>https://kracekumar.github.io/post/56633639978/funny-experience-of-using-trace-module-to-trace/</link>
+      <pubDate>Sat, 27 Jul 2013 21:35:32 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/56633639978/funny-experience-of-using-trace-module-to-trace/</guid>
+      <description>I came across this issue in httpie and started my investigation.
+The problem is while pretty printing the json, output is alpha sorted because keys are hashed and user wanted to preserve the order. Then I made 3 comments to the issue. First comment was half correct and explained why it isn’t possible to get the desired output, quickly I figured my assumptions were wrong and second comment explained what is actually happening, finally I proposed the solution.</description>
+    </item>
+    
+    <item>
+      <title>Why This Kolaveri Di song words language </title>
+      <link>https://kracekumar.github.io/post/55796363713/why-this-kolaveri-di-song-words-language/</link>
+      <pubDate>Thu, 18 Jul 2013 18:26:20 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/55796363713/why-this-kolaveri-di-song-words-language/</guid>
+      <description>I was wondering how many words in why this kolaveri di song belongs to english. So I wrote this code to evaluate.
+#! /usr/bin/env #! -*- coding: utf-8 -*- lyrics = &amp;quot;&amp;quot;&amp;quot; yo boys i am singing song soup song flop song why this kolaveri kolaveri kolaveri di why this kolaveri kolaveri kolaveri di rhythm correct why this kolaveri kolaveri kolaveri di maintain please why this kolaveri di distance la moon-u moon-u moon-u color-u white-u white background night-u night-u night-u color-u black-u why this kolaveri kolaveri kolaveri di why this kolaveri kolaveri kolaveri di white skin-u girl-u girl-u girl-u heart-u black-u eyes-u eyes-u meet-u meet-u my future dark why this kolaveri kolaveri kolaveri di why this kolaveri kolaveri kolaveri di maama notes eduthuko apdiye kaila snacks eduthuko pa pa paan pa pa paan pa pa paa pa pa paan sariya vaasi super maama ready ready 1 2 3 4 whaa wat a change over maama ok maama now tune change-u kaila glass only english hand la glass glass la scotch eyes-u full-a tear-u empty life-u girl-u come-u life reverse gear-u love-u love-u oh my love-u you showed me bouv-u cow-u cow-u holy cow-u i want you hear now-u god i am dying now-u she is happy how-u this song for soup boys-u we dont have choice-u why this kolaveri kolaveri kolaveri di why this kolaveri kolaveri kolaveri di why this kolaveri kolaveri kolaveri di why this kolaveri kolaveri kolaveri di flop song &amp;quot;&amp;quot;&amp;quot; dict_file_path = &amp;quot;/usr/share/dict/words&amp;quot; def sanitize(words): for index, word in enumerate(words): if word.</description>
+    </item>
+    
+    <item>
+      <title>SSL for flask local development </title>
+      <link>https://kracekumar.github.io/post/54437887454/ssl-for-flask-local-development/</link>
+      <pubDate>Tue, 02 Jul 2013 16:50:39 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/54437887454/ssl-for-flask-local-development/</guid>
+      <description>Recently at HasGeek we moved all our web application to https. So I wanted to have all my development environment urls to have https.
+How to have https in flask app
+Method 1
+from flask import Flask app = Flask(__name__) app.run(&#39;0.0.0.0&#39;, debug=True, port=8100, ssl_context=&#39;adhoc&#39;)  In the above piece of code, ssl_context variable is passed to werkezug.run_simple which creates SSL certificates using OpenSSL, you may need to install pyopenssl. I had issues with this method, so I generated self signed certificate.</description>
+    </item>
+    
+    <item>
+      <title>cp command implementation and benchmark in python, go, lua</title>
+      <link>https://kracekumar.github.io/post/53685731325/cp-command-implementation-and-benchmark-in-python/</link>
+      <pubDate>Sun, 23 Jun 2013 17:20:35 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/53685731325/cp-command-implementation-and-benchmark-in-python/</guid>
+      <description>I was wondering how much will be the speed difference between cp command, rsync and implementation in python, go, lua and so wrote this code.
+Background
+ python has two versions one with gevent and without gevent. Both the version uses shutil for copying files and directory tree. go uses https://github.com/opesun/copyrecur for copying recursively. lua uses lfs - LuaFileSystem module. lfs has support for creating directory but not for files, in order to copy the files low level file opening and writing to file technique is used.</description>
+    </item>
+    
+    <item>
+      <title>Evaluate python code using client side javascript  </title>
+      <link>https://kracekumar.github.io/post/46183195282/evaluate-python-code-using-client-side-javascript/</link>
+      <pubDate>Sun, 24 Mar 2013 19:24:08 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/46183195282/evaluate-python-code-using-client-side-javascript/</guid>
+      <description>Now Python code can be evaluated using Client side Javascript with the help of empythoned project. empythoned uses emscripten which convert LLVM bitcode to javascript.
+What is empythoned? Empythoned is project which has converted CPython to javascript. I have created a demo project to test how to use empythoned, have a look.</description>
+    </item>
+    
+    <item>
+      <title>Python parallel assignment</title>
+      <link>https://kracekumar.github.io/post/45502206532/python-parallel-assignment/</link>
+      <pubDate>Sat, 16 Mar 2013 15:31:21 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/45502206532/python-parallel-assignment/</guid>
+      <description>Python supports parallel assignment like
+&amp;gt;&amp;gt;&amp;gt; lang, version = &amp;quot;python&amp;quot;, 2.7 &amp;gt;&amp;gt;&amp;gt; print lang, version python 2.7  values are assigned to each variable without any issues.
+&amp;gt;&amp;gt;&amp;gt; x, y, z = 1, 2, x + y Traceback (most recent call last): File &amp;quot;&amp;lt;stdin&amp;gt;&amp;quot;, line 1, in &amp;lt;module&amp;gt; NameError: name &#39;x&#39; is not defined  First python tries to evaluate x + y expression. Since x, y is defined in same line, python is unable to access the variable x and y, so NameError is raised.</description>
+    </item>
+    
+    <item>
+      <title>Can PyPy be used for web application deployment ?</title>
+      <link>https://kracekumar.github.io/post/36532666649/can-pypy-be-used-for-web-application-deployment/</link>
+      <pubDate>Sun, 25 Nov 2012 20:11:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/36532666649/can-pypy-be-used-for-web-application-deployment/</guid>
+      <description>What is PyPy ?  PyPy is an implementation of Python in Python which uses JIT(Just In Time) translation.  Why to Use PyPy?  According to benchmarks “It depends greatly on the type of task being performed. The geometric average of all benchmarks is 0.18 or 5.6 times faster than CPython”.  Experience? I have used PyPy for sandboxing for my project pylive, tested flask with pypy, ported brubeck to work on pypy, tested lastuser in PyPy 2.</description>
+    </item>
+    
+    <item>
+      <title>Microframeworks produces micro level progress in project</title>
+      <link>https://kracekumar.github.io/post/35493348288/microframeworks-produces-micro-level-progress-in/</link>
+      <pubDate>Sun, 11 Nov 2012 17:14:24 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/35493348288/microframeworks-produces-micro-level-progress-in/</guid>
+      <description>I created my first web app in PHP 5.2 with * no frameworks *, then learned drupal, tried codeigniter, joomla. Then I learned Rails for HappySchool project and learned Django since I am python lover. Tried Pylons and settled with Flask and experimenting brubeck.
+Flask is microframework built around werkzeug datastructures.
+Advantages Vs Disadvantages  Learn in depth working of HTTP vs Time consuming Opportunity to create library vs Time consuming Less batteries available vs More development time  It is highly loosely coupled which is good to replace the parts with best tools if available.</description>
+    </item>
+    
+    <item>
+      <title>What I like about Python</title>
+      <link>https://kracekumar.github.io/post/33900573776/what-i-like-about-python/</link>
+      <pubDate>Fri, 19 Oct 2012 17:22:18 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/33900573776/what-i-like-about-python/</guid>
+      <description>Lynn Root  asked in twitter what you like and like to improve in python https://twitter.com/roguelynn/status/259338864664125440. Following are my observation
+Likes
+ Importance to documentation.. Clean syntax. Easy to get started for non CS background people. lot of smart programmers. Libraries like IPython, requests, flask. Creating libraries like pygments, sphinx, readthedocs to solve * REAL * problem.  I would like/want to improve
+ python.org site While programmers are reading docs.</description>
+    </item>
+    
+    <item>
+      <title>How I got into HasGeek Crew</title>
+      <link>https://kracekumar.github.io/post/26494437210/how-i-got-into-hasgeek-crew/</link>
+      <pubDate>Wed, 04 Jul 2012 15:32:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/26494437210/how-i-got-into-hasgeek-crew/</guid>
+      <description>Background about me I am kracekumar, graduated from Amrita school of Engineering, Coimbatore in B.Tech IT (2007-2011). I am working with IBM India Pvt Ltd, Bangalore as Associate System Engineer from 14th July, 2011 til 16th July, 2012.(C# developer but never wrote single line of code in c# in IBM).
+I am GNU/Linux user for 3 years and developed application in PHP, Rails, Flask(all are hobby projects).
+Scene I was not happy with job at IBM and I had training bond for one year(14th July, 2011 to 13th July 2012), decided to resign from my job once bond period is over whether I have new job offer or not.</description>
+    </item>
+    
+    <item>
+      <title>python `in` operator use cases</title>
+      <link>https://kracekumar.github.io/post/22512660850/python-in-operator-use-cases/</link>
+      <pubDate>Sun, 06 May 2012 13:06:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/22512660850/python-in-operator-use-cases/</guid>
+      <description>Python *in* operator is membership test operator.*Examples:*List—-
+ In [1]: python_webframeworks = [&#39;flask&#39;, &#39;django&#39;, &#39;pylons&#39;, &#39;pyramid&#39;, &#39;brubeck&#39;] In [2]: &#39;flask&#39; in python_webframeworks Out[2]: True In [3]: &#39;web.py&#39; in python_webframeworks Out[3]: False  in operator iterates over the list of elements and returns True or False.
+What about nested list?
+ In [4]: webframeworks = [[&#39;flask&#39;, &#39;django&#39;, &#39;pyramid&#39;],[&#39;rails&#39;, &#39;sintara&#39;],[&#39;zend&#39;, &#39;symfony&#39;]] In [5]: &#39;flask&#39; in webframeworks Out[5]: False  in isnt handy for nested list, unless it is overriden.</description>
+    </item>
+    
+  </channel>
+</rss>

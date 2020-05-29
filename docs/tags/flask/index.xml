@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>flask on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/flask/</link>
+    <description>Recent content in flask on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 02 May 2015 16:42:40 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/flask/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Simple Json Response basic test between Flask and Django</title>
+      <link>https://kracekumar.github.io/post/117948332935/simple-json-response-basic-test-between-flask-and/</link>
+      <pubDate>Sat, 02 May 2015 16:42:40 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/117948332935/simple-json-response-basic-test-between-flask-and/</guid>
+      <description>Django and Flask are two well known Python web frameworks. There are lot of benchmarks claim Flask is 2xfaster for simple JSON Response, one such is Techempower. After lookinginto the source, it struckme Django can do better!
+I will compare Flask and Django for simple json response. The machine used is Macbook pro, Intel Core i5-4258U CPU @ 2.40GHz,with 8 GB Memory on OS X 10.10.3. gunicorn==19.3.0 will be used for serving WSGI application.</description>
+    </item>
+    
+    <item>
+      <title>Deploying full fledged flask app in production</title>
+      <link>https://kracekumar.github.io/post/71120049966/deploying-full-fledged-flask-app-in-production/</link>
+      <pubDate>Wed, 25 Dec 2013 18:08:34 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/71120049966/deploying-full-fledged-flask-app-in-production/</guid>
+      <description>This article will focus on deploying flask app starting from scratch like creating separate linux user, installating database, web server. Web server will be nginx, database will be postgres, python 2.7 middleware will be uwsgi, server ubuntu 13.10 x64. Flask app name is fido. Demo is carried out in Digital ocean.
+Step 1 - Installation Python header
+root@fido:~# apt-get install -y build-essential python-dev  Install uwsgi dependencies
+root@fido:~# apt-get install -y libxml2-dev libxslt1-dev  Nginx, uwsgi</description>
+    </item>
+    
+    <item>
+      <title>SSL for flask local development </title>
+      <link>https://kracekumar.github.io/post/54437887454/ssl-for-flask-local-development/</link>
+      <pubDate>Tue, 02 Jul 2013 16:50:39 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/54437887454/ssl-for-flask-local-development/</guid>
+      <description>Recently at HasGeek we moved all our web application to https. So I wanted to have all my development environment urls to have https.
+How to have https in flask app
+Method 1
+from flask import Flask app = Flask(__name__) app.run(&#39;0.0.0.0&#39;, debug=True, port=8100, ssl_context=&#39;adhoc&#39;)  In the above piece of code, ssl_context variable is passed to werkezug.run_simple which creates SSL certificates using OpenSSL, you may need to install pyopenssl. I had issues with this method, so I generated self signed certificate.</description>
+    </item>
+    
+    <item>
+      <title>Microframeworks produces micro level progress in project</title>
+      <link>https://kracekumar.github.io/post/35493348288/microframeworks-produces-micro-level-progress-in/</link>
+      <pubDate>Sun, 11 Nov 2012 17:14:24 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/35493348288/microframeworks-produces-micro-level-progress-in/</guid>
+      <description>I created my first web app in PHP 5.2 with * no frameworks *, then learned drupal, tried codeigniter, joomla. Then I learned Rails for HappySchool project and learned Django since I am python lover. Tried Pylons and settled with Flask and experimenting brubeck.
+Flask is microframework built around werkzeug datastructures.
+Advantages Vs Disadvantages  Learn in depth working of HTTP vs Time consuming Opportunity to create library vs Time consuming Less batteries available vs More development time  It is highly loosely coupled which is good to replace the parts with best tools if available.</description>
+    </item>
+    
+  </channel>
+</rss>

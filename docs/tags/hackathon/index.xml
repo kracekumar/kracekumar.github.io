@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hackathon on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/hackathon/</link>
+    <description>Recent content in hackathon on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Nov 2012 17:00:40 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/hackathon/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hackathons are to hack and * headdesk * moments</title>
+      <link>https://kracekumar.github.io/post/35492377794/hackathons-are-to-hack-and-headdesk-moments/</link>
+      <pubDate>Sun, 11 Nov 2012 17:00:40 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/35492377794/hackathons-are-to-hack-and-headdesk-moments/</guid>
+      <description>I feel whole idea of hackathon is to build stuff over night or a day or two. All the outcome of the hackathon is for good. As a beginner it could be useful to get started to technology/language. I am biased towards prizes in hackathon.</description>
+    </item>
+    
+  </channel>
+</rss>

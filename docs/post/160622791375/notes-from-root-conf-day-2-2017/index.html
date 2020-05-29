@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Notes from Root Conf Day 2 - 2017 - Technical Ramblings</title>
+  <meta name="description" content="On day 2, I spent a considerable amount of time networking and attend only four sessions.
+Spotswap: running production APIs on Spot instance
+ Amazon EC2 spot instances are cheaper than on-demand server costs. Spot instances run when the bid price is greater than market/spot instance price. Mapbox API server uses spot instances which are part of auto-scaling server Auto scaling group is configured with min, desired, max parameters. Latency should be low and cost effective EC2 has three types of instances: On demand, reserved and spot."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Technical Ramblings",
+    
+    "url": "https:\/\/kracekumar.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/kracekumar.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/post\/160622791375\/notes-from-root-conf-day-2-2017\/",
+          "name": "Notes from root conf day 2 2017"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "Notes from Root Conf Day 2 - 2017",
+  "description" : "On day 2, I spent a considerable amount of time networking and attend only four sessions.\nSpotswap: running production APIs on Spot instance\n Amazon EC2 spot instances are cheaper than on-demand server costs. Spot instances run when the bid price is greater than market\/spot instance price. Mapbox API server uses spot instances which are part of auto-scaling server Auto scaling group is configured with min, desired, max parameters. Latency should be low and cost effective EC2 has three types of instances: On demand, reserved and spot.",
+  "inLanguage" : "en",
+  "wordCount":  994 ,
+  "datePublished" : "2017-05-13T15:51:29",
+  "dateModified" : "2017-05-13T15:51:29",
+  "image" : "https:\/\/kracekumar.github.io\/",
+  "keywords" : [ "devops, conference, notes" ],
+  "mainEntityOfPage" : "https:\/\/kracekumar.github.io\/post\/160622791375\/notes-from-root-conf-day-2-2017\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/kracekumar.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/kracekumar.github.io\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Notes from Root Conf Day 2 - 2017" />
+<meta property="og:description" content="On day 2, I spent a considerable amount of time networking and attend only four sessions.
+Spotswap: running production APIs on Spot instance
+ Amazon EC2 spot instances are cheaper than on-demand server costs. Spot instances run when the bid price is greater than market/spot instance price. Mapbox API server uses spot instances which are part of auto-scaling server Auto scaling group is configured with min, desired, max parameters. Latency should be low and cost effective EC2 has three types of instances: On demand, reserved and spot.">
+<meta property="og:url" content="https://kracekumar.github.io/post/160622791375/notes-from-root-conf-day-2-2017/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Technical Ramblings" />
+
+  <meta name="twitter:title" content="Notes from Root Conf Day 2 - 2017" />
+  <meta name="twitter:description" content="On day 2, I spent a considerable amount of time networking and attend only four sessions.
+Spotswap: running production APIs on Spot instance
+ Amazon EC2 spot instances are cheaper than on-demand …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.71.1" />
+  <link rel="alternate" href="https://kracekumar.github.io/index.xml" type="application/rss+xml" title="Technical Ramblings"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kracekumar.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://kracekumar.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://kracekumar.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://kracekumar.github.io/">Technical Ramblings</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Notes from Root Conf Day 2 - 2017</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on May 13, 2017
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;994&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>On day 2, I spent a considerable amount of time networking and attend only four sessions.</p>
+<p><a href="https://rootconf.talkfunnel.com/2017/72-spotswap-running-production-apis-on-spot-instances" target="_blank">Spotswap: running production APIs on Spot instance</a></p>
+<ul>
+<li>Amazon EC2 spot instances are cheaper than on-demand server costs. Spot instances run when the bid price is greater than market/spot instance price.</li>
+<li>Mapbox API server uses spot instances which are part of auto-scaling server</li>
+<li>Auto scaling group is configured with min, desired, max parameters.</li>
+<li>Latency should be low and cost effective</li>
+<li>EC2 has three types of instances: On demand, reserved and spot. The spot instance comes from unused space and unstable pricing.</li>
+<li>Spot market starts with bid price and market price.</li>
+<li>In winter 2015 traffic increased and price also increased increased</li>
+<li>To spin up a new machine with code takes almost two minutes</li>
+<li>Our machine fleet encompasses of spot and on-demand instances</li>
+<li>When one spot machine from the fleet goes down, and auto scaling group spins up an on-demand machine.</li>
+<li>Race condition: several instances go down at same time.</li>
+<li>Aggressive spin up in on-demand machines when market is volatile.</li>
+<li>Tag EC2 machines going down and then spin up AWS lambda.When spot instance returns shit down a lambda or on-demand instance. Auto Scaling group can take care of this.</li>
+<li>Savings 50% to 80%</li>
+<li>Source code: <a href="https://github.com/mapbox/spotswap" target="_blank"><a href="https://github.com/mapbox/spotswap">https://github.com/mapbox/spotswap</a></a></li>
+<li>No latency because over-provisioned</li>
+<li>Set bid price as on-demand price.</li>
+<li>Didn’t try to increase spot instance before going on-demand</li>
+<li>Cfconfig to deploy and Cloud formation template from AWS</li>
+</ul>
+<p><a href="https://rootconf.talkfunnel.com/2017/1-adventures-in-postgres-management" target="_blank">Adventures with Postgres</a></p>
+<ul>
+<li>Speaker: I’m an Accidental DBA</li>
+<li>The talk is a story of a Postgres debugging.</li>
+<li>Our services include Real-time monitoring, on demand business reporting to e-commerce players. 4000 stores and 10 million events per day. Thousands of customers in a single database.</li>
+<li>Postgres 9.4, M4.xlarge,16GB, 750 GB disk space with Extensive monitoring</li>
+<li>Reads don’t block writes, Multi-Version Concurrency Model.</li>
+<li>Two Clients A, B read X value as 3. When B updates the value X to 4, A reads the X value and gets back as 3. A reads the X value as 4 when B’s transaction succeeds.</li>
+<li>Every transaction has a unique ID - XID.</li>
+<li>XID - 32 bit, max transaction id is 4 billion.</li>
+<li>After 2 billion no transaction happens.</li>
+<li>All writes stop and server shutdown. Restarts in single user mode,</li>
+<li>Read replicas work without any issue.</li>
+<li>Our server reached 1 billion ids. 600k transaction per hour, so in 40 days transaction id will hit the maximum limit.</li>
+<li>How to prevent?</li>
+<li>Promote standby to master? But XID is also replicated.</li>
+<li>Estimate the damage - txid_current - Current Transaction ID</li>
+<li>Every insert and update is wrapped inside a transaction</li>
+<li>Now add begin and commit for a group of statements, this bought some time.</li>
+<li>With current rate, 60 days is left to hit max transaction limit.</li>
+<li>TOAST - The Oversized Attribute Storage Technique</li>
+<li>Aggressive maintenance. Config tweaks: autovacuum_workers, maintenance_work_mem, autovaccum_nap_time - knife to gun fight. Didn’t help</li>
+<li><code>rds_superuser</code> prevented from modifying pg system tables</li>
+<li>Never thought about <code>rds_superuser</code> can be an issue.</li>
+<li>VACUUM – garbage-collect and optionally analyze a database</li>
+<li>vacuum freeze (*) worked. Yay!</li>
+<li>What may have caused issues - DB had a large number of tables. Thousands of tables</li>
+<li>Better <code>shard</code> per customer</li>
+<li>Understand the <code>schema</code> better</li>
+<li>Configuration tweaks - max_workers, nap_time, cost_limit, maintenance_work_mem</li>
+<li>Keep an eye out XID; Long-lived transactions are problem</li>
+<li>Parallel vacuum introduced in 9.5</li>
+<li><code>pg_visibility</code> improvements in 9.6</li>
+<li>Similar problem faced other companies like GetSentry</li>
+</ul>
+<p><a href="https://rootconf.talkfunnel.com/2017/60-mysql-troubleshooting-tldr" target="_blank">MySQL troubleshooting</a></p>
+<ul>
+<li>Step 1 - Define the problem, know what is normal, read the manual</li>
+<li>Step 2: collect diagnostics data (OS, MySQL). <code>pt_stalk</code> tool to collect diagnostics error</li>
+<li>Lookup MySQL error log when DB misbehaves.</li>
+<li>Check OOM killer</li>
+<li>General performance issues - show global variables, show global status, show indexes, profile the query</li>
+<li>Table corruption InnoDB, system can’t startup. Worst strategy force recovery and start from backup.</li>
+<li>Log message for table corruption is marked as crashed</li>
+<li>Replication issues - show master status, my.cnf/my.ini, show global variables, show slave status</li>
+</ul>
+<p>OTR Session - Micro Service</p>
+<ul>
+<li>OTR - Off The Record session is a group discussion. Few folks come together and moderate the session. Ramya, Venkat, Ankit and Anand C where key in answering and moderating the session.</li>
+<li>What is service and micro service? Micro is independent, self-contained and owned by the single team. Growing code base is unmanageable, and the number of deploys increases. So break them at small scale. Ease of coupling with other teams. No clear boundary</li>
+<li>Advantages of Microservices - team size, easy to understand, scale it. Security aspects. Two pizza team, eight-member team. Able to pick up right tools for the job, and change the data store to experiment, fix perf issues.</li>
+<li>How to verify your app needs micro service?</li>
+<li>Functional boundary, behavior which is clear. Check out and Delivery</li>
+<li>PDF/Document parsing is a good candidate for Micro Service, and parsing is CPU intensive. Don’t create nano-service :-)</li>
+<li>Failure is inevitable. Have logic for handling failures on another service. Say when MS 1 fails MS2 code base should handle gracefully.</li>
+<li>Message queue Vs Simple REST service architecture. Sync Vs Async.The choice depends on the needs and functionality.</li>
+<li>Service discovery? Service registry and discover from them.</li>
+<li>Use swagger for API</li>
+<li>Overwhelming tooling - you can start simple and add as per requirements</li>
+<li>Good have to think from beginnings - how you deploy, build pipelines.</li>
+<li>Auth for internal services - internal auth say Service level auth and user token for certain services. Convert monolithic to modular and then micro level.</li>
+<li>API gateway to maintain different versions and rate limitingWhen to use role-based access and where does scope originate? Hard and no correct way. Experiment with one and move on.</li>
+<li>Debugging in monolithic and micro service is different.</li>
+<li>When you use vendor-specific software use mock service to test them. Also, use someone else micro service. Integration test for microservices are hard.</li>
+<li>Use continuous delivery and don’t make large number of service deployment in one release.</li>
+<li>The discussion went on far for 2 hours! I moved out after an hour. Very exhaustive discussion on the topic.</li>
+</ul>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://kracekumar.github.io//tags/devops/">devops</a>&nbsp;
+            
+              <a href="https://kracekumar.github.io//tags/conference/">conference</a>&nbsp;
+            
+              <a href="https://kracekumar.github.io//tags/notes/">notes</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/160561774060/notes-from-root-conf-day-1-2017/">Notes from Root Conf Day 1 - 2017</a></li>
+                
+              </ul>
+
+          
+                  
+       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://kracekumar.github.io/post/160561774060/notes-from-root-conf-day-1-2017/" data-toggle="tooltip" data-placement="top" title="Notes from Root Conf Day 1 - 2017">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://kracekumar.github.io/post/168364964555/debugging-python-multiprocessing-program-with/" data-toggle="tooltip" data-placement="top" title="Debugging Python multiprocessing program with strace">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://kracekumar.github.io/">Technical Ramblings</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.71.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://kracekumar.github.io/js/main.js"></script>
+<script src="https://kracekumar.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://kracekumar.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

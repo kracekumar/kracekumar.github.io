@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>How to run Python Linux commands in PyPy ? - Technical Ramblings</title>
+  <meta name="description" content="I have been using PyPy from 1.6. Now PyPy 2.0beta1 is out. Most of python libraries which don’t have c extensions as dependencies work(exceptions are present).
+E.g: requests, fabric, gunicorn
+Install PyPy2.0beta1   Grab 32 or 64 bit pypy2.0 beta1. If you are using ubuntu grab libc2.5.
+  bzip2 pypy-2.0-beta1-linux64-libc2.15.tar.bz2
+  tar -xvf pypy-2.0-beta1-linux64-libc2.15.tar
+  curl -O http://python-distribute.org/distribute_setup.py
+  curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+  ./pypy-2.0-beta1/bin/pypy distribute_setup."><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Technical Ramblings",
+    
+    "url": "https:\/\/kracekumar.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/kracekumar.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/kracekumar.github.io\/post\/36529827327\/how-to-run-python-linux-commands-in-pypy\/",
+          "name": "How to run python linux commands in py py ?"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : ""
+  },
+  "headline": "How to run Python Linux commands in PyPy ?",
+  "description" : "I have been using PyPy from 1.6. Now PyPy 2.0beta1 is out. Most of python libraries which don’t have c extensions as dependencies work(exceptions are present).\nE.g: requests, fabric, gunicorn\nInstall PyPy2.0beta1   Grab 32 or 64 bit pypy2.0 beta1. If you are using ubuntu grab libc2.5.\n  bzip2 pypy-2.0-beta1-linux64-libc2.15.tar.bz2\n  tar -xvf pypy-2.0-beta1-linux64-libc2.15.tar\n  curl -O http:\/\/python-distribute.org\/distribute_setup.py\n  curl -O https:\/\/raw.github.com\/pypa\/pip\/master\/contrib\/get-pip.py\n  .\/pypy-2.0-beta1\/bin\/pypy distribute_setup.",
+  "inLanguage" : "en",
+  "wordCount":  211 ,
+  "datePublished" : "2012-11-25T19:36:19",
+  "dateModified" : "2012-11-25T19:36:19",
+  "image" : "https:\/\/kracekumar.github.io\/",
+  "keywords" : [ "PyPy, apt-get" ],
+  "mainEntityOfPage" : "https:\/\/kracekumar.github.io\/post\/36529827327\/how-to-run-python-linux-commands-in-pypy\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/kracekumar.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/kracekumar.github.io\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="How to run Python Linux commands in PyPy ?" />
+<meta property="og:description" content="I have been using PyPy from 1.6. Now PyPy 2.0beta1 is out. Most of python libraries which don’t have c extensions as dependencies work(exceptions are present).
+E.g: requests, fabric, gunicorn
+Install PyPy2.0beta1   Grab 32 or 64 bit pypy2.0 beta1. If you are using ubuntu grab libc2.5.
+  bzip2 pypy-2.0-beta1-linux64-libc2.15.tar.bz2
+  tar -xvf pypy-2.0-beta1-linux64-libc2.15.tar
+  curl -O http://python-distribute.org/distribute_setup.py
+  curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+  ./pypy-2.0-beta1/bin/pypy distribute_setup.">
+<meta property="og:url" content="https://kracekumar.github.io/post/36529827327/how-to-run-python-linux-commands-in-pypy/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Technical Ramblings" />
+
+  <meta name="twitter:title" content="How to run Python Linux commands in PyPy ?" />
+  <meta name="twitter:description" content="I have been using PyPy from 1.6. Now PyPy 2.0beta1 is out. Most of python libraries which don’t have c extensions as dependencies work(exceptions are present).
+E.g: requests, fabric, gunicorn
+Install …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.71.1" />
+  <link rel="alternate" href="https://kracekumar.github.io/index.xml" type="application/rss+xml" title="Technical Ramblings"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://kracekumar.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://kracekumar.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://kracekumar.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://kracekumar.github.io/">Technical Ramblings</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>How to run Python Linux commands in PyPy ?</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on November 25, 2012
+  
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;211&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>I have been using PyPy from 1.6. Now PyPy 2.0beta1 is out. Most of python libraries which don’t have <code>c extensions</code> as dependencies work(exceptions are present).</p>
+<p>E.g: <code>requests, fabric, gunicorn</code></p>
+<h2 id="install-pypy20beta1">Install PyPy2.0beta1</h2>
+<ol>
+<li>
+<p>Grab 32 or 64 bit <a href="http://pypy.org/download.html" target="_blank">pypy2.0 beta1</a>. If you are using ubuntu grab <code>libc2.5</code>.</p>
+</li>
+<li>
+<p><code>bzip2 pypy-2.0-beta1-linux64-libc2.15.tar.bz2</code></p>
+</li>
+<li>
+<p><code>tar -xvf pypy-2.0-beta1-linux64-libc2.15.tar</code></p>
+</li>
+<li>
+<p><code>curl -O <a href="http://python-distribute.org/distribute_setup.py" target="_blank"><a href="http://python-distribute.org/distribute_setup.py">http://python-distribute.org/distribute_setup.py</a></a></code></p>
+</li>
+<li>
+<p><code>curl -O <a href="https://raw.github.com/pypa/pip/master/contrib/get-pip.py" target="_blank"><a href="https://raw.github.com/pypa/pip/master/contrib/get-pip.py">https://raw.github.com/pypa/pip/master/contrib/get-pip.py</a></a></code></p>
+</li>
+<li>
+<p><code>./pypy-2.0-beta1/bin/pypy distribute_setup.py</code></p>
+</li>
+<li>
+<p><code>./pypy-2.0-beta1/bin/pypy get-pip.py</code></p>
+</li>
+<li>
+<p><code>./pypy-2.0-beta1/bin/pip install virtualenv</code></p>
+</li>
+<li>
+<p>Please feel free to create <code>alias</code>. Here is sample alias.</p>
+<p>alias pypy2b=&rdquo;/home/kracekumar/downloads/pypy-2.0-beta1/bin/pypy&rdquo;
+alias pypy2b-pip=&rsquo;/home/kracekumar/downloads/pypy-2.0-beta1/bin/pip&rsquo;
+alias pypy2b-venv=&rsquo;/home/kracekumar/downloads/pypy-2.0-beta1/bin/virtualenv&rsquo;</p>
+</li>
+</ol>
+<h2 id="next-">Next ?</h2>
+<ol>
+<li>
+<p><code>pypy2b-pip install fabric</code></p>
+</li>
+<li>
+<p>Add <code>pypy bin</code> directory to <code>$PATH, export PATH=$PATH:/home/kracekumar/downloads/pypy-2.0-beta1/bin</code> or open <code>~/.bashrc</code> add <code>export PATH=$PATH:/home/kracekumar/downloads/pypy-2.0-beta1/bin</code> and <code>source ~/.bashrc</code>.</p>
+</li>
+<li>
+<pre><code> kracekumar@aadukalam:~/codes/python-wiktionary$ which fab
+ /home/kracekumar/downloads/pypy-2.0-beta1/bin/fab
+</code></pre>
+</li>
+<li>
+<p><code><br/>
+kracekumar@aadukalam:~/codes/python-wiktionary$ cat <code>which fab</code><br/><code>#!/home/kracekumar/downloads/pypy-2.0-beta1/bin/pypy</code><br/><code># EASY-INSTALL-ENTRY-SCRIPT: &lsquo;Fabric==1.5.1&rsquo;,&lsquo;console_scripts&rsquo;,&lsquo;fab'</code><br/><strong>requires</strong> = ‘Fabric==1.5.1’<br/>
+import sys<br/>
+from pkg_resources import load_entry_point<br/>
+if <strong>name</strong> == ’<strong>main</strong>’:<br/>
+sys.exit(
+load_entry_point(&lsquo;Fabric==1.5.1’, &lsquo;console_scripts’, &lsquo;fab’)()<br/>
+)</code></p>
+</li>
+</ol>
+<p>So <code>fab</code> now uses pypy interpreter rather than CPython.</p>
+<p>But there are other commands like <code>history, gwibber-service</code> which are installed via <code>apt-get</code> can’t use PyPy since <code>apt-get</code> doesn’t support <code>pypy</code> since it is unstable.</p>
+<h2 id="thoughts">Thoughts</h2>
+<ul>
+<li>
+<p>There should be way developer can specify in debian/ubuntu repo to look for PyPy in the user installation if not use CPython.</p>
+</li>
+<li>
+<p><code>apt-get</code> is written in python, if distros ship <code>pypy</code> and <code>apt-get</code> works well, there is a chance <code>PyPy</code> will became main stream in linux packaging.</p>
+</li>
+</ul>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://kracekumar.github.io//tags/pypy/">PyPy</a>&nbsp;
+            
+              <a href="https://kracekumar.github.io//tags/apt-get/">apt-get</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+
+          
+                  
+       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://kracekumar.github.io/post/36222425955/why-did-i-install-ubuntu-in-macbook/" data-toggle="tooltip" data-placement="top" title="Why did I install Ubuntu in MacBook ?">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://kracekumar.github.io/post/36532666649/can-pypy-be-used-for-web-application-deployment/" data-toggle="tooltip" data-placement="top" title="Can PyPy be used for web application deployment ?">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://kracekumar.github.io/">Technical Ramblings</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.71.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://kracekumar.github.io/js/main.js"></script>
+<script src="https://kracekumar.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://kracekumar.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

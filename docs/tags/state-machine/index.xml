@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>state machine on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/state-machine/</link>
+    <description>Recent content in state machine on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 16 Jul 2016 20:25:06 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/state-machine/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>State machine in DB model</title>
+      <link>https://kracekumar.github.io/post/147507497215/state-machine-in-db-model/</link>
+      <pubDate>Sat, 16 Jul 2016 20:25:06 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/147507497215/state-machine-in-db-model/</guid>
+      <description>A state machine is an abstract machine that can be in one of a finite number of states. The machine is in only one state at a time; the state it is in at any given time is called the current state.
+While using the database, individual records should be in allowed states. The database or application stores rules for the states. There are many ways to design the database schema to achieve this.</description>
+    </item>
+    
+  </channel>
+</rss>

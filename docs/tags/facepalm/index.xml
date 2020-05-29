@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>facepalm on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/facepalm/</link>
+    <description>Recent content in facepalm on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 12 Apr 2013 21:12:08 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/facepalm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>hardest feature request </title>
+      <link>https://kracekumar.github.io/post/47806200096/hardest-feature-request/</link>
+      <pubDate>Fri, 12 Apr 2013 21:12:08 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/47806200096/hardest-feature-request/</guid>
+      <description>I was working on Hgtv feature, syncing slides and videos, when video is viewed slide changes automatically. Seems easy but guess what someone has to take pain to watch entire video and collect the details about timings of the video and slide number . Then pass on the info to presentz.js which syncs video and slides.
+Iframe If you look into source code how slide show and video is inserted, it is iframe.</description>
+    </item>
+    
+  </channel>
+</rss>

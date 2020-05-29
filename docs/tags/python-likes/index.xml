@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python-likes on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/python-likes/</link>
+    <description>Recent content in python-likes on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 19 Oct 2012 17:22:18 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/python-likes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>What I like about Python</title>
+      <link>https://kracekumar.github.io/post/33900573776/what-i-like-about-python/</link>
+      <pubDate>Fri, 19 Oct 2012 17:22:18 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/33900573776/what-i-like-about-python/</guid>
+      <description>Lynn Root  asked in twitter what you like and like to improve in python https://twitter.com/roguelynn/status/259338864664125440. Following are my observation
+Likes
+ Importance to documentation.. Clean syntax. Easy to get started for non CS background people. lot of smart programmers. Libraries like IPython, requests, flask. Creating libraries like pygments, sphinx, readthedocs to solve * REAL * problem.  I would like/want to improve
+ python.org site While programmers are reading docs.</description>
+    </item>
+    
+  </channel>
+</rss>

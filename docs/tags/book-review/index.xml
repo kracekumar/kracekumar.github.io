@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>book-review on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/book-review/</link>
+    <description>Recent content in book-review on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 May 2017 19:22:01 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/book-review/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Book Review: The Culture Map</title>
+      <link>https://kracekumar.github.io/post/160523067765/book-review-the-culture-map/</link>
+      <pubDate>Wed, 10 May 2017 19:22:01 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/160523067765/book-review-the-culture-map/</guid>
+      <description>The Culture Map: Breaking Through the Invisible Boundaries of Global Business is a book on cultural differences in communication by Erin Meyer.
+Last year, I spent three months in NYC. Whenever I entered food outlet or made an eye contact, all the conversation started with “How are you doing?”. I replied, “I’m good and how are you doing?”. Most of the times, I didn’t receive a response. It was a sign.</description>
+    </item>
+    
+    <item>
+      <title>Book Review: Software Architecture with Python</title>
+      <link>https://kracekumar.github.io/post/160521154075/book-review-software-architecture-with-python/</link>
+      <pubDate>Wed, 10 May 2017 18:13:33 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/160521154075/book-review-software-architecture-with-python/</guid>
+      <description>The book Software Architecture with Python is by Anand B Pillai. The book explains various aspects of software architecture like testability, performance, scaling, concurrency and design patterns.
+The book has ten chapters. The first chapter speaks about different architect roles like solution architect, enterprise architect, technical architect what is the role of an architect and difference between design and architecture. The book covers two lesser spoken topics debugging and code security which I liked.</description>
+    </item>
+    
+    <item>
+      <title>Man&#39;s Search for Meaning - Book Review</title>
+      <link>https://kracekumar.github.io/post/152845373255/mans-search-for-meaning-book-review/</link>
+      <pubDate>Mon, 07 Nov 2016 05:48:12 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/152845373255/mans-search-for-meaning-book-review/</guid>
+      <description>What can you do during acute inhuman soul-crushing conditions in life? Hope. This book is about “Hope.” - dopamine for life. Psychiatrist Viktor Frankl’s presents his life in Nazi death camps and learning for spiritual survival. The narrative is based on his experience and the experiences of others he treated later in his practice. The author aptly reiterated throughout the book “We cannot avoid suffering, but we can choose how to cope with it, and find a meaning to live.</description>
+    </item>
+    
+    <item>
+      <title>Quiet - Book Review</title>
+      <link>https://kracekumar.github.io/post/152278984540/quiet-book-review/</link>
+      <pubDate>Tue, 25 Oct 2016 03:56:09 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/152278984540/quiet-book-review/</guid>
+      <description>Quiet: The Power of Introverts in a World That Can’t Stop Talking is an excellent book about introverts and what makes introvert an introvert. The book dives deep how different culture views introvert, analyses what intrigues introverts and in what circumstances they effectively work. The book makes a lot of parallel comparisons with extroverts. What intrigues extroverts and why introverts are good at solving complex problems.
+The book accounts for various behavior patterns like how introverts behave in the social events, how to raise introvert kids without nonsense advice.</description>
+    </item>
+    
+    <item>
+      <title>Animal Farm Review</title>
+      <link>https://kracekumar.github.io/post/145749737410/animal-farm-review/</link>
+      <pubDate>Sat, 11 Jun 2016 10:35:27 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/145749737410/animal-farm-review/</guid>
+      <description>Animal Farm’s satire makes the novella interesting to read. Written after Bolshevik revolution and no reason why lot go over gaga. Confining to Bolshevik revolution is tunnel view. The core of the novella resembles with lot of today’s politics and ancient kingdom. For a moment forget about the bolshevik revolution. Rebellion outbursts, the leader comes to power and slowly vanquishes non believers in ideas or voices. Slowly becomes benevolent dictator for life, corrupt and power moves from people to few hands.</description>
+    </item>
+    
+    <item>
+      <title>Two scoops of django</title>
+      <link>https://kracekumar.github.io/post/76145181921/two-scoops-of-django/</link>
+      <pubDate>Sun, 09 Feb 2014 20:44:31 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/76145181921/two-scoops-of-django/</guid>
+      <description>Two Scoops of Django -1.5 is book by Pydanny and Audrey Roy focusing on writing clean and better Django application.
+If you are using Django in production this is must read book.
+Q: I am using django since 0.8 do I need this book ?
+A: Yes, consider the book as starting point to validate your assumption.
+Q: I just started using django, should I read this ?
+A: Yes. I started to use django in production last month.</description>
+    </item>
+    
+    <item>
+      <title>code simplicity book review</title>
+      <link>https://kracekumar.github.io/post/63657996702/code-simplicity-book-review/</link>
+      <pubDate>Thu, 10 Oct 2013 18:00:00 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/63657996702/code-simplicity-book-review/</guid>
+      <description>Code Simplicity: The Fundamentals of Software by Max Kanat-Alexander is crisp book about writing better software.
+The book is just 88 pages, but insights are useful for any software engineer. Author is creator of bugzilla project.
+Whenever I come across bold statements in the book, I would sit and think for 2 minutes to correlate with my programming experience. Most of the time I was able to come up with valid example.</description>
+    </item>
+    
+  </channel>
+</rss>

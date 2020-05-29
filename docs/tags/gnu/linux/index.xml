@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GNU/Linux on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/gnu/linux/</link>
+    <description>Recent content in GNU/Linux on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://kracekumar.github.io/tags/gnu/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Stable Browser vs Fastest Browser</title>
+      <link>https://kracekumar.github.io/post/36602101124/stable-browser-vs-fastest-browser/</link>
+      <pubDate>Mon, 26 Nov 2012 18:33:11 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/36602101124/stable-browser-vs-fastest-browser/</guid>
+      <description>Firefox Vs Chrome Vs Chromium Chrome &amp;amp; Firefox are my current favourite browser. I was previously using chromium but stopped using because of this bug.
+Since then I switch between chrome and firefox. Chrome is fastest, better UI &amp;amp; UX. Firefox is stable.
+Today I faced issue with my flash player in chrome(Ubuntu 64 bit OS). All the youtube video starts playing at 2x - 3x speed. After few mins video plays in normal speed.</description>
+    </item>
+    
+    <item>
+      <title>What GNU/Linux Operating System lacks ?</title>
+      <link>https://kracekumar.github.io/post/34154528432/what-gnulinux-operating-system-lacks/</link>
+      <pubDate>Tue, 23 Oct 2012 07:10:09 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/34154528432/what-gnulinux-operating-system-lacks/</guid>
+      <description>I am GNU/Linux user for almost 4 years, saying that I don’t switch back to windows for any day to day activities, being said that GNU/Linux operating system’s lacks lot of * applications *. There are lot superior command line applications but those are intended for religious command line humans.
+I have been using mac osx 10.6. for 3-4 weeks, it seems to have all applications but I don’t feel at ~.</description>
+    </item>
+    
+  </channel>
+</rss>

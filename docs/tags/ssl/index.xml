@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ssl on Technical Ramblings</title>
+    <link>https://kracekumar.github.io/tags/ssl/</link>
+    <description>Recent content in ssl on Technical Ramblings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 02 Jul 2013 16:50:39 +0000</lastBuildDate>
+    
+	<atom:link href="https://kracekumar.github.io/tags/ssl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SSL for flask local development </title>
+      <link>https://kracekumar.github.io/post/54437887454/ssl-for-flask-local-development/</link>
+      <pubDate>Tue, 02 Jul 2013 16:50:39 +0000</pubDate>
+      
+      <guid>https://kracekumar.github.io/post/54437887454/ssl-for-flask-local-development/</guid>
+      <description>Recently at HasGeek we moved all our web application to https. So I wanted to have all my development environment urls to have https.
+How to have https in flask app
+Method 1
+from flask import Flask app = Flask(__name__) app.run(&#39;0.0.0.0&#39;, debug=True, port=8100, ssl_context=&#39;adhoc&#39;)  In the above piece of code, ssl_context variable is passed to werkezug.run_simple which creates SSL certificates using OpenSSL, you may need to install pyopenssl. I had issues with this method, so I generated self signed certificate.</description>
+    </item>
+    
+  </channel>
+</rss>
